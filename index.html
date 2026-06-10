@@ -1,0 +1,1868 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://hasugu.lymin80.shop/ -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하수구수사대 - 배관케어 전문업체 | 누수탐지 전문</title>
+    <meta name="description" content="배관 #누수탐지 #하수구막힘 #고압세척 #관로탐지 - 철저한 원인 분석으로 시원하게 해결해드리겠습니다. 24시간 긴급출동">
+    <link href="./index_files/all.min.css" rel="stylesheet">
+    <link href="./index_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --accent: #ef4444;
+            --accent-light: #fee2e2;
+            --dark: #111827;
+            --gray-900: #1f2937;
+            --gray-700: #374151;
+            --gray-500: #6b7280;
+            --gray-300: #d1d5db;
+            --gray-100: #f3f4f6;
+            --white: #ffffff;
+            --yellow: #fbbf24;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Floating CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .float-btn {
+            display: block;
+            width: auto;
+            height: auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .float-btn img {
+            display: block;
+            width: 160px;
+            height: auto;
+        }
+
+        .float-btn.call-btn {
+            animation: pulse-ring 2s infinite;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent);
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        .float-btn:hover {
+            transform: scale(1.05) translateY(-2px);
+        }
+
+        @keyframes pulse-ring {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.5); }
+            50% { box-shadow: 0 0 0 12px rgba(239,68,68,0); }
+        }
+
+        /* Header */
+        .header {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-100);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 24px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .header-nav a {
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .header-nav a:hover {
+            color: var(--primary);
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        .btn-cta {
+            background: var(--accent);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+
+        .btn-cta:hover {
+            background: #dc2626;
+            transform: translateY(-1px);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+        }
+
+        .hero-slider {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-slide::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(17,24,39,0.92) 0%, rgba(17,24,39,0.7) 50%, rgba(17,24,39,0.5) 100%);
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            padding: 80px 0 100px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text {
+            color: var(--white);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(239,68,68,0.15);
+            border: 1px solid rgba(239,68,68,0.3);
+            color: #fca5a5;
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 3.25rem;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero-title .highlight {
+            color: var(--yellow);
+        }
+
+        .hero-desc {
+            font-size: 1.125rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 32px;
+        }
+
+        .hero-tag {
+            background: rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.9);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #dc2626;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(239,68,68,0.35);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .hero-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .hero-card:hover {
+            background: rgba(255,255,255,0.14);
+            transform: translateY(-4px);
+        }
+
+        .hero-card.featured {
+            background: var(--yellow);
+            border-color: var(--yellow);
+        }
+
+        .hero-card.featured .card-number,
+        .hero-card.featured .card-label {
+            color: var(--dark);
+        }
+
+        .card-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .card-label {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 8px;
+        }
+
+        /* Services */
+        .services {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-subtitle {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            font-size: 1.1rem;
+            color: var(--gray-500);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            border: 1px solid var(--gray-100);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+        }
+
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.08);
+        }
+
+        .service-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.4) 100%);
+        }
+
+        .service-content {
+            padding: 24px;
+        }
+
+        .service-content h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .service-content p {
+            font-size: 0.9rem;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        /* Process */
+        .process {
+            padding: 100px 0;
+            background: var(--gray-100);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .process-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+            overflow: hidden;
+        }
+
+        .process-number {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.1rem;
+            z-index: 2;
+        }
+
+        .process-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .process-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .process-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.15) 100%);
+        }
+
+        .process-card-content {
+            padding: 24px 20px 28px;
+        }
+
+        .process-card-content h3 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .process-card-content p {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        /* Promise / Banner */
+        .promise {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--gray-900) 100%);
+        }
+
+        .promise-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .promise-image-area {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .promise-banner {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+        }
+
+        .promise-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .promise-right {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .promise-text h2 {
+            font-size: 2.25rem;
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .promise-text h2 .accent {
+            color: var(--yellow);
+        }
+
+        .promise-list {
+            list-style: none;
+        }
+
+        .promise-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+            color: rgba(255,255,255,0.85);
+            font-size: 1.05rem;
+        }
+
+        .promise-list li i {
+            color: var(--yellow);
+            font-size: 1.25rem;
+            margin-top: 2px;
+        }
+
+        .promise-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .promise-feature {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .promise-feature:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-4px);
+        }
+
+        .promise-feature i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .promise-feature h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .promise-feature p {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Banner Section */
+        .banner-section {
+            padding: 0;
+            position: relative;
+        }
+
+        .banner-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Equipment */
+        .equipment {
+            padding: 100px 0;
+            background: var(--gray-100);
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .equipment-item {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+            border: 1px solid var(--gray-100);
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .equipment-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+        }
+
+        .equipment-img {
+            width: 100%;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: var(--white);
+        }
+
+        .equipment-img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .equipment-name {
+            padding: 14px 12px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--dark);
+            border-top: 1px solid var(--gray-100);
+            background: var(--gray-100);
+        }
+
+        @media (max-width: 1024px) {
+            .equipment-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .equipment-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Portfolio */
+        .portfolio {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 1;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.85) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-tag {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            width: fit-content;
+        }
+
+        .portfolio-overlay h4 {
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 80px 0;
+            background: var(--accent);
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2.25rem;
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 32px;
+        }
+
+        .cta-phone {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .cta .btn-white {
+            background: var(--white);
+            color: var(--accent);
+            padding: 18px 48px;
+            font-size: 1.1rem;
+        }
+
+        .cta .btn-white:hover {
+            background: var(--gray-100);
+        }
+
+        .cta .btn-kakao {
+            background: #fee500;
+            color: #3c1e1e;
+            padding: 18px 48px;
+            font-size: 1.1rem;
+        }
+
+        .cta .btn-kakao:hover {
+            background: #fdd800;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 80px 0 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 48px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand h3 span {
+            color: var(--accent);
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            height: 40px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .footer-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .footer-badge {
+            background: rgba(255,255,255,0.1);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--yellow);
+        }
+
+        .footer-col h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: var(--white);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        .footer-contact-item i {
+            color: var(--yellow);
+            width: 20px;
+        }
+
+        .footer-contact-item.phone {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+
+        /* Lightbox Modal */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .lightbox-overlay.active {
+            display: flex;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 28px;
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+            z-index: 2010;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255,255,255,0.25);
+        }
+
+        .lightbox-header {
+            text-align: center;
+            padding: 24px 20px 16px;
+            flex-shrink: 0;
+        }
+
+        .lightbox-header h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .lightbox-header p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+
+        .lightbox-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+            padding: 0 40px 40px;
+            max-width: 1200px;
+            width: 100%;
+            overflow-y: auto;
+            max-height: calc(100vh - 140px);
+        }
+
+        .lightbox-gallery::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .lightbox-gallery::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.2);
+            border-radius: 3px;
+        }
+
+        .lightbox-img {
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .lightbox-img:hover {
+            transform: scale(1.03);
+        }
+
+        .lightbox-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Full image view */
+        .fullview-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.97);
+            z-index: 2500;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fullview-overlay.active {
+            display: flex;
+        }
+
+        .fullview-overlay img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .fullview-close {
+            position: absolute;
+            top: 20px;
+            right: 28px;
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .fullview-close:hover {
+            background: rgba(255,255,255,0.25);
+        }
+
+        .fullview-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .fullview-nav:hover {
+            background: rgba(255,255,255,0.25);
+        }
+
+        .fullview-prev { left: 20px; }
+        .fullview-next { right: 20px; }
+
+        .fullview-counter {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .lightbox-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 16px 24px;
+                gap: 10px;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .process-grid,
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .promise-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-nav {
+                display: none;
+            }
+
+            .header-cta .btn-cta {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2.25rem;
+            }
+
+            .hero-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid,
+            .process-grid,
+            .portfolio-grid,
+            .promise-features {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-badges {
+                justify-content: center;
+            }
+
+            .cta-phone {
+                font-size: 2rem;
+            }
+
+            .float-btn img {
+                width: 120px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="tel:010-2340-2118" class="float-btn call-btn" title="전화상담">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="https://hasugu.lymin80.shop/#" class="float-btn" title="카카오톡 상담">
+            <img src="./index_files/talk.png" alt="카톡상담">
+        </a>
+        <a href="https://hasugu.lymin80.shop/#contact" class="float-btn" title="견적문의">
+            <img src="./index_files/in.png" alt="견적문의">
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="https://hasugu.lymin80.shop/#" class="logo">
+                <img src="./index_files/logo.png" alt="하수구수사대 - 배관케어전문업체 누수탐지">
+            </a>
+            <nav class="header-nav">
+                <a href="https://hasugu.lymin80.shop/#services">사업영역</a>
+                <a href="https://hasugu.lymin80.shop/#process">작업과정</a>
+                <a href="https://hasugu.lymin80.shop/#promise">확실한 책임시공</a>
+                <a href="https://hasugu.lymin80.shop/#portfolio">시공사례</a>
+                <a href="https://hasugu.lymin80.shop/#contact">견적문의</a>
+            </nav>
+            <div class="header-cta">
+                <div class="header-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    010-2340-2118
+                </div>
+                <a href="tel:010-2340-2118" class="btn-cta">무료상담</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero with Image Slider -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide" style="background-image: url(&#39;images/Top_Bg_1.png&#39;);"></div>
+            <div class="hero-slide" style="background-image: url(&#39;images/Top_Bg_2.png&#39;);"></div>
+            <div class="hero-slide active" style="background-image: url(&#39;images/Top_Bg_3.png&#39;);"></div>
+            <div class="hero-slide" style="background-image: url(&#39;images/Top_Bg_4.png&#39;);"></div>
+        </div>
+        <div class="hero-inner">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-badge">
+                            <i class="fas fa-certificate"></i>
+                            배관케어 전문업체 · 누수탐지 전문
+                        </div>
+                        <h1 class="hero-title">
+                            철저한 원인 분석으로<br>
+                            <span class="highlight">시원하게 해결</span>해<br>
+                            드리겠습니다
+                        </h1>
+                        <p class="hero-desc">
+                            20년 경력의 배관 전문가가 최첨단 장비로 정확하게 진단하고<br>
+                            확실하게 해결합니다. 재시공 걱정 없는 완벽한 책임시공.
+                        </p>
+                        <div class="hero-tags">
+                            <span class="hero-tag">#배관</span>
+                            <span class="hero-tag">#누수탐지</span>
+                            <span class="hero-tag">#하수구막힘</span>
+                            <span class="hero-tag">#고압세척</span>
+                            <span class="hero-tag">#관로탐지</span>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="tel:010-2340-2118" class="btn btn-primary">
+                                <i class="fas fa-phone-alt"></i>
+                                무료 상담받기
+                            </a>
+                            <a href="https://hasugu.lymin80.shop/#services" class="btn btn-outline">
+                                서비스 보기
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-cards">
+                        <div class="hero-card">
+                            <div class="card-number">10+</div>
+                            <div class="card-label">년 경력</div>
+                        </div>
+                        <div class="hero-card featured">
+                            <div class="card-number">1,000+</div>
+                            <div class="card-label">시공 건수</div>
+                        </div>
+                        <div class="hero-card">
+                            <div class="card-number">99.2%</div>
+                            <div class="card-label">고객 만족도</div>
+                        </div>
+                        <div class="hero-card">
+                            <div class="card-number">24H</div>
+                            <div class="card-label">긴급 출동</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Expert Services</p>
+                <h2 class="section-title">전문 서비스</h2>
+                <p class="section-desc">배관 전문가가 최첨단 장비로 모든 배관 문제를 해결합니다</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="./index_files/Top_Bg_2.png" alt="하수구 막힘 / 배관공사">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>하수구 막힘 / 배관공사</h3>
+                        <p>노후 배관 교체부터 신규 설치까지 전문 기술진이 깔끔하게 시공합니다.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="./index_files/Top_Bg_1.png" alt="누수탐지 / 진단">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>누수탐지 / 진단</h3>
+                        <p>정밀 음향탐지기와 열화상 카메라로 누수 위치를 정확히 찾습니다.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="./index_files/Top_Bg_3.png" alt="내시경 / 관로탐지">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>내시경 / 관로탐지</h3>
+                        <p>CCTV 관로조사 장비로 배관 내부 상태를 영상으로 정확히 진단합니다.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="./index_files/Top_Bg_4.png" alt="배관고압세척">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>배관고압세척</h3>
+                        <p>300bar 이상 고압 장비로 배관 내 이물질을 완벽히 제거합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Work Process</p>
+                <h2 class="section-title">작업 과정</h2>
+                <p class="section-desc">체계적인 프로세스로 정확하고 신속하게 문제를 해결합니다</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <div class="process-image">
+                        <img src="./index_files/Process_1.png" alt="무료방문견적">
+                        <div class="process-image-overlay"></div>
+                    </div>
+                    <div class="process-card-content">
+                        <h3>무료방문견적</h3>
+                        <p>전문가의 정확한 원인파악과 진단으로 최적의 비용과 해결방안을 제시합니다.</p>
+                    </div>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <div class="process-image">
+                        <img src="./index_files/Process_2.png" alt="정확한 위치의 누수확인">
+                        <div class="process-image-overlay"></div>
+                    </div>
+                    <div class="process-card-content">
+                        <h3>정확한 위치의 누수확인</h3>
+                        <p>누수가 발생하는 위치를 확인하고 현장에 맞는 시공방법을 제시합니다.</p>
+                    </div>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <div class="process-image">
+                        <img src="./index_files/Process_3.png" alt="전문장비를 통한 안전시공">
+                        <div class="process-image-overlay"></div>
+                    </div>
+                    <div class="process-card-content">
+                        <h3>전문장비를 통한 안전시공</h3>
+                        <p>각 원인에 맞는 전문 장비를 사용하여 신속정확하고 안전하게 시공합니다.</p>
+                    </div>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">04</div>
+                    <div class="process-image">
+                        <img src="./index_files/Process_4.png" alt="철저한 A/S 관리 및 점검">
+                        <div class="process-image-overlay"></div>
+                    </div>
+                    <div class="process-card-content">
+                        <h3>철저한 A/S 관리 및 점검</h3>
+                        <p>문제 해결 후 배관 상태를 확인하고 재발 방지를 위한 후속 조치를 취해드립니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promise -->
+    <section class="promise" id="promise">
+        <div class="container">
+            <div class="promise-content">
+                <div class="promise-image-area">
+                    <div class="promise-banner">
+                        <img src="./index_files/Ban_Er_1.png" alt="확실한 책임시공">
+                    </div>
+                    <div class="promise-banner">
+                        <img src="./index_files/Ban_Er_2.png" alt="배관전문케어전문">
+                    </div>
+                </div>
+                <div class="promise-right">
+                    <div class="promise-text">
+                        <h2>
+                            <span class="accent">확실한 책임시공</span><br>
+                            해결안된 누수!<br>
+                            뚫어도 뚫어도 막히는 하수관!<br>
+                            고압세척으로 배수관복원!
+                        </h2>
+                        <ul class="promise-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                일상배상책임보험 처리까지 완벽하게 OK
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                20년 경력 전문가 직접 시공
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                투명한 견적, 추가 비용 없음
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                1년 무상 A/S 보장
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="promise-features">
+                        <div class="promise-feature">
+                            <i class="fas fa-won-sign"></i>
+                            <h4>합리적 비용</h4>
+                            <p>투명한 견적으로 신뢰를 드립니다</p>
+                        </div>
+                        <div class="promise-feature">
+                            <i class="fas fa-satellite-dish"></i>
+                            <h4>최첨단 탐사장비</h4>
+                            <p>정밀 진단으로 정확한 원인 파악</p>
+                        </div>
+                        <div class="promise-feature">
+                            <i class="fas fa-calendar-check"></i>
+                            <h4>정기적 점검</h4>
+                            <p>시공 후에도 꾸준한 관리</p>
+                        </div>
+                        <div class="promise-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>확실한 A/S관리</h4>
+                            <p>1년 무상 A/S 보장</p>
+                        </div>
+                        <div class="promise-feature">
+                            <i class="fas fa-truck"></i>
+                            <h4>신속한 출동</h4>
+                            <p>24시간 긴급출동 가능</p>
+                        </div>
+                        <div class="promise-feature">
+                            <i class="fas fa-user-tie"></i>
+                            <h4>전문가 직접 시공</h4>
+                            <p>자격증 보유 기술자 파견</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Portfolio</p>
+                <h2 class="section-title">시공사례</h2>
+                <p class="section-desc">15,000건 이상의 성공적인 시공 실적</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-gallery="drain" style="cursor:pointer;">
+                    <img src="./index_files/portfolio_1.jpg" alt="화장실 배관작업">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">하수구막힘</span>
+                        <h4>화장실 배관 작업</h4>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-gallery="drain" style="cursor:pointer;">
+                    <img src="./index_files/portfolio_2.jpg" alt="주방 싱크대 수리">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">싱크대막힘</span>
+                        <h4>주방 싱크대 수리</h4>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-gallery="drain" style="cursor:pointer;">
+                    <img src="./index_files/portfolio_3.jpg" alt="주방 배관 작업">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">배관공사</span>
+                        <h4>주방 배관 작업</h4>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-gallery="drain" style="cursor:pointer;">
+                    <img src="./index_files/portfolio_4.jpg" alt="배관 교체">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">배관교체</span>
+                        <h4>노후 배관 교체</h4>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-gallery="drain" style="cursor:pointer;">
+                    <img src="./index_files/portfolio_5.png" alt="하수구 작업">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">고압세척</span>
+                        <h4>하수구 고압세척</h4>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-gallery="drain" style="cursor:pointer;">
+                    <img src="./index_files/portfolio_6.jpg" alt="현장 출동">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">현장출동</span>
+                        <h4>현장 긴급 출동</h4>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-gallery="drain" style="cursor:pointer;">
+                    <img src="./index_files/portfolio_7.jpg" alt="배관 세척">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">배관세척</span>
+                        <h4>전문 배관 세척</h4>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-gallery="drain" style="cursor:pointer;">
+                    <img src="./index_files/portfolio_8.jpg" alt="장비 운용">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag">전문장비</span>
+                        <h4>전문 장비 운용</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment -->
+    <section class="equipment" id="equipment">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Professional Equipment</p>
+                <h2 class="section-title">보유장비</h2>
+                <p class="section-desc">최첨단 전문 장비로 정확한 진단과 확실한 시공을 제공합니다</p>
+            </div>
+            <div class="equipment-grid">
+                <div class="equipment-item">
+                    <div class="equipment-img">
+                        <img src="./index_files/eq_1.png" alt="건습식 청소기">
+                    </div>
+                    <div class="equipment-name">건습식 청소기</div>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-img">
+                        <img src="./index_files/eq_2.png" alt="공기질 검측기">
+                    </div>
+                    <div class="equipment-name">공기질 검측기</div>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-img">
+                        <img src="./index_files/eq_3.png" alt="관로 탐지기">
+                    </div>
+                    <div class="equipment-name">관로 탐지기</div>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-img">
+                        <img src="./index_files/eq_4.png" alt="누수탐지기">
+                    </div>
+                    <div class="equipment-name">누수탐지기</div>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-img">
+                        <img src="./index_files/eq_5.png" alt="배관내시경">
+                    </div>
+                    <div class="equipment-name">배관내시경</div>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-img">
+                        <img src="./index_files/eq_6.png" alt="온수고압세척기">
+                    </div>
+                    <div class="equipment-name">온수고압세척기</div>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-img">
+                        <img src="./index_files/eq_7.png" alt="전동 스프링기">
+                    </div>
+                    <div class="equipment-name">전동 스프링기</div>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-img">
+                        <img src="./index_files/eq_8.png" alt="플렉스 샤프트">
+                    </div>
+                    <div class="equipment-name">플렉스 샤프트</div>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-img">
+                        <img src="./index_files/eq_9.png" alt="해빙기">
+                    </div>
+                    <div class="equipment-name">해빙기</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2>배관 문제, 전문가에게 맡기세요</h2>
+            <p>지금 바로 전화주시면 무료 상담과 정확한 견적을 안내해 드립니다</p>
+            <div class="cta-phone">
+                <i class="fas fa-phone-alt"></i>
+                010-2340-2118
+            </div>
+            <div class="cta-buttons">
+                <a href="tel:010-2340-2118" class="btn btn-white">
+                    <i class="fas fa-phone-alt"></i>
+                    무료 상담 신청하기
+                </a>
+                <a href="https://hasugu.lymin80.shop/#" class="btn btn-kakao">
+                    <i class="fas fa-comment"></i>
+                    카카오톡 상담
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="./index_files/logo.png" alt="하수구수사대">
+                    </div>
+                    <p>
+                        하수구수사대는 배관 전문가가 직접 운영하는 신뢰할 수 있는 배관케어 전문업체입니다.<br>
+                        철저한 원인 분석과 확실한 책임시공으로 고객님의 걱정을 해결해 드립니다.
+                    </p>
+                    <div class="footer-badges">
+                        <span class="footer-badge">배관기능사</span>
+                        <span class="footer-badge">설비산업기사</span>
+                        <span class="footer-badge">산업안전기사</span>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>BUSINESS</h4>
+                    <ul>
+                        <li><a href="https://hasugu.lymin80.shop/#services">하수구막힘 / 배관공사</a></li>
+                        <li><a href="https://hasugu.lymin80.shop/#services">누수탐지/진단</a></li>
+                        <li><a href="https://hasugu.lymin80.shop/#services">내시경/관로탐지</a></li>
+                        <li><a href="https://hasugu.lymin80.shop/#services">배관고압세척</a></li>
+                        <li><a href="https://hasugu.lymin80.shop/#services">해빙/동파</a></li>
+                        <li><a href="https://hasugu.lymin80.shop/#services">수전교체</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>CONTACT</h4>
+                    <div class="footer-contact-item phone">
+                        <i class="fas fa-phone-alt"></i>
+                        010-2340-2118
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        hasugu80@naver.com
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        24시간 상담 가능
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        서울/경기 전 지역 출장
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>COMPANY INFO</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-building"></i>
+                        하수구수사대
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-user"></i>
+                        대표 : 이은진
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-file-alt"></i>
+                        사업자등록번호 : 296-52-00518
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 하수구수사대. 대표 : 이은진 | 사업자등록번호 : 296-52-00518 | 전화 : 010-2340-2118 | 이메일 : hasugu80@naver.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Gallery Modal -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+        <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+        <div class="lightbox-header">
+            <h3 id="lightboxTitle">하수구 막힘 시공사례</h3>
+            <p id="lightboxDesc">현장 작업 상세 사진</p>
+        </div>
+        <div class="lightbox-gallery" id="lightboxGallery"></div>
+    </div>
+
+    <!-- Full Image View -->
+    <div class="fullview-overlay" id="fullviewOverlay">
+        <button class="fullview-close" id="fullviewClose"><i class="fas fa-times"></i></button>
+        <button class="fullview-nav fullview-prev" id="fullviewPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="fullview-nav fullview-next" id="fullviewNext"><i class="fas fa-chevron-right"></i></button>
+        <img id="fullviewImg" src="https://hasugu.lymin80.shop/" alt="">
+        <div class="fullview-counter" id="fullviewCounter"></div>
+    </div>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Hero image slider
+        (function() {
+            const slides = document.querySelectorAll('.hero-slide');
+            let current = 0;
+            setInterval(function() {
+                slides[current].classList.remove('active');
+                current = (current + 1) % slides.length;
+                slides[current].classList.add('active');
+            }, 4000);
+        })();
+
+        // Gallery data
+        var galleryData = {
+            drain: {
+                title: '하수구 막힘 시공사례',
+                desc: '하수구 막힘 현장 작업 상세 사진 10장',
+                images: [
+                    'images/img1/case_1.jpg',
+                    'images/img1/case_2.jpg',
+                    'images/img1/case_3.jpg',
+                    'images/img1/case_4.jpg',
+                    'images/img1/case_5.jpg',
+                    'images/img1/case_6.jpg',
+                    'images/img1/case_7.jpg',
+                    'images/img1/case_8.jpg',
+                    'images/img1/case_9.jpg',
+                    'images/img1/case_10.jpg'
+                ]
+            }
+        };
+
+        // Lightbox
+        var lightbox = document.getElementById('lightboxOverlay');
+        var lightboxGallery = document.getElementById('lightboxGallery');
+        var lightboxTitle = document.getElementById('lightboxTitle');
+        var lightboxDesc = document.getElementById('lightboxDesc');
+        var fullview = document.getElementById('fullviewOverlay');
+        var fullviewImg = document.getElementById('fullviewImg');
+        var fullviewCounter = document.getElementById('fullviewCounter');
+        var currentImages = [];
+        var currentIdx = 0;
+
+        // Open lightbox gallery
+        document.querySelectorAll('.portfolio-item[data-gallery]').forEach(function(item) {
+            item.addEventListener('click', function() {
+                var key = this.getAttribute('data-gallery');
+                var data = galleryData[key];
+                if (!data) return;
+
+                lightboxTitle.textContent = data.title;
+                lightboxDesc.textContent = data.desc;
+                currentImages = data.images;
+
+                lightboxGallery.innerHTML = '';
+                data.images.forEach(function(src, idx) {
+                    var div = document.createElement('div');
+                    div.className = 'lightbox-img';
+                    div.innerHTML = '<img src="' + src + '" alt="시공사례 ' + (idx + 1) + '">';
+                    div.addEventListener('click', function() {
+                        openFullview(idx);
+                    });
+                    lightboxGallery.appendChild(div);
+                });
+
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close lightbox
+        document.getElementById('lightboxClose').addEventListener('click', function() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Full image view
+        function openFullview(idx) {
+            currentIdx = idx;
+            fullviewImg.src = currentImages[idx];
+            fullviewCounter.textContent = (idx + 1) + ' / ' + currentImages.length;
+            fullview.classList.add('active');
+        }
+
+        document.getElementById('fullviewClose').addEventListener('click', function() {
+            fullview.classList.remove('active');
+        });
+
+        fullview.addEventListener('click', function(e) {
+            if (e.target === fullview) {
+                fullview.classList.remove('active');
+            }
+        });
+
+        document.getElementById('fullviewPrev').addEventListener('click', function(e) {
+            e.stopPropagation();
+            currentIdx = (currentIdx - 1 + currentImages.length) % currentImages.length;
+            fullviewImg.src = currentImages[currentIdx];
+            fullviewCounter.textContent = (currentIdx + 1) + ' / ' + currentImages.length;
+        });
+
+        document.getElementById('fullviewNext').addEventListener('click', function(e) {
+            e.stopPropagation();
+            currentIdx = (currentIdx + 1) % currentImages.length;
+            fullviewImg.src = currentImages[currentIdx];
+            fullviewCounter.textContent = (currentIdx + 1) + ' / ' + currentImages.length;
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (fullview.classList.contains('active')) {
+                if (e.key === 'Escape') fullview.classList.remove('active');
+                if (e.key === 'ArrowLeft') document.getElementById('fullviewPrev').click();
+                if (e.key === 'ArrowRight') document.getElementById('fullviewNext').click();
+            } else if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+    </script>
+<script defer="" src="./index_files/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;e1551c29500e4666a10be7b4909c43ae&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+</body></html>
