@@ -1193,10 +1193,10 @@
         <a href="tel:010-2340-2118" class="float-btn call-btn" title="전화상담">
             <i class="fas fa-phone-alt"></i>
         </a>
-        <a href="https://hasugu.lymin80.shop/#" class="float-btn" title="카카오톡 상담">
+        <a href="blog-sample.html" class="float-btn" title="카톡상담">
             <img src="./index_files/talk.png" alt="카톡상담">
         </a>
-        <a href="https://hasugu.lymin80.shop/#contact" class="float-btn" title="견적문의">
+        <a href="blog-sample.html" class="float-btn" title="견적문의">
             <img src="./index_files/in.png" alt="견적문의">
         </a>
     </div>
@@ -1204,15 +1204,15 @@
     <!-- Header -->
     <header class="header">
         <div class="header-inner">
-            <a href="https://hasugu.lymin80.shop/#" class="logo">
+            <a href="#" class="logo">
                 <img src="./index_files/logo.png" alt="하수구수사대 - 배관케어전문업체 누수탐지">
             </a>
             <nav class="header-nav">
-                <a href="https://hasugu.lymin80.shop/#services">사업영역</a>
-                <a href="https://hasugu.lymin80.shop/#process">작업과정</a>
-                <a href="https://hasugu.lymin80.shop/#promise">확실한 책임시공</a>
-                <a href="https://hasugu.lymin80.shop/#portfolio">시공사례</a>
-                <a href="https://hasugu.lymin80.shop/#contact">견적문의</a>
+                <a href="#services">사업영역</a>
+                <a href="#process">작업과정</a>
+                <a href="#promise">확실한 책임시공</a>
+                <a href="#portfolio">시공사례</a>
+                <a href="#contact">견적문의</a>
             </nav>
             <div class="header-cta">
                 <div class="header-phone">
@@ -1261,7 +1261,7 @@
                                 <i class="fas fa-phone-alt"></i>
                                 무료 상담받기
                             </a>
-                            <a href="https://hasugu.lymin80.shop/#services" class="btn btn-outline">
+                            <a href="#services" class="btn btn-outline">
                                 서비스 보기
                             </a>
                         </div>
@@ -1625,7 +1625,7 @@
                     <i class="fas fa-phone-alt"></i>
                     무료 상담 신청하기
                 </a>
-                <a href="https://hasugu.lymin80.shop/#" class="btn btn-kakao">
+                <a href="#" class="btn btn-kakao">
                     <i class="fas fa-comment"></i>
                     카카오톡 상담
                 </a>
@@ -1654,12 +1654,12 @@
                 <div class="footer-col">
                     <h4>BUSINESS</h4>
                     <ul>
-                        <li><a href="https://hasugu.lymin80.shop/#services">하수구막힘 / 배관공사</a></li>
-                        <li><a href="https://hasugu.lymin80.shop/#services">누수탐지/진단</a></li>
-                        <li><a href="https://hasugu.lymin80.shop/#services">내시경/관로탐지</a></li>
-                        <li><a href="https://hasugu.lymin80.shop/#services">배관고압세척</a></li>
-                        <li><a href="https://hasugu.lymin80.shop/#services">해빙/동파</a></li>
-                        <li><a href="https://hasugu.lymin80.shop/#services">수전교체</a></li>
+                        <li><a href="blog-sample.html">하수구막힘 / 배관공사</a></li>
+                        <li><a href="blog-sample.html">누수탐지/진단</a></li>
+                        <li><a href="blog-sample.html">내시경/관로탐지</a></li>
+                        <li><a href="blog-sample.html">배관고압세척</a></li>
+                        <li><a href="blog-sample.html">해빙/동파</a></li>
+                        <li><a href="blog-sample.html">수전교체</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -1718,7 +1718,7 @@
         <button class="fullview-close" id="fullviewClose"><i class="fas fa-times"></i></button>
         <button class="fullview-nav fullview-prev" id="fullviewPrev"><i class="fas fa-chevron-left"></i></button>
         <button class="fullview-nav fullview-next" id="fullviewNext"><i class="fas fa-chevron-right"></i></button>
-        <img id="fullviewImg" src="https://hasugu.lymin80.shop/" alt="">
+        <img id="fullviewImg" src="" alt="">
         <div class="fullview-counter" id="fullviewCounter"></div>
     </div>
 
@@ -1776,30 +1776,10 @@
         var currentImages = [];
         var currentIdx = 0;
 
-        // Open lightbox gallery
+        // Open lightbox gallery - click navigates to blog-sample.html
         document.querySelectorAll('.portfolio-item[data-gallery]').forEach(function(item) {
             item.addEventListener('click', function() {
-                var key = this.getAttribute('data-gallery');
-                var data = galleryData[key];
-                if (!data) return;
-
-                lightboxTitle.textContent = data.title;
-                lightboxDesc.textContent = data.desc;
-                currentImages = data.images;
-
-                lightboxGallery.innerHTML = '';
-                data.images.forEach(function(src, idx) {
-                    var div = document.createElement('div');
-                    div.className = 'lightbox-img';
-                    div.innerHTML = '<img src="' + src + '" alt="시공사례 ' + (idx + 1) + '">';
-                    div.addEventListener('click', function() {
-                        openFullview(idx);
-                    });
-                    lightboxGallery.appendChild(div);
-                });
-
-                lightbox.classList.add('active');
-                document.body.style.overflow = 'hidden';
+                window.location.href = 'blog-sample.html';
             });
         });
 
