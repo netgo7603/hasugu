@@ -3,4 +3,4 @@ Allow: /
 Disallow: /index_files/
 Disallow: /blog/images/img1/
 
-Sitemap: https://hasugu.lymin80.shop/sitemap.xml
+Sitemap: https://hasugu2.lymin80.shop/sitemap.xml
