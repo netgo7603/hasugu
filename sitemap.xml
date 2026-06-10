@@ -34,4 +34,17 @@
     </image:image>
   </url>
 
+  <!-- 시공사례: 용인 풍덕천동 음식물처리기 배관막힘 하수관 청소 -->
+  <url>
+    <loc>https://hasugu.lymin80.shop/blog/yongin-pungdeokcheon-food-waste-disposer-drain-cleaning-224300839005.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hasugu.lymin80.shop/blog/images/224300839005/title.jpg</image:loc>
+      <image:title>용인 풍덕천동 음식물처리기 배관막힘 하수관 청소 사례</image:title>
+      <image:caption>하수구수사대 시공사례 - 용인 수지구 풍덕천동 음식물처리기 배관막힘 해결 현장</image:caption>
+    </image:image>
+  </url>
+
 </urlset>
