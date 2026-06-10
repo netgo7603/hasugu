@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- 메인 페이지 -->
+  <url>
+    <loc>https://hasugu.lymin80.shop/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hasugu.lymin80.shop/images/Top_Bg_2.png</image:loc>
+      <image:title>하수구수사대 배관케어 전문업체 메인</image:title>
+      <image:caption>하수구수사대 - 하수구막힘, 누수탐지, 고압세척 전문업체</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hasugu.lymin80.shop/images/logo.png</image:loc>
+      <image:title>하수구수사대 로고</image:title>
+      <image:caption>하수구수사대 공식 로고</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 시공사례 블로그 상세 페이지 -->
+  <url>
+    <loc>https://hasugu.lymin80.shop/blog-sample.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hasugu.lymin80.shop/blog/images/title.jpg</image:loc>
+      <image:title>영통구 이의동 베란다 누수 우수관교체 방수공사 사례</image:title>
+      <image:caption>하수구수사대 시공사례 - 수원 영통구 베란다 누수 해결 현장</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
