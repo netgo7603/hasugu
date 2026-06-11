@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="처인구하수구막힘은 처인구하수구막힘에서 안녕하세요 &amp;quot;하수구 수사대&amp;quot; 입니다 싱크대하수구배관...">
+    <meta property="og:title" content="처인구하수구막힘은 하수구막힘에서">
+    <meta property="og:description" content="처인구하수구막힘은 처인구하수구막힘에서 안녕하세요 &amp;quot;하수구 수사대&amp;quot; 입니다 싱크대하수구배관...">
+    
+    <title>처인구하수구막힘은 하수구막힘에서 - 하수구수사대</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #0d47a1;
+            --accent: #ff5722;
+            --text-dark: #1a1a2e;
+            --text-mid: #444466;
+            --text-light: #888899;
+            --bg: #f8f9fc;
+            --card-bg: #ffffff;
+            --border: #e8eaf0;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,.06);
+            --shadow-md: 0 8px 32px rgba(0,0,0,.10);
+            --shadow-lg: 0 20px 60px rgba(0,0,0,.14);
+            --radius: 16px;
+            --radius-sm: 8px;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: var(--bg);
+            color: var(--text-dark);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── 헤더 ── */
+        .site-header {
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 50%, #1976d2 100%);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(13,71,161,.35);
+        }
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(255,255,255,.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        .logo-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+        .header-nav a {
+            color: rgba(255,255,255,.85);
+            text-decoration: none;
+            font-size: .9rem;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            transition: background .2s, color .2s;
+        }
+        .header-nav a:hover {
+            background: rgba(255,255,255,.15);
+            color: #fff;
+        }
+
+        /* ── 히어로 (커버 이미지) ── */
+        .post-hero {
+            position: relative;
+            width: 100%;
+            height: 460px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a237e, #283593);
+        }
+        .post-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .72;
+        }
+        .post-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0) 30%,
+                rgba(10,20,60,.75) 100%
+            );
+        }
+        .hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            padding: 40px 32px 36px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-size: .75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .hero-title {
+            font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.3;
+            text-shadow: 0 2px 12px rgba(0,0,0,.4);
+            margin-bottom: 14px;
+        }
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: rgba(255,255,255,.8);
+            font-size: .85rem;
+        }
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* ── 본문 레이아웃 ── */
+        .post-layout {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        /* ── 본문 카드 ── */
+        .post-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            padding: 48px;
+            margin-bottom: 32px;
+        }
+
+        /* ── 블로그 본문 스타일 ── */
+        .blog-body {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            line-height: 1.9;
+        }
+        .blog-body .blog-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-sm);
+            margin: 24px 0;
+            box-shadow: var(--shadow-sm);
+            display: block;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+        .blog-body .blog-image:hover {
+            transform: scale(1.01);
+            box-shadow: var(--shadow-md);
+        }
+        .blog-body p {
+            margin-bottom: 1em;
+        }
+        .blog-body b, .blog-body strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        .blog-body blockquote,
+        .blog-body .se-quotation-container {
+            border-left: 4px solid var(--primary);
+            background: #f0f4ff;
+            padding: 16px 20px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 24px 0;
+            font-style: italic;
+            color: var(--primary-dark);
+        }
+        .blog-body .se-caption {
+            text-align: center;
+            color: var(--text-light);
+            font-size: .85rem;
+            margin-top: -16px;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        /* se-viewer 기본 스타일 보정 */
+        .se-viewer {
+            font-family: 'Noto Sans KR', sans-serif !important;
+        }
+        .se-text-paragraph {
+            margin-bottom: .6em;
+        }
+        .se-text-paragraph-align-center {
+            text-align: center;
+        }
+        .se-section-image {
+            margin: 20px 0;
+        }
+        .se-module-image {
+            text-align: center;
+        }
+        .pcol3 {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* ── 공유/정보 박스 ── */
+        .post-info-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 32px;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .post-info-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .author-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .author-name {
+            font-weight: 700;
+            font-size: .95rem;
+            color: var(--text-dark);
+        }
+        .post-date {
+            font-size: .82rem;
+            color: var(--text-light);
+        }
+        .naver-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: #03c75a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: .85rem;
+            font-weight: 600;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .naver-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(3,199,90,.35);
+        }
+
+        /* ── 하단 CTA ── */
+        .cta-section {
+            background: linear-gradient(135deg, #0d47a1, #1976d2);
+            border-radius: var(--radius);
+            padding: 48px 40px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 32px;
+        }
+        .cta-section h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .cta-section p {
+            opacity: .85;
+            margin-bottom: 24px;
+            font-size: .95rem;
+        }
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform .2s, box-shadow .2s;
+            box-shadow: 0 4px 20px rgba(255,87,34,.4);
+        }
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255,87,34,.5);
+        }
+
+        /* ── 푸터 ── */
+        .site-footer {
+            background: #1a1a2e;
+            color: rgba(255,255,255,.55);
+            text-align: center;
+            padding: 32px 24px;
+            font-size: .82rem;
+            line-height: 1.8;
+        }
+        .site-footer strong {
+            color: rgba(255,255,255,.85);
+        }
+
+        /* ── 반응형 ── */
+        @media (max-width: 768px) {
+            .post-hero { height: 300px; }
+            .hero-content { padding: 24px 20px 28px; }
+            .post-card { padding: 28px 20px; }
+            .post-layout { padding: 28px 16px 60px; }
+            .cta-section { padding: 32px 24px; }
+            .header-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 헤더 -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo">
+            <div class="logo-icon">🔧</div>
+            <span class="logo-text">하수구수사대</span>
+        </a>
+        <nav class="header-nav">
+            <a href="../index.html">홈</a>
+            <a href="index.html">블로그</a>
+            <a href="../index.html#contact">상담문의</a>
+        </nav>
+    </div>
+</header>
+
+<!-- 히어로 -->
+<section class="post-hero">
+    
+    <div style="max-width:900px;margin:0 auto;position:relative;">
+        <div class="hero-content">
+            <span class="hero-badge">게시판</span>
+            <h1 class="hero-title">처인구하수구막힘은 하수구막힘에서</h1>
+            <div class="hero-meta">
+                <span>📅 2022. 1. 30. 3:51</span>
+                <span>✍️ 하수구수사대</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 본문 -->
+<main class="post-layout">
+
+    <!-- 작성자 정보 바 -->
+    <div class="post-info-bar">
+        <div class="post-info-left">
+            <div class="author-avatar">하</div>
+            <div class="author-info">
+                <span class="author-name">하수구수사대</span>
+                <span class="post-date">2022. 1. 30. 3:51</span>
+            </div>
+        </div>
+        <a href="https://blog.naver.com/hasugu80/222634871204" target="_blank" rel="noopener" class="naver-link">
+            📝 네이버 원문 보기
+        </a>
+    </div>
+
+    <!-- 블로그 본문 -->
+    <article class="post-card">
+        <div class="blog-body">
+            <div class="se-main-container">
+                <div class="se-component se-text se-l-default" id="SE-1AFC75BA-2311-4369-91E0-0F625FFAAEED">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-CBF1BC51-80E3-4C7D-9547-A5F0A3A47961"><span style="" class="se-fs- se-ff-system   " id="SE-CDFBFDC3-F303-4F82-9BBA-CAA7F9A67A06"> </span><span style="" class="se-fs- se-ff-system   " id="SE-4A678BCA-D659-40A1-A71A-9B17F2F70591"><b>처인구하수구막힘은 처인구하수구막힘에서</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-ED24F82A-7D1B-4F7B-929C-DF9C470BC33A"><span style="" class="se-fs- se-ff-system   " id="SE-A26637FA-48A9-43D1-8B11-A3768F506674"><b>​</b></span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </article>
+
+    <!-- 하단 CTA -->
+    <div class="cta-section">
+        <h3>🔧 하수구 막힘 문제로 고민 중이신가요?</h3>
+        <p>24시간 신속 출동! 용인·수원·화성 전문 하수구 청소 서비스</p>
+        <a href="tel:010-0000-0000" class="cta-btn">📞 지금 바로 전화 상담</a>
+    </div>
+
+</main>
+
+<!-- 푸터 -->
+<footer class="site-footer">
+    <strong>하수구수사대</strong><br>
+    용인·수원·화성 하수구 막힘 전문 청소업체<br>
+    © 2026 하수구수사대. All rights reserved.
+</footer>
+
+</body>
+</html>

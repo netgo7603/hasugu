@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="하수구수사대 시공 후기 및 블로그 - 용인·수원·화성 하수구 막힘 청소 전문">
+    <title>블로그 - 하수구수사대</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --primary: #1a73e8; --primary-dark: #0d47a1; --accent: #ff5722;
+            --text-dark: #1a1a2e; --text-mid: #444466; --text-light: #888899;
+            --bg: #f8f9fc; --card-bg: #fff; --radius: 16px; --radius-sm: 8px;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,.06); --shadow-md: 0 8px 32px rgba(0,0,0,.10);
+        }
+        body { font-family: 'Noto Sans KR', sans-serif; background: var(--bg); color: var(--text-dark); -webkit-font-smoothing: antialiased; }
+        .site-header { background: linear-gradient(135deg, #0d47a1, #1976d2); padding: 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 20px rgba(13,71,161,.35); }
+        .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; }
+        .logo-icon { width: 36px; height: 36px; background: rgba(255,255,255,.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+        .logo-text { font-size: 1.1rem; font-weight: 700; }
+        .header-nav a { color: rgba(255,255,255,.85); text-decoration: none; font-size: .9rem; font-weight: 500; padding: 6px 14px; border-radius: var(--radius-sm); transition: background .2s; }
+        .header-nav a:hover { background: rgba(255,255,255,.15); color: #fff; }
+        .page-hero { background: linear-gradient(135deg, #1a237e, #283593); padding: 80px 24px 60px; text-align: center; color: #fff; }
+        .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; margin-bottom: 12px; }
+        .page-hero p { opacity: .8; font-size: 1rem; }
+        .post-count { display: inline-block; background: var(--accent); color: #fff; padding: 4px 14px; border-radius: 20px; font-size: .8rem; font-weight: 700; margin-top: 16px; }
+        .posts-grid { max-width: 1100px; margin: 0 auto; padding: 56px 24px 80px; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }
+        .post-card { background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; cursor: pointer; transition: transform .25s, box-shadow .25s; display: flex; flex-direction: column; }
+        .post-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+        .card-img { height: 210px; overflow: hidden; background: #e8eaf0; }
+        .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+        .post-card:hover .card-img img { transform: scale(1.05); }
+        .card-img-placeholder { display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--text-light); }
+        .card-body { padding: 22px 24px 24px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+        .card-badge { display: inline-block; background: #e8f0fe; color: var(--primary); padding: 3px 10px; border-radius: 20px; font-size: .72rem; font-weight: 700; }
+        .card-title { font-size: 1.05rem; font-weight: 700; color: var(--text-dark); line-height: 1.4; }
+        .card-desc { font-size: .87rem; color: var(--text-mid); line-height: 1.7; flex: 1; }
+        .card-meta { display: flex; justify-content: space-between; align-items: center; font-size: .8rem; color: var(--text-light); margin-top: 8px; }
+        .card-read { color: var(--primary); font-weight: 600; }
+        .empty-state { text-align: center; padding: 80px 24px; color: var(--text-light); grid-column: 1/-1; }
+        .site-footer { background: #1a1a2e; color: rgba(255,255,255,.55); text-align: center; padding: 32px 24px; font-size: .82rem; line-height: 1.8; }
+        .site-footer strong { color: rgba(255,255,255,.85); }
+        @media (max-width: 768px) { .posts-grid { padding: 32px 16px 60px; gap: 20px; } .header-nav { display: none; } }
+    </style>
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo">
+            <div class="logo-icon">🔧</div>
+            <span class="logo-text">하수구수사대</span>
+        </a>
+        <nav class="header-nav">
+            <a href="../index.html">홈</a>
+            <a href="index.html">블로그</a>
+            <a href="../index.html#contact">상담문의</a>
+        </nav>
+    </div>
+</header>
+<section class="page-hero">
+    <h1>📋 시공 후기 & 블로그</h1>
+    <p>하수구수사대의 실제 현장 시공 후기를 확인하세요</p>
+    <span class="post-count">총 1개 포스트</span>
+</section>
+<div class="posts-grid">
+    
+        <article class="post-card" onclick="location.href='222634871204.html'" role="button" tabindex="0">
+            <div class="card-img card-img-placeholder">🔧</div>
+            <div class="card-body">
+                <span class="card-badge">게시판</span>
+                <h2 class="card-title">처인구하수구막힘은 하수구막힘에서</h2>
+                <p class="card-desc">처인구하수구막힘은 처인구하수구막힘에서 안녕하세요 &amp;quot;하수구 수사대&amp;quot; 입니다 싱크대하수구배관...</p>
+                <div class="card-meta">
+                    <span>📅 2022. 1. 30. 3:51</span>
+                    <span class="card-read">자세히 보기 →</span>
+                </div>
+            </div>
+        </article>
+</div>
+<footer class="site-footer">
+    <strong>하수구수사대</strong><br>
+    용인·수원·화성 하수구 막힘 전문 청소업체<br>
+    © 2026 하수구수사대. All rights reserved.
+</footer>
+</body>
+</html>
