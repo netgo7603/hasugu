@@ -30,13 +30,13 @@ IMAGES_BASE_DIR = os.path.join(BLOG_DIR, "images")
 
 HEADERS = {
     "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/124.0.0.0 Safari/537.36"
+        "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) "
+        "AppleWebKit/605.1.15 (KHTML, like Gecko) "
+        "Version/16.0 Mobile/15E148 Safari/604.1"
     ),
     "Referer": "https://m.blog.naver.com/",
     "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 }
 
 
@@ -107,19 +107,42 @@ def parse_blog(html, log_no):
     cover_match = re.search(r"background-image:url\(\'(https://mblogthumb[^\']+)\'\)", html)
     cover_image = cover_match.group(1).split("?")[0] if cover_match else ""
 
-    # 본문 콘텐츠 영역 추출 (se-main-container 또는 _postView)
+    # 본문 콘텐츠 영역 추출 (se-main-container 우선, fallback: _postView)
     content_html = ""
+    
+    # 방법1: se-main-container 전체 추출 (닫는 div를 세지 않고 클래스 기준)
     main_match = re.search(
-        r'(<div class="se-main-container".*?</div>\s*</div>\s*</div>\s*</div>)',
+        r'(<div class="se-main-container".*?<!-- SE_DOC_BODY_END -->)',
         html, re.DOTALL
     )
     if main_match:
         content_html = main_match.group(1)
     else:
-        # fallback: _postView 전체
-        post_match = re.search(r'<div class="_postView">(.*?)</div>\s*</div>\s*</div>\s*</div>\s*</div>', html, re.DOTALL)
+        # 방법2: se-main-container ~ </div></div></div> 유연 매칭
+        main_match = re.search(
+            r'(<div class="se-main-container".*?</div>\s*</div>\s*</div>)',
+            html, re.DOTALL
+        )
+        if main_match:
+            content_html = main_match.group(1)
+    
+    if not content_html:
+        # 방법3: _postView 전체 추출 (se-viewer 포함)
+        post_match = re.search(
+            r'(<div class="_postView">.*?<div class="se-viewer.*?</div>\s*</div>\s*</div>)',
+            html, re.DOTALL
+        )
         if post_match:
             content_html = post_match.group(1)
+    
+    if not content_html:
+        # 방법4: viewTypeSelector만이라도 추출
+        view_match = re.search(
+            r'(<div class="post_ct[^"]*".*?</div>\s*</div>\s*</div>)',
+            html, re.DOTALL
+        )
+        if view_match:
+            content_html = view_match.group(1)
 
     # 이미지 URL 추출 - data-lazy-src 우선 (w800 크기 URL 사용)
     image_urls = []   # 베이스 URL(쿼리 없는) 저장 -> 파일명 계산용
