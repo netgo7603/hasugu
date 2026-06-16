@@ -139,12 +139,12 @@ def parse_original_content(blog_id: str) -> dict:
     img_pattern = re.compile(r'<img[^>]+src="([^"]+)"', re.DOTALL)
     for img_src in img_pattern.findall(body):
         if 'logo' not in img_src and 'avatar' not in img_src:
-            # 만약 상대경로라면 슬래시 붙이기
-            if not img_src.startswith('/'):
-                img_src = '/' + img_src
+            # 파일명만 추출하여 표준 Nginx 경로 /blog/images/{blog_id}/{filename}로 저장
+            filename = os.path.basename(img_src)
+            img_path = f"/blog/images/{blog_id}/{filename}"
             # 중복 제거
-            if img_src not in images:
-                images.append(img_src)
+            if img_path not in images:
+                images.append(img_path)
                 
     # 3. 인용구(blockquote) 추출
     quotes = []
