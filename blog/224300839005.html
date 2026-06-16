@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="용인 수지구 풍덕천동 음식물처리기 배관막힘, 싱크대 하수관 청소작업 환영합니다. 용인 수지구 풍덕천동 ...">
+    <meta property="og:title" content="용인 풍덕천동 음식물처리기 배관막힘, 하수관 청소작업">
+    <meta property="og:description" content="용인 수지구 풍덕천동 음식물처리기 배관막힘, 싱크대 하수관 청소작업 환영합니다. 용인 수지구 풍덕천동 ...">
+    <meta property="og:image" content="images/224300839005/title01.jpg">
+    <title>용인 풍덕천동 음식물처리기 배관막힘, 하수관 청소작업 - 하수구수사대</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #0d47a1;
+            --accent: #ff5722;
+            --text-dark: #1a1a2e;
+            --text-mid: #444466;
+            --text-light: #888899;
+            --bg: #f8f9fc;
+            --card-bg: #ffffff;
+            --border: #e8eaf0;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,.06);
+            --shadow-md: 0 8px 32px rgba(0,0,0,.10);
+            --shadow-lg: 0 20px 60px rgba(0,0,0,.14);
+            --radius: 16px;
+            --radius-sm: 8px;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: var(--bg);
+            color: var(--text-dark);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── 헤더 ── */
+        .site-header {
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 50%, #1976d2 100%);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(13,71,161,.35);
+        }
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(255,255,255,.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        .logo-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+        .header-nav a {
+            color: rgba(255,255,255,.85);
+            text-decoration: none;
+            font-size: .9rem;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            transition: background .2s, color .2s;
+        }
+        .header-nav a:hover {
+            background: rgba(255,255,255,.15);
+            color: #fff;
+        }
+
+        /* ── 히어로 (커버 이미지) ── */
+        .post-hero {
+            position: relative;
+            width: 100%;
+            height: 460px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a237e, #283593);
+        }
+        .post-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .72;
+        }
+        .post-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0) 30%,
+                rgba(10,20,60,.75) 100%
+            );
+        }
+        .hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            padding: 40px 32px 36px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-size: .75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .hero-title {
+            font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.3;
+            text-shadow: 0 2px 12px rgba(0,0,0,.4);
+            margin-bottom: 14px;
+        }
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: rgba(255,255,255,.8);
+            font-size: .85rem;
+        }
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* ── 본문 레이아웃 ── */
+        .post-layout {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        /* ── 본문 카드 ── */
+        .post-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            padding: 48px;
+            margin-bottom: 32px;
+        }
+
+        /* ── 블로그 본문 스타일 ── */
+        .blog-body {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            line-height: 1.9;
+        }
+        .blog-body .blog-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-sm);
+            margin: 24px 0;
+            box-shadow: var(--shadow-sm);
+            display: block;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+        .blog-body .blog-image:hover {
+            transform: scale(1.01);
+            box-shadow: var(--shadow-md);
+        }
+        .blog-body p {
+            margin-bottom: 1em;
+        }
+        .blog-body b, .blog-body strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        .blog-body blockquote,
+        .blog-body .se-quotation-container {
+            border-left: 4px solid var(--primary);
+            background: #f0f4ff;
+            padding: 16px 20px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 24px 0;
+            font-style: italic;
+            color: var(--primary-dark);
+        }
+        .blog-body .se-caption {
+            text-align: center;
+            color: var(--text-light);
+            font-size: .85rem;
+            margin-top: -16px;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        /* se-viewer 기본 스타일 보정 */
+        .se-viewer {
+            font-family: 'Noto Sans KR', sans-serif !important;
+        }
+        .se-text-paragraph {
+            margin-bottom: .6em;
+        }
+        .se-text-paragraph-align-center {
+            text-align: center;
+        }
+        .se-section-image {
+            margin: 20px 0;
+        }
+        .se-module-image {
+            text-align: center;
+        }
+        .pcol3 {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* ── 공유/정보 박스 ── */
+        .post-info-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 32px;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .post-info-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .author-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .author-name {
+            font-weight: 700;
+            font-size: .95rem;
+            color: var(--text-dark);
+        }
+        .post-date {
+            font-size: .82rem;
+            color: var(--text-light);
+        }
+        .naver-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: #03c75a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: .85rem;
+            font-weight: 600;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .naver-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(3,199,90,.35);
+        }
+
+        /* ── 하단 CTA ── */
+        .cta-section {
+            background: linear-gradient(135deg, #0d47a1, #1976d2);
+            border-radius: var(--radius);
+            padding: 48px 40px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 32px;
+        }
+        .cta-section h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .cta-section p {
+            opacity: .85;
+            margin-bottom: 24px;
+            font-size: .95rem;
+        }
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform .2s, box-shadow .2s;
+            box-shadow: 0 4px 20px rgba(255,87,34,.4);
+        }
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255,87,34,.5);
+        }
+
+        /* ── 푸터 ── */
+        .site-footer {
+            background: #1a1a2e;
+            color: rgba(255,255,255,.55);
+            text-align: center;
+            padding: 32px 24px;
+            font-size: .82rem;
+            line-height: 1.8;
+        }
+        .site-footer strong {
+            color: rgba(255,255,255,.85);
+        }
+
+        /* ── 반응형 ── */
+        @media (max-width: 768px) {
+            .post-hero { height: 300px; }
+            .hero-content { padding: 24px 20px 28px; }
+            .post-card { padding: 28px 20px; }
+            .post-layout { padding: 28px 16px 60px; }
+            .cta-section { padding: 32px 24px; }
+            .header-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 헤더 -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo">
+            <div class="logo-icon">🔧</div>
+            <span class="logo-text">하수구수사대</span>
+        </a>
+        <nav class="header-nav">
+            <a href="../index.html">홈</a>
+            <a href="index.html">블로그</a>
+            <a href="../index.html#contact">상담문의</a>
+        </nav>
+    </div>
+</header>
+
+<!-- 히어로 -->
+<section class="post-hero">
+    <img src="images/224300839005/title01.jpg" alt="용인 풍덕천동 음식물처리기 배관막힘, 하수관 청소작업">
+    <div style="max-width:900px;margin:0 auto;position:relative;">
+        <div class="hero-content">
+            <span class="hero-badge">하수구막힘</span>
+            <h1 class="hero-title">용인 풍덕천동 음식물처리기 배관막힘, 하수관 청소작업</h1>
+            <div class="hero-meta">
+                <span>📅 2026. 5. 30. 12:32</span>
+                <span>✍️ 하수구수사대</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 본문 -->
+<main class="post-layout">
+
+    <!-- 작성자 정보 바 -->
+    <div class="post-info-bar">
+        <div class="post-info-left">
+            <div class="author-avatar">하</div>
+            <div class="author-info">
+                <span class="author-name">하수구수사대</span>
+                <span class="post-date">2026. 5. 30. 12:32</span>
+            </div>
+        </div>
+        <a href="https://blog.naver.com/hasugu2118/224300839005" target="_blank" rel="noopener" class="naver-link">
+            📝 네이버 원문 보기
+        </a>
+    </div>
+
+    <!-- 블로그 본문 -->
+    <article class="post-card">
+        <div class="blog-body">
+            <div class="se-main-container">
+                <div class="se-component se-text se-l-default" id="SE-08bc34d7-c9ad-4246-9ecd-22056c3c763d">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-e48b42d8-2bb8-4851-92e5-7f899ce32591"><span style="" class="se-fs- se-ff-   " id="SE-57c4eda1-cd3d-452b-aefc-49b65dc14262">​</span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                <div class="se-component se-quotation se-l-quotation_bubble" id="SE-eb488bdb-aadb-450c-9ece-a8212a4e4722">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-quotation se-l-quotation_bubble">
+                            <blockquote class="se-quotation-container">
+                                <div class="se-module se-module-text se-quote"><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align- " style="" id="SE-f07acb32-fa43-485d-9c4a-04038ed4a31f"><span style="" class="se-fs-fs16 se-ff-   " id="SE-193aa658-cb4f-4d97-85e4-410412816acd">용인 수지구 풍덕천동 음식물처리기</span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align- " style="" id="SE-20be32a6-ef3e-4989-b843-468a6c209597"><span style="" class="se-fs-fs16 se-ff-   " id="SE-e347a36b-878b-4302-ae61-e640eca9d3fc">배관막힘, 싱크대 하수관 청소작업</span></p><!-- } SE-TEXT --></div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="se-component se-text se-l-default" id="SE-b88ea989-529e-4271-8fa5-ffeb41464d76">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-bfaa4207-a9ed-4512-b319-61bc30c86976"><span style="" class="se-fs- se-ff-   " id="SE-3f4aee5d-f797-4399-b588-db791b8465ad"><b>​</b></span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                <div class="se-component se-image se-l-default" id="SE-bf37e341-47a3-4885-af4d-950355502a10">
+                    <div class="se-component-content se-component-content-normal">
+                        <div class="se-section se-section-image se-l-default se-section-align-center" style="max-width:800px;">
+                                <div class="se-module se-module-image" style="">
+                                    
+                                        <img src="images/224300839005/title01.jpg" alt="" class="blog-image" loading="lazy">
+                                    
+                                </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="se-component se-text se-l-default" id="SE-b54f8024-89d0-447e-ae0f-d0aad34e8967">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-2bb75344-10a2-4897-abe4-d8ae4d760d6f"><span style="" class="se-fs- se-ff-   " id="SE-33fb5f90-062b-4754-8bd9-dd209cc297db"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-e77dec3a-6099-468f-865b-760a81e83186"><span style="" class="se-fs- se-ff-   " id="SE-602068f8-7484-4aa6-9f01-bc63a541e8fc"><b>환영합니다.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-27d42807-662b-4280-8d09-49b72f1236e4"><span style="" class="se-fs- se-ff-   " id="SE-0c5d97bd-9c9a-45de-95f1-d63f15281eba"><b>용인 수지구 풍덕천동 배관막힘</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-f003d4b0-8e1b-4025-a59c-bff63fae7756"><span style="" class="se-fs- se-ff-   " id="SE-e4a99d10-1780-44e1-bbc9-a99096fd527f"><b>청소전문업체 </b></span><span style="color:#ff0010;" class="se-fs- se-ff-   " id="SE-e5522a53-8fc2-41fb-b271-fda37cebcafb"><b>하수구수사대</b></span><span style="" class="se-fs- se-ff-   " id="SE-45478b4d-3d99-4b4c-b2e3-93c6eeb62680"><b>입니다.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-60e5764c-9004-4f68-b9ea-87d224c0c423"><span style="" class="se-fs- se-ff-   " id="SE-77263a7a-5f48-45cc-9fce-be1bcae68890"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-35e64f51-cfed-4302-a6a1-a61b1fb4d79b"><span style="" class="se-fs- se-ff-   " id="SE-48cb6321-8c44-41b4-8611-f91abd233c69"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-a97b3b71-afb1-45b8-b2ca-556311d468d6"><span style="" class="se-fs- se-ff-   " id="SE-290ebc41-273b-4d00-bb12-a70fef18d3ad"><b>오늘 시공 후기는</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-468a959f-69b3-46d2-9b5f-35b555b6289b"><span style="" class="se-fs- se-ff-   " id="SE-e89abf63-cdc0-4646-8444-0a7232779438"><b>용인 수지구 풍덕천동에 위치한</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-fa5ded76-02e2-4147-8d34-606f4296672d"><span style="" class="se-fs- se-ff-   " id="SE-b9fca7b1-d169-4c58-9aeb-cff43e9c9b91"><b>한 아파트에서 싱크대 물이 전혀</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-2526056f-91bd-4a0a-82e7-6b569770f04a"><span style="" class="se-fs- se-ff-   " id="SE-3cb8817a-eea4-40d9-a83b-c2ec0352725c"><b>빠지지 않고 수조에 그대로 고인다는</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-96463e27-5258-407f-acc6-00503372a4c0"><span style="" class="se-fs- se-ff-   " id="SE-c7d27bef-29ae-4292-bc19-36a78e42a645"><b>다급한 연락을 받고 출동한 사례입니다.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-7adf81d2-2559-45e7-84a1-9064758ef6bc"><span style="" class="se-fs- se-ff-   " id="SE-afd8a8b2-7035-4c7e-8624-22a5d848d8f6"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-f9b05ebe-cece-499a-bce1-b54f3d540af1"><span style="" class="se-fs- se-ff-   " id="SE-c429694f-2178-47f4-8ae3-9f6bdc1744b8"><b>​</b></span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                <div class="se-component se-image se-l-default" id="SE-bd1a20ff-6ca4-4cc8-b44c-4db6af6d3887">
+                    <div class="se-component-content se-component-content-normal">
+                        <div class="se-section se-section-image se-l-default se-section-align-center" style="max-width:800px;">
+                                <div class="se-module se-module-image" style="">
+                                    
+                                        <img src="images/224300839005/3.jpg" alt="" class="blog-image" loading="lazy">
+                                    
+                                </div>
+                            <div class="se-module se-module-text se-caption"><p class="se-text-paragraph se-text-paragraph-align- " style="" id="SE-e2c0b1bc-3767-4a7b-a422-6c1918bf9c1a"><span style="" class="se-fs- se-ff-   " id="SE-f030b1eb-ca57-4d3b-991c-d83cf07f3024">용인 풍덕천동 음식물처리기 배관막힘 현장</span></p></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="se-component se-text se-l-default" id="SE-1275e336-f683-4d36-b62b-123118475a80">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-166bb0a6-8166-47f6-bf1c-7423550f96e7"><span style="" class="se-fs- se-ff-   " id="SE-ff643fb4-3b25-4688-b6a7-fc5ea02ba6a6"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-7e9849a7-07f6-4f1c-8a86-506daa250ac2"><span style="" class="se-fs- se-ff-   " id="SE-52ee4841-77c0-445c-9f8a-a9683506b6b6"><b>이번 용인 풍덕천동 배관막힘 현장은</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-dacb2399-eba3-4cf5-b807-82e4841a1cb5"><span style="" class="se-fs- se-ff-   " id="SE-1f4fdf37-54a6-49c4-941a-70520fc61af0"><b>음식물처리기를 사용 중인</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-f7e547bd-2a07-40d4-80d8-7ddd78eaf49e"><span style="" class="se-fs- se-ff-   " id="SE-1ac345e4-8872-40d8-9f3c-549758570142"><b>가구였는데요. 주방 하부장을 열어보니</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-552c78fa-7f89-4b1c-9c8c-b2c18d247067"><span style="" class="se-fs- se-ff-   " id="SE-6aed5942-8857-4021-af21-e09db9855aff"><b>일반적인 싱크대보다 훨씬 복잡한</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-7784e492-daec-489b-be9c-c6d46a478e0c"><span style="" class="se-fs- se-ff-   " id="SE-df54adc6-71cf-4320-9a02-baaf237aa254"><b>배수 라인이 형성되어 있었습니다.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-5f8e9d13-7fdc-4ac7-84a3-9dfcc70de2a8"><span style="" class="se-fs- se-ff-   " id="SE-c1b54bb4-8009-41ad-b8fc-3c0983f8d6a7"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-f18fe0dd-066a-47bc-9e04-3715493b2dd9"><span style="" class="se-fs- se-ff-   " id="SE-1a1a76ba-762d-4dbd-b87b-4007878144ae"><b>​</b></span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                <div class="se-component se-image se-l-default" id="SE-8110ced5-e77d-4ad4-8c43-b9d8a33aaae0">
+                    <div class="se-component-content se-component-content-normal">
+                        <div class="se-section se-section-image se-l-default se-section-align-center" style="max-width:800px;">
+                                <div class="se-module se-module-image" style="">
+                                    
+                                        <img src="images/224300839005/12.jpg" alt="" class="blog-image" loading="lazy">
+                                    
+                                </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="se-component se-text se-l-default" id="SE-81d3442e-ec1d-4f56-90ba-7dba6d5a94c4">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-fed4d4e3-1bab-4124-8a18-99bf0d73bb8d"><span style="" class="se-fs- se-ff-   " id="SE-d99572d3-f258-406a-bba4-b04457f2e184"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-9bfdab4d-2505-4261-b5e3-f982f171bf28"><span style="" class="se-fs- se-ff-   " id="SE-8d2294c0-21ff-419e-8f7a-21144cb90753"><b>이러한 구조는 겉으로 보기에는</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-9b68550c-a8ba-4bdf-ad37-0883ed2679bc"><span style="" class="se-fs- se-ff-   " id="SE-6207d385-374e-4beb-8eec-459fb672414c"><b>문제가 없어 보이지만, 내부 통로가</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-e006e069-2396-4d39-864f-4ad6fe482d72"><span style="" class="se-fs- se-ff-   " id="SE-d8a15497-5760-48e3-ad60-79cdebebd988"><b>좁아지기 쉬운 환경이라 기름때나</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-d2eebfb0-e595-4703-b36b-9476dd155412"><span style="" class="se-fs- se-ff-   " id="SE-c086f0e5-ee1e-49ca-8143-0844388cc545"><b>작은 찌꺼기가 조금만 쌓여도 금세</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-2a2b9c7e-f660-4555-8fec-7ade2fe86892"><span style="" class="se-fs- se-ff-   " id="SE-58697b18-ffdd-4a74-9320-e5bb467819b0"><b>배관막힘 현상이 발생하곤 합니다.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-3bd3cfb9-917d-4475-9fa9-a92ca558d1c8"><span style="" class="se-fs- se-ff-   " id="SE-5e044b9c-f2c8-4f78-a99d-be692f7f03dd"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-44f25458-38df-49be-838c-ed99a8aaf545"><span style="" class="se-fs- se-ff-   " id="SE-0b222fc7-5364-4386-aeb4-c5fb3fea9cb5"><b>​</b></span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                <div class="se-component se-quotation se-l-quotation_line" id="SE-82c68a8a-f2a2-4ebe-a68e-119ebc602b42">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-quotation se-l-quotation_line">
+                            <blockquote class="se-quotation-container">
+                                <div class="se-module se-module-text se-quote"><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align- " style="" id="SE-3ee3e231-cfa5-482b-95ee-ea361e910bb0"><span style="" class="se-fs- se-ff-   " id="SE-e180433f-295a-48a4-9462-a489e8d51a1f"><b>내시경 점검으로 드러난 배관막힘 원인</b></span></p><!-- } SE-TEXT --></div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="se-component se-text se-l-default" id="SE-8c06b31b-e190-4392-af12-7640ae90d773">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-f25cf921-26e7-4490-b3f5-b87cb3014ee1"><span style="" class="se-fs- se-ff-   " id="SE-91deeaf1-f494-42f3-b824-363931806f63"><b>​</b></span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                <div class="se-component se-image se-l-default" id="SE-5ae57f86-d0f8-486b-977c-ad9485cb60fc">
+                    <div class="se-component-content se-component-content-normal">
+                        <div class="se-section se-section-image se-l-default se-section-align-center" style="max-width:800px;">
+                                <div class="se-module se-module-image" style="">
+                                    
+                                        <img src="images/224300839005/5.jpg" alt="" class="blog-image" loading="lazy">
+                                    
+                                </div>
+                            <div class="se-module se-module-text se-caption"><p class="se-text-paragraph se-text-paragraph-align- " style="" id="SE-5d6e3051-2f14-4b72-879e-485e617d6d63"><span style="" class="se-fs- se-ff-   " id="SE-f8c8df8d-fd0c-4a2c-baca-46afe6c6a9a5">풍덕천동 음식물처리기 배관 점검 과정</span></p></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="se-component se-text se-l-default" id="SE-bac6c83e-cd72-4bcf-b5bc-4b89e4695e03">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-f6ec8f18-1622-44c6-9705-5b4d191145d7"><span style="" class="se-fs- se-ff-   " id="SE-0fbfde85-f492-4ffb-806a-e088af6d8583"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-4ecc02f8-6912-4348-b140-ed5292c7cd30"><span style="" class="se-fs- se-ff-   " id="SE-7645a8a6-6618-41b3-ace8-dd27f95e98ac"><b>먼저 용인 풍덕천동 배관막힘의</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-74a1900f-67b1-4ebc-8027-0309efa1a357"><span style="" class="se-fs- se-ff-   " id="SE-e5e219d0-146a-467f-96f9-173f502df473"><b>정확한 원인 파악을 위해</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-0733de32-4670-4d7a-9f7b-0e2533c52f33"><span style="" class="se-fs- se-ff-   " id="SE-76b60bda-8f7a-4ea4-9331-0c4b83d40333"><b>내시경 카메라를 투입했는데요.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-11280f79-1234-4281-bb4b-36c993123431"><span style="" class="se-fs- se-ff-   " id="SE-e5ce7ed3-490a-4942-beac-9465e29e9d27"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-5ffac4c5-69ba-4ff6-b448-0751d3878c71"><span style="" class="se-fs- se-ff-   " id="SE-59d458e6-62b8-4c3b-84a0-2f95d164a6ba"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-8dedb7aa-e61b-413d-8ece-298711f23277"><span style="" class="se-fs- se-ff-   " id="SE-07374e4e-0945-472b-a2bc-e399ff60a7ee"><b>모니터를 통해 확인한 하수관 내부의</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-60d7974f-2794-4a3c-b584-1f52f60ddb5b"><span style="" class="se-fs- se-ff-   " id="SE-68e3d622-e1b5-4b96-87ce-b60ccc6000a4"><b>상태는 생각보다 심각했습니다.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-224369a1-bee6-448d-9992-4f4a29648e4f"><span style="" class="se-fs- se-ff-   " id="SE-6196acaf-02c0-4af3-bb7e-62cad15ce6e4"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-3aafb256-5be9-4fc5-9410-dbf470aba3af"><span style="" class="se-fs- se-ff-   " id="SE-c91131b0-2088-466a-8251-704112ac3d88"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-ad44033f-0364-4047-9bc9-2837fa146967"><span style="" class="se-fs- se-ff-   " id="SE-a48f8000-62cf-4cd5-92a9-2db47d00b7f8"><b>음식물처리기 사용으로 인해</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-a07f8d55-9b7b-4be4-bab5-be58ec93735a"><span style="" class="se-fs- se-ff-   " id="SE-adb6ea7a-1180-43b7-9d5e-19bfefd51cad"><b>잘게 갈린 찌꺼기들이 기름 슬러지와</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-976a4f02-90c9-43c8-9f82-21fef826540b"><span style="" class="se-fs- se-ff-   " id="SE-71a131d9-9610-4286-8dbb-9ceead4c62d1"><b>뒤엉켜 단단하게 고착되어 있었고,</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-892dc706-1e74-45ce-aab7-91fa25341102"><span style="" class="se-fs- se-ff-   " id="SE-96e49ddb-5beb-4945-a1ee-83603ceade22"><b>이것이 통로를 꽉 막고 있었습니다.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-bbc9e077-9e1a-48b3-85f9-1e0777a1312f"><span style="" class="se-fs- se-ff-   " id="SE-1a4a4393-6600-46d4-bb45-c387ac92f7e7"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-0cf99eab-b6ab-4d45-879c-585f3779bee3"><span style="" class="se-fs- se-ff-   " id="SE-a627622d-46dd-4481-a465-8ce75eca4a6a"><b>​</b></span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                <div class="se-component se-image se-l-default" id="SE-cab3f574-52c6-4941-a457-b51a9a5a9125">
+                    <div class="se-component-content se-component-content-normal">
+                        <div class="se-section se-section-image se-l-default se-section-align-center" style="max-width:800px;">
+                                <div class="se-module se-module-image" style="">
+                                    
+                                        <img src="images/224300839005/9.jpg" alt="" class="blog-image" loading="lazy">
+                                    
+                                </div>
+                            <div class="se-module se-module-text se-caption"><p class="se-text-paragraph se-text-paragraph-align- " style="" id="SE-d2c11614-4f82-4861-b6a2-4ab4930be7b6"><span style="" class="se-fs- se-ff-   " id="SE-e6e2fa23-85c1-4113-96e2-94e25925ed1a">고객님께 하수관 내부 환경을 공유하는 과정</span></p></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="se-component se-text se-l-default" id="SE-a9d49070-d2b5-45de-91e1-d281d73380f2">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-52a229cb-ed93-4bb0-b6a6-9317c90074cf"><span style="" class="se-fs- se-ff-   " id="SE-991171b9-11d5-4bc1-807d-84b7c7b3be68"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-f6b1cfc2-9ce1-4953-9479-662cccefea28"><span style="" class="se-fs- se-ff-   " id="SE-eafbe87c-e934-43fd-8f76-5d59b6842540"><b>고객님께 실시간으로 화면을 보여드리며</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-421a5d19-1a30-4f00-883f-c18014c25836"><span style="" class="se-fs- se-ff-   " id="SE-934f73eb-fdd0-45d1-940c-af24fd892601"><b>왜 싱크대 물이 내려가지 않았는지,</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-b1a120f9-692c-4a97-851e-f05967f22e8c"><span style="" class="se-fs- se-ff-   " id="SE-ad4ae678-9f3a-43be-8ef5-a2f2882293bc"><b>현재 내부가 어떤 상태인지 상세히</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-a50a309f-e2f5-4887-94ce-b55049cfe058"><span style="" class="se-fs- se-ff-   " id="SE-6c4082b6-08c7-4f28-a9b9-4c01328a069e"><b>공유했는데요.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-9f968cdd-515f-4e9c-9e31-27390ac6f5a4"><span style="" class="se-fs- se-ff-   " id="SE-00935121-33e8-4363-a0cf-44251bbea5b9"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-b8392d07-326d-4fde-85bb-6f8a32d9adfa"><span style="" class="se-fs- se-ff-   " id="SE-449a7d23-716d-49a7-80bc-3df7c853b9c7"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-dbb6dc30-9f9e-47dd-8803-16b3a0388f38"><span style="" class="se-fs- se-ff-   " id="SE-c61ec774-335a-4f2e-bedf-a7062b799b67"><b>수지구 풍덕천동 싱크대 하수관막힘</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-e98fac75-0c36-404e-aeb7-b2aa95333e70"><span style="" class="se-fs- se-ff-   " id="SE-feb89827-c90d-4ddb-820c-487889b595b4"><b>원인이 명확히 드러났기에 즉시</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-5796999b-cd7f-4887-b696-233dcfa36700"><span style="" class="se-fs- se-ff-   " id="SE-474f0e90-fb48-4d01-8cf6-6300e26b0117"><b>샤프트 장비를 준비하여 하수관 청소</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-3348e08e-db2a-471f-a357-fee83d9a6c98"><span style="" class="se-fs- se-ff-   " id="SE-6787e01d-1e59-461f-bc5c-ead9d0fbd340"><b>작업을 시작했습니다.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-9e94b692-f6e8-40c6-a1b9-2add3701a758"><span style="" class="se-fs- se-ff-   " id="SE-25f3ab5c-9ee9-4e71-aca7-2eef550b64eb"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-d110567f-81f9-41af-a9b7-fdf0ec190c61"><span style="" class="se-fs- se-ff-   " id="SE-08e74034-89be-4777-bf82-95b1c55447a2"><b>​</b></span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                <div class="se-component se-image se-l-default" id="SE-395d178f-8b72-4064-9036-d31548b0c98d">
+                    <div class="se-component-content se-component-content-normal">
+                        <div class="se-section se-section-image se-l-default se-section-align-center" style="max-width:800px;">
+                                <div class="se-module se-module-image" style="">
+                                    
+                                        <img src="images/224300839005/7.jpg" alt="" class="blog-image" loading="lazy">
+                                    
+                                </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="se-component se-text se-l-default" id="SE-1efbb788-2cad-4812-bba6-6fcf6f77ab6c">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-1c4b7e6d-2aae-4c64-b674-65e8d15fed64"><span style="" class="se-fs- se-ff-   " id="SE-251df6a0-6506-4dfa-92ba-9efdaafa6979"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-886a712c-2222-445d-a04b-43dd8684b46c"><span style="color:#ff0010;" class="se-fs- se-ff-   " id="SE-0284e2c7-4666-4d51-ba4d-bd0cb57e4033"><b>참고로 음식물처리기 사용 세대의 경우</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-41c738b2-54b9-46da-a861-d392e4c12906"><span style="color:#ff0010;" class="se-fs- se-ff-   " id="SE-23aee096-ed1c-4d80-bba3-e9fb33bd5144"><b>기름 성분과 미세한 입자들이 결합해</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-ab11028c-465c-4347-b94b-8dea36e9348b"><span style="color:#ff0010;" class="se-fs- se-ff-   " id="SE-8753c334-93ee-4c1c-b07e-b6df345a3597"><b>매우 단단한 덩어리를 만들기 때문에</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-16fef578-e580-4ad8-9fac-0f859d7da616"><span style="color:#ff0010;" class="se-fs- se-ff-   " id="SE-5b39f510-0b85-408a-ae26-228535b9fc61"><b>무리한 힘을 가하기보다는 조금씩</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-b0e27745-62c2-4df7-9d74-2c2c28f71123"><span style="color:#ff0010;" class="se-fs- se-ff-   " id="SE-609eb900-0a5d-415f-a0ef-159615beb737"><b>분쇄하며 제거하는 것이 중요합니다.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-8aabfaef-bded-4fca-9749-9da4c1c574ca"><span style="color:#ff0010;" class="se-fs- se-ff-   " id="SE-ed8d277b-1ad3-43bb-923c-bf1ee49301c6"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-eb77acbd-4a5a-4819-94ee-65cae539db50"><span style="color:#ff0010;" class="se-fs- se-ff-   " id="SE-8a5310f8-77b3-40d1-815a-876af8646e84"><b>​</b></span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                <div class="se-component se-image se-l-default" id="SE-a97ff72a-10ea-4b09-8c7a-c929526b2a13">
+                    <div class="se-component-content se-component-content-normal">
+                        <div class="se-section se-section-image se-l-default se-section-align-center" style="max-width:800px;">
+                                <div class="se-module se-module-image" style="">
+                                    
+                                        <img src="images/224300839005/8.jpg" alt="" class="blog-image" loading="lazy">
+                                    
+                                </div>
+                            <div class="se-module se-module-text se-caption"><p class="se-text-paragraph se-text-paragraph-align- " style="" id="SE-04d21a67-adf6-4def-b5f8-3251f4b63129"><span style="" class="se-fs- se-ff-   " id="SE-0544faad-3e9a-4195-8b67-398c27848327">샤프트 장비로 하수관 청소 작업 중</span></p></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="se-component se-text se-l-default" id="SE-0f0cd5f4-b00d-4cab-b328-7c2ddb575e8e">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-537e9c04-53a3-4a5b-916b-93b520b7eb78"><span style="" class="se-fs- se-ff-   " id="SE-1cc163ec-5cca-44cc-a2b1-1128b1f8bc0d"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-c8a88e3e-9fdd-4808-b47e-10ee8ed197e9"><span style="" class="se-fs- se-ff-   " id="SE-01793002-cf6f-45b5-8f49-a51127f00f31"><b>샤프트 장비를 이용해 내부 이물질을</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-259922e6-9263-4ed8-ad12-f84ad54106ad"><span style="" class="se-fs- se-ff-   " id="SE-56d3c0f7-2481-4a40-a311-fc2503db0585"><b>세밀하게 타격하면서 내시경으로</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-710ceee4-8419-49f9-8382-ddc255907215"><span style="" class="se-fs- se-ff-   " id="SE-a6c05981-d955-46b4-9645-c5374ff37a22"><b>진행 과정을 계속해서 확인했는데요.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-0134fd9b-f8c7-4d87-97f3-26acffcc211a"><span style="" class="se-fs- se-ff-   " id="SE-a4b1fe9f-d082-42b0-bb1b-0ec6786863e2"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-a7c590a7-e93e-488f-b79a-2983352894d7"><span style="" class="se-fs- se-ff-   " id="SE-fa9459c4-06d6-4aba-b812-bf4e9af57ce4"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-57f35650-1343-4f4d-b20e-1e51edb3757e"><span style="" class="se-fs- se-ff-   " id="SE-13dcfd69-4b0e-4aa6-8be7-e155289b471c"><b>점차 굳은 덩어리들이 부서지고</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-d617d1f2-78ca-4899-a4b9-cf0d3ef13d52"><span style="" class="se-fs- se-ff-   " id="SE-831d48c0-9eee-4826-abf7-7286f291b39d"><b>꽉 막혀있던 배관의 통로가 확보되면서</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-65abb36d-f278-428e-bc57-9d0cfee352ee"><span style="" class="se-fs- se-ff-   " id="SE-1b42229d-9f04-4e26-ac29-ce110f01bb1d"><b>물이 시원하게 내려가는 것을</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-29534274-6bcc-490c-9170-87d3f25c3001"><span style="" class="se-fs- se-ff-   " id="SE-bd204dde-5165-4ff1-92ac-1b804bdeff1e"><b>모니터 화면으로 확인할 수 있었습니다.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-58ccd37f-1e29-4e4d-902e-5d1440431762"><span style="" class="se-fs- se-ff-   " id="SE-6e489f22-6a21-48ea-a407-967d7effd64c"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-01c281b0-bf85-4f7d-9134-fdd1a140be99"><span style="" class="se-fs- se-ff-   " id="SE-e543c50b-4f15-47bd-9a8f-1c3ccf2f1052"><b>​</b></span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                <div class="se-component se-quotation se-l-quotation_line" id="SE-6d96c625-89fd-49ce-a23f-f1605cd03ce0">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-quotation se-l-quotation_line">
+                            <blockquote class="se-quotation-container">
+                                <div class="se-module se-module-text se-quote"><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align- " style="" id="SE-1c32f9ce-d4a1-4ced-b5a6-2072cebc330c"><span style="" class="se-fs- se-ff-   " id="SE-b239ecad-cd84-4214-8ad7-44a8b4b7d789"><b>싱크대 하수관 청소 후 배수 테스트까지 진행</b></span></p><!-- } SE-TEXT --></div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="se-component se-text se-l-default" id="SE-40799779-b470-49ec-844f-8507e583ae65">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-05aebd20-b490-4fb1-8fe7-b07ab9d3d6e4"><span style="" class="se-fs- se-ff-   " id="SE-1b51fa14-cfd6-4443-b46f-239ce1fba62d"><b>​</b></span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                <div class="se-component se-image se-l-default" id="SE-b3109d91-d2ef-4d07-b9d0-bc99964b630f">
+                    <div class="se-component-content se-component-content-normal">
+                        <div class="se-section se-section-image se-l-default se-section-align-center" style="max-width:800px;">
+                                <div class="se-module se-module-image" style="">
+                                    
+                                        <img src="images/224300839005/11.jpg" alt="" class="blog-image" loading="lazy">
+                                    
+                                </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="se-component se-text se-l-default" id="SE-3b784626-b87d-4233-8ce1-bf8c77396b2a">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-9481c359-3a2d-4909-9e07-d2e580db5ca6"><span style="" class="se-fs- se-ff-   " id="SE-4a8d314f-0805-40cb-a5b3-d31ec6c4c5ba"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-74a59ca9-fcb5-4747-bd31-e6e0a5ee0d66"><span style="" class="se-fs- se-ff-   " id="SE-8af74cc6-76d2-4ce3-85b4-2441b2816299"><b>용인 풍덕천동 음식물처리기 배관막힘</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-c94bea3e-375b-4c39-a56b-c737c953aeb3"><span style="" class="se-fs- se-ff-   " id="SE-1291c0cf-da4d-4f74-9475-7acb376093d9"><b>청소 작업이 마무리된 후에는 싱크대에</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-bce11009-2476-4eaa-8524-d07367ff6482"><span style="" class="se-fs- se-ff-   " id="SE-7c6f9dd8-43a7-46e2-9e9f-6700c53aaf2b"><b>가득 물을 받아 한꺼번에 흘려보내는</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-99f98bff-7429-4dea-9e59-7a1830e60db6"><span style="" class="se-fs- se-ff-   " id="SE-62f75cd0-687f-4404-babe-2ad1c3dbe946"><b>배수 테스트를 진행했는데요.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-29d088fd-0470-4148-8f47-0e6ea340870a"><span style="" class="se-fs- se-ff-   " id="SE-9d13241b-fc6a-4c5d-9bdf-d5a96992f4dd"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-d0f9c4b3-17eb-4171-9e0d-4d39af1b26df"><span style="" class="se-fs- se-ff-   " id="SE-13cb6f72-48a3-4090-b58e-5d67b1cb77e4"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-1d3346ef-979c-40cf-9d26-e32b019323b9"><span style="" class="se-fs- se-ff-   " id="SE-15b3e1c3-751d-4f6f-863c-2011af5bc915"><b>수조에 물이 고이지 않고 막힘없이</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-d2ffad22-67bd-46a8-8ad4-8fe270504654"><span style="" class="se-fs- se-ff-   " id="SE-275c7b2f-23e0-4f63-92a1-f4febfd300b3"><b>원활하게 배출되는 것을 고객님과 함께</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-d51ce18e-4ffd-47d6-895e-e4de49991f1a"><span style="" class="se-fs- se-ff-   " id="SE-7daa9a83-446a-4727-894f-ef0d7f3cb049"><b>확인한 후 현장을 정리할 수 있었습니다.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-3227f36e-30ad-403e-822f-c21b38e2d86f"><span style="" class="se-fs- se-ff-   " id="SE-8e68871e-90e8-4a0c-9ff8-86d919e01774"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-fbfa9360-9eed-4197-945e-993a2926acd5"><span style="" class="se-fs- se-ff-   " id="SE-8be9a072-6f79-421d-9b61-225bd8376f5d"><b>​</b></span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                <div class="se-component se-image se-l-default" id="SE-2e702c4f-de0f-4154-be03-689b8df1f010">
+                    <div class="se-component-content se-component-content-normal">
+                        <div class="se-section se-section-image se-l-default se-section-align-center" style="max-width:800px;">
+                                <div class="se-module se-module-image" style="">
+                                    
+                                        <img src="images/224300839005/6.jpg" alt="" class="blog-image" loading="lazy">
+                                    
+                                </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="se-component se-text se-l-default" id="SE-97e9a1e8-29d3-48d2-b6f4-faac16403c56">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-3aecbe33-7eaa-49fb-b110-a0f52f7701cb"><span style="" class="se-fs- se-ff-   " id="SE-a5f43b15-b026-4bf7-811e-bbddb3324271"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-d1aaf577-4297-42e6-b666-c52b97213752"><span style="" class="se-fs- se-ff-   " id="SE-65ee560c-ef0c-46f4-bd1c-2877f32a9780"><b>이번 배관막힘 하수관 청소작업 사례는</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-bee3eaca-9611-496b-a8f5-265ffde00efb"><span style="" class="se-fs- se-ff-   " id="SE-11b445d2-b940-4beb-81f2-c0a9a4d10c50"><b>음식물처리기를 사용하는 가정에서</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-797a517e-20fd-424d-88c2-87f2f471d0a1"><span style="" class="se-fs- se-ff-   " id="SE-0fc093ac-1622-4a40-a6f0-dadd282ecc14"><b>흔히 겪을 수 있는 배관 문제를</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-b40444f8-12a2-4e05-819e-397cf54e79a0"><span style="" class="se-fs- se-ff-   " id="SE-ffe060ab-bc2e-408c-b30c-37158c21aaff"><b>내시경 점검과 샤프트 작업을 통해</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-9a99a59e-5aaa-4454-af2f-fe956da4b8c5"><span style="" class="se-fs- se-ff-   " id="SE-e7dda526-934f-46d8-b3dd-44ffe52050b4"><b>근본적으로 해결한 과정이었는데요.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-334aec11-9e5e-43fe-a685-e557ba8cef98"><span style="" class="se-fs- se-ff-   " id="SE-634b57c2-f08c-456d-86a1-34c51ad25186"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-3971d81a-afe9-49c8-ae7b-90f78625dbc5"><span style="" class="se-fs- se-ff-   " id="SE-290cf124-c5c5-4622-a73f-7ea6ab780555"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-f84da1fe-da92-426d-b188-a1e3bbd48a43"><span style="" class="se-fs- se-ff-   " id="SE-fe89b6f2-f3f0-405c-965a-f05fb0a59ea8"><b>음식물처리기는 편리한 도구지만,</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-2232856a-ad21-455e-b4de-6a3cbdf8fa86"><span style="" class="se-fs- se-ff-   " id="SE-263c57ae-6123-4bb1-8b5e-4511d12b260c"><b>기름기가 많은 음식을 처리하거나</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-b3ce6de8-4a9e-4202-8875-fbe40fe6bd94"><span style="" class="se-fs- se-ff-   " id="SE-fb09498c-2c90-4a13-b35a-36d794b5e44f"><b>한 번에 많은 양을 투입할 경우</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-ac8b5fb2-2eb1-47bd-b356-71ead6584294"><span style="" class="se-fs- se-ff-   " id="SE-b889eb19-8d22-48e9-a33f-465ef195ed40"><b>내부에 기름과 전분기가 쉽게 쌓일 수</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-e9dac46f-dba2-4642-939a-0fbc4e79e14d"><span style="" class="se-fs- se-ff-   " id="SE-b3d6683d-9c59-46c5-b40f-19f5f0668b61"><b>있으니 사용에 주의가 필요합니다.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-981c8d75-d7cc-49e9-ab1e-f75e12ccd4ac"><span style="" class="se-fs- se-ff-   " id="SE-51170aa2-f2c9-4d16-8792-dfc9f324903b"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-5a4742f7-45f7-4dac-9789-10ab4c24c302"><span style="" class="se-fs- se-ff-   " id="SE-3ed8bd0d-0004-4c0a-99e3-80e2ac39b9f8"><b>​</b></span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                <div class="se-component se-image se-l-default" id="SE-843d24eb-d4fb-4478-a77f-e36657583859">
+                    <div class="se-component-content se-component-content-normal">
+                        <div class="se-section se-section-image se-l-default se-section-align-center" style="max-width:800px;">
+                                <div class="se-module se-module-image" style="">
+                                    
+                                        <img src="images/224300839005/4.jpg" alt="" class="blog-image" loading="lazy">
+                                    
+                                </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="se-component se-text se-l-default" id="SE-80557422-b18f-4825-b297-c223e4c24a77">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-8687ddaa-3a59-40f0-aa65-ae13e1c73f61"><span style="" class="se-fs- se-ff-   " id="SE-81d2e9e7-6d57-4cb9-86f6-ea3f954b26a5"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-c99dedb4-69c4-42c6-95f2-8487610b7e89"><span style="" class="se-fs- se-ff-   " id="SE-367ab5c7-1c8c-475a-8ef9-7e040b1698a2"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-a0a19fb9-b1c1-4109-a4b1-0ae65b5bccf9"><span style="" class="se-fs- se-ff-   " id="SE-082f4c2b-06d4-41e0-b411-b7d0960bc292"><b>지금 만약 배수가 평소보다 느려졌다고</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-375d6cd5-0ebb-4e12-bcc9-044de930f26e"><span style="" class="se-fs- se-ff-   " id="SE-e9070ae0-8585-48ed-8013-45cac4756c4c"><b>느껴진다면 단순히 세정제에 의존하기보다</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-e8069051-36be-48f8-8381-972a6ce868d8"><span style="" class="se-fs- se-ff-   " id="SE-2d2cd8b5-1595-4573-becc-0848a1e3f4f9"><b>내부 상태를 점검하는 것이 좋은데요.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-f692a9e4-810f-4adf-a723-a1d2d1d0cd5c"><span style="" class="se-fs- se-ff-   " id="SE-550e49ba-8009-405f-9307-d374bc1ce81b"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-7685bbc9-e652-48be-8805-5201fcc7264f"><span style="" class="se-fs- se-ff-   " id="SE-3302863d-31a2-4870-8362-7235a6271b14"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-ed265ccc-9bbe-45ab-99cd-65a96a64370a"><span style="" class="se-fs- se-ff-   " id="SE-98e921fa-40ee-4d45-ac31-e43148cea35e"><b>용인 풍덕천동 지역에서 갑작스러운</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-25753426-7e71-41d7-b9ae-f39c4dce6753"><span style="" class="se-fs- se-ff-   " id="SE-06bd8127-f8e0-4a07-8d89-9260331b8f1c"><b>싱크대 배관막힘으로 불편을 겪고 있다면</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-ab1d0b2f-ad0b-4c66-9abc-db853cebae29"><span style="color:#ff0010;" class="se-fs- se-ff-   " id="SE-6ea1240a-5d00-46db-804c-8b36d31e45d2"><b>하수구수사대가</b></span><span style="color:#0078cb;" class="se-fs- se-ff-   " id="SE-41644690-e001-430a-98e6-8f69c7a8247a"><b> 각 현장의 배관 상태를</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-228dea06-fff2-4ded-8e19-6aac08f3078b"><span style="color:#0078cb;" class="se-fs- se-ff-   " id="SE-1462c395-f60c-4e61-9777-f7300604486a"><b>면밀히 분석하고 그에 최적화된 장비를</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-b9920f8e-5706-4abf-bfc5-a060449dc158"><span style="color:#0078cb;" class="se-fs- se-ff-   " id="SE-bdc1dd0e-3365-4278-9df3-c59df92f7593"><b>활용해 신속하고 정확하게 막힘 문제를</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-9422716c-28bb-490d-b2e1-8fd656dbfcc6"><span style="color:#0078cb;" class="se-fs- se-ff-   " id="SE-7b857965-03a2-4109-b0ab-eb827825bd24"><b>해결해 드리겠습니다.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-0d33de20-934e-44e0-a12b-fda547c67e84"><span style="color:#0078cb;" class="se-fs- se-ff-   " id="SE-b538bd1d-71c6-4d46-aa25-87b7457a6be0"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-2af701d8-8958-4190-8ddc-b6515654cd8c"><span style="color:#ff0010;" class="se-fs- se-ff-   " id="SE-01d3e475-1532-45a8-95c9-de4028b3d55e"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-421cfcaf-8148-4a51-aef3-8bd175f56620"><span style="" class="se-fs- se-ff-   " id="SE-4c92c9ae-d187-412f-87c4-2a802b0fc36b"><b>올바른 음식물처리기 사용 습관과</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-e70b1460-d29a-4de0-8f2b-3e1eeeb9e11d"><span style="" class="se-fs- se-ff-   " id="SE-1f76dfae-7a89-4b17-9743-7687f6c875e6"><b>정기적인 청소 관리가 병행된다면</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-a9e16567-ec4d-4e15-ae6b-10c1a3e34121"><span style="" class="se-fs- se-ff-   " id="SE-73267aef-05b0-474a-bfd1-fde417d98110"><b>막힘없는 환경을 유지할 수 있습니다.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-8854c44e-fd7b-4346-9812-33b6b4d75f97"><span style="" class="se-fs- se-ff-   " id="SE-3803b0eb-d814-4f74-8c5f-f9e88089b19a"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-818d760c-e84b-4720-868d-ebece155d882"><span style="" class="se-fs- se-ff-   " id="SE-5aee1b64-aa94-4a9b-a061-f7c22892baeb"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-047fb775-a8e7-4cb9-9e83-b21bd8caee32"><span style="" class="se-fs- se-ff-   " id="SE-87188b41-3e09-4018-bab0-15d6dbedbdce"><b>지금까지</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-3ab20bfc-da1b-4d13-9aff-85de2ac29cf3"><span style="" class="se-fs- se-ff-   " id="SE-050647c7-ad63-4743-95fb-0400049296c3"><b>용인 풍덕천동 아파트에서 진행한</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-ca8a753e-319d-4389-9e8c-2afbdf960ba1"><span style="" class="se-fs- se-ff-   " id="SE-5c9000d5-59df-431e-8631-4cd776ae5a23"><b>음식물처리기 배관막힘 청소작업</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-99c756bc-8d30-4d53-b11c-5e7e5743ae63"><span style="" class="se-fs- se-ff-   " id="SE-374474f4-4edf-42c5-93e7-38e7181ece04"><b>후기를 읽어주셔서 감사합니다.</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-06bc6399-6804-416e-a406-7a3a31d16905"><span style="" class="se-fs- se-ff-   " id="SE-60874e1d-9e6d-444e-9434-884eebd38579"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-b3b09a70-1d87-48d8-8de4-b5ca64560d29"><span style="" class="se-fs- se-ff-   " id="SE-96efb701-faf1-48bb-a95d-2f27df0b217c"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-ef5de265-8c58-4ca3-b647-fb571cf8967e"><span style="" class="se-fs- se-ff-   " id="SE-a291b279-4c67-44e2-ae77-19c98a5a139e"><b>​</b></span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                <div class="se-component se-video se-l-default">
+                    <div class="se-component-content se-component-content-normal">
+                        <div class="se-section se-section-video se-section-align-center se-l-default" style="max-width:800px;">
+                            <div class="se-module se-module-video" id="SE-2b4a882e-bcf8-4313-b742-200ef4929779">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                <div class="se-component se-text se-l-default" id="SE-7f5c040a-9ec9-41bc-b81f-dfa579b15220">
+                    <div class="se-component-content">
+                        <div class="se-section se-section-text se-l-default">
+                            <div class="se-module se-module-text">
+                                    <!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-01c8909d-10e5-47ad-8e12-a47dfbed862f"><span style="" class="se-fs- se-ff-   " id="SE-fa07cb32-5b81-495f-acad-980d702daf8a"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-2182eabb-aa39-44a0-8dea-4f2c9c55f4a7"><span style="" class="se-fs- se-ff-   " id="SE-eafc4531-f490-4e41-a62e-a7ce23cc710e"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-dd7acfb6-bbce-4db2-a926-eb62f57796ad"><span style="" class="se-fs- se-ff-   " id="SE-0bb3bf65-5007-4360-882e-2106aaaac186"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align-center " style="" id="SE-4b38c2ed-5e37-4ca5-a2eb-a85d3ba86363"><span style="" class="se-fs- se-ff-   " id="SE-8074180f-82cb-420f-a7d5-f33954abadf5"><b>​</b></span></p><!-- } SE-TEXT --><!-- SE-TEXT { --><p class="se-text-paragraph se-text-paragraph-align- " style="" id="SE-09e84c7a-6e14-47fb-8727-0148dceb5e40"><span style="" class="se-fs- se-ff-   " id="SE-54a854ce-8288-4806-bc7d-afde4c6764c1"><b><span class="__se-hash-tag">#용인풍덕천동음식물처리기배관막힘</span> <span class="__se-hash-tag">#풍덕천동싱크대배관막힘</span> <span class="__se-hash-tag">#용인음식물처리기막힘</span> <span class="__se-hash-tag">#풍덕천동싱크대막힘</span> <span class="__se-hash-tag">#풍덕천동싱크대하수관막힘</span> <span class="__se-hash-tag">#하수구수사대</span> <span class="__se-hash-tag">#용인하수구막힘</span></b></span></p><!-- } SE-TEXT -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>    </div>
+        </div>
+    </article>
+
+    <!-- 하단 CTA -->
+    <div class="cta-section">
+        <h3>🔧 하수구 막힘 문제로 고민 중이신가요?</h3>
+        <p>24시간 신속 출동! 용인·수원·화성 전문 하수구 청소 서비스</p>
+        <a href="tel:010-0000-0000" class="cta-btn">📞 지금 바로 전화 상담</a>
+    </div>
+
+</main>
+
+<!-- 푸터 -->
+<footer class="site-footer">
+    <strong>하수구수사대</strong><br>
+    용인·수원·화성 하수구 막힘 전문 청소업체<br>
+    © 2026 하수구수사대. All rights reserved.
+</footer>
+
+</body>
+</html>

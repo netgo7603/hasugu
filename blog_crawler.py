@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 네이버 블로그 크롤러 - 하수구수사대 홈페이지 블로그 자동 생성기
-사용법: python blog_crawler.py [블로그 포스트 번호]
-예시: python blog_crawler.py 224300839005
+사용법: python blog_crawler.py [블로그 포스트 번호 또는 URL]
+예시: python blog_crawler.py 223789808499
+      python blog_crawler.py https://m.blog.naver.com/hasugu2118/223789808499
 """
 
 import os
@@ -30,14 +31,38 @@ IMAGES_BASE_DIR = os.path.join(BLOG_DIR, "images")
 
 HEADERS = {
     "User-Agent": (
-        "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) "
-        "AppleWebKit/605.1.15 (KHTML, like Gecko) "
-        "Version/16.0 Mobile/15E148 Safari/604.1"
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
     ),
     "Referer": "https://m.blog.naver.com/",
     "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
 }
+
+
+def extract_log_no(input_str):
+    """URL 또는 입력 문자열에서 블로그 포스트 번호(logNo) 추출"""
+    input_str = input_str.strip()
+    
+    # 1. URL 형태인 경우 처리
+    if "blog.naver.com" in input_str:
+        # 쿼리 파라미터 logNo=... 검색
+        query_match = re.search(r'[?&]logNo=(\d+)', input_str)
+        if query_match:
+            return query_match.group(1)
+        
+        # 경로 상의 포스트 번호 검색 (예: m.blog.naver.com/hasugu2118/223789808499)
+        path_match = re.search(r'blog\.naver\.com/[a-zA-Z0-9_-]+/(\d+)', input_str)
+        if path_match:
+            return path_match.group(1)
+            
+    # 2. 순수 숫자만 추출
+    digits = re.findall(r'\d+', input_str)
+    if digits:
+        return digits[-1] # 마지막 숫자 시퀀스 리턴
+        
+    return input_str
 
 
 def fetch_html(url):
@@ -79,6 +104,30 @@ def download_image(img_url, save_path):
             return False
 
 
+def _extract_tag_block(html, start_tag):
+    """중첩 div를 정확히 추적해 start_tag로 시작하는 블록 전체 추출"""
+    idx = html.find(start_tag)
+    if idx == -1:
+        return ""
+    depth = 0
+    pos = idx
+    length = len(html)
+    while pos < length:
+        open_pos = html.find('<div', pos)
+        close_pos = html.find('</div>', pos)
+        if open_pos == -1 and close_pos == -1:
+            break
+        if open_pos != -1 and (close_pos == -1 or open_pos < close_pos):
+            depth += 1
+            pos = open_pos + 4
+        else:
+            depth -= 1
+            pos = close_pos + 6
+            if depth == 0:
+                return html[idx:pos]
+    return html[idx:]  # fallback
+
+
 def parse_blog(html, log_no):
     """블로그 HTML 파싱하여 필요한 정보 추출"""
     
@@ -103,60 +152,35 @@ def parse_blog(html, log_no):
     cat_match = re.search(r'class="blog_category"[^>]*><a[^>]*>([^<]+)</a>', html)
     category = cat_match.group(1).strip() if cat_match else ""
 
-    # 썸네일/커버 이미지 (문서 커버)
-    cover_match = re.search(r"background-image:url\(\'(https://mblogthumb[^\']+)\'\)", html)
-    cover_image = cover_match.group(1).split("?")[0] if cover_match else ""
-
-    # 본문 콘텐츠 영역 추출 (se-main-container 우선, fallback: _postView)
-    content_html = ""
-    
-    # 방법1: se-main-container 전체 추출 (닫는 div를 세지 않고 클래스 기준)
-    main_match = re.search(
-        r'(<div class="se-main-container".*?<!-- SE_DOC_BODY_END -->)',
-        html, re.DOTALL
-    )
-    if main_match:
-        content_html = main_match.group(1)
+    # 썸네일/커버 이미지 (OG 이미지 우선)
+    cover_image = ""
+    og_img_match = re.search(r'property="og:image"\s+content="([^"]+)"', html)
+    if og_img_match:
+        cover_image = og_img_match.group(1).split("?")[0]
     else:
-        # 방법2: se-main-container ~ </div></div></div> 유연 매칭
-        main_match = re.search(
-            r'(<div class="se-main-container".*?</div>\s*</div>\s*</div>)',
-            html, re.DOTALL
-        )
-        if main_match:
-            content_html = main_match.group(1)
-    
-    if not content_html:
-        # 방법3: _postView 전체 추출 (se-viewer 포함)
-        post_match = re.search(
-            r'(<div class="_postView">.*?<div class="se-viewer.*?</div>\s*</div>\s*</div>)',
-            html, re.DOTALL
-        )
-        if post_match:
-            content_html = post_match.group(1)
-    
-    if not content_html:
-        # 방법4: viewTypeSelector만이라도 추출
-        view_match = re.search(
-            r'(<div class="post_ct[^"]*".*?</div>\s*</div>\s*</div>)',
-            html, re.DOTALL
-        )
-        if view_match:
-            content_html = view_match.group(1)
+        cover_match = re.search(r'background-image:url\(\'(https://mblogthumb[^\']+)\'\)', html)
+        if cover_match:
+            cover_image = cover_match.group(1).split("?")[0]
 
-    # 이미지 URL 추출 - data-lazy-src 우선 (w800 크기 URL 사용)
-    image_urls = []   # 베이스 URL(쿼리 없는) 저장 -> 파일명 계산용
-    seen = set()      # 중복 방지용 (베이스 URL 기준)
+    # ── 본문 콘텐츠 추출: 중첩 div 태그 카운팅 방식 ──
+    content_html = _extract_tag_block(html, '<div class="se-main-container">')
+    if not content_html:
+        content_html = _extract_tag_block(html, '<div class="se-viewer ')
+    if not content_html:
+        content_html = _extract_tag_block(html, '<div class="_postView">')
 
-    # data-lazy-src 우선 수집 (예: ...JPEG/3.jpg?type=w800)
+    # ── 이미지 URL 추출 ──
+    image_urls = []
+    seen = set()
+
     lazy_imgs = re.findall(r'data-lazy-src="(https://mblogthumb[^"]+)"', html)
     for url in lazy_imgs:
         base = url.split("?")[0]
         if base not in seen:
             seen.add(base)
-            image_urls.append(base)   # 베이스 URL 저장 (파일명 추출용)
+            image_urls.append(base)
 
-    # data-linkdata "src" 에서도 수집 (커버 등 누락 방지)
+    # data-linkdata src 에서도 보완 수집
     link_data_imgs = re.findall(r'"src"\s*:\s*"(https://mblogthumb[^"]+)"', html)
     for url in link_data_imgs:
         base = url.split("?")[0]
@@ -167,7 +191,7 @@ def parse_blog(html, log_no):
     # 커버 이미지도 포함
     if cover_image:
         base = cover_image.split("?")[0]
-        if base not in seen:
+        if base not in seen and ('mblogthumb' in base or 'blogthumb' in base):
             image_urls.insert(0, base)
 
     return {
@@ -182,18 +206,9 @@ def parse_blog(html, log_no):
     }
 
 
-def clean_content_for_website(content_html, log_no, image_urls):
+def clean_content_for_website(content_html, log_no, img_map):
     """본문 HTML을 회사 홈페이지용으로 정제"""
     
-    # 이미지 URL -> 로컬 경로 매핑
-    img_map = {}
-    for i, url in enumerate(image_urls):
-        filename = os.path.basename(url.split("?")[0])
-        if not filename or "." not in filename:
-            ext = ".jpg"
-            filename = f"image_{i+1}{ext}"
-        img_map[url] = f"images/{log_no}/{filename}"
-
     # data-lazy-src를 실제 src로 교체, 로컬 이미지 경로 사용
     def replace_img(m):
         full_tag = m.group(0)
@@ -215,16 +230,16 @@ def clean_content_for_website(content_html, log_no, image_urls):
 
     cleaned = re.sub(r'<img[^>]+>', replace_img, content_html)
 
-    # <a> 링크 제거 (이미지 링크 등 불필요한 링크)
+    # <a> 링크 제거
     cleaned = re.sub(r'<a\s[^>]*class="[^"]*se-module-image-link[^"]*"[^>]*>(.*?)</a>', r'\1', cleaned, flags=re.DOTALL)
     cleaned = re.sub(r'<a\s[^>]*href="[^"]*PostList[^"]*"[^>]*>(.*?)</a>', r'\1', cleaned, flags=re.DOTALL)
 
     # script 태그 제거
     cleaned = re.sub(r'<script[^>]*>.*?</script>', '', cleaned, flags=re.DOTALL)
 
-    # 불필요한 onclick 제거
+    # 불필요한 속성 제거
     cleaned = re.sub(r'\s*onclick="[^"]*"', '', cleaned)
-    cleaned = re.sub(r"\s*data-linkdata='[^']*'", '', cleaned)
+    cleaned = re.sub(r'\s*data-linkdata=\'[^\']*\'', '', cleaned)
     cleaned = re.sub(r'\s*data-linktype="[^"]*"', '', cleaned)
     cleaned = re.sub(r'\s*data-lazy-src="[^"]*"', '', cleaned)
     cleaned = re.sub(r'\s*data-width="[^"]*"', '', cleaned)
@@ -233,20 +248,16 @@ def clean_content_for_website(content_html, log_no, image_urls):
     return cleaned
 
 
-def generate_html(data, log_no):
+def generate_html(data, log_no, img_map, cover_image_local):
     """회사 홈페이지 스타일의 HTML 생성"""
     
     title = data["title"]
     description = data["description"]
     post_date = data["date"]
     category = data["category"]
-    content_html = clean_content_for_website(data["content_html"], log_no, data["images"])
+    content_html = clean_content_for_website(data["content_html"], log_no, img_map)
 
-    # 커버 이미지 로컬 경로
-    cover_local = ""
-    if data["cover_image"]:
-        cover_filename = os.path.basename(data["cover_image"].split("?")[0])
-        cover_local = f"images/{log_no}/{cover_filename}"
+    cover_local = cover_image_local
 
     html = f"""<!DOCTYPE html>
 <html lang="ko">
@@ -636,7 +647,7 @@ def generate_html(data, log_no):
 
 <!-- 히어로 -->
 <section class="post-hero">
-    {"" if not cover_local else f'<img src="{cover_local}" alt="{title}">'}
+    {"" if not cover_local else f'<img src="{cover_local}" alt="{title}">' }
     <div style="max-width:900px;margin:0 auto;position:relative;">
         <div class="hero-content">
             {"" if not category else f'<span class="hero-badge">{category}</span>'}
@@ -698,7 +709,16 @@ def generate_html(data, log_no):
 def run(log_no):
     """메인 실행 함수"""
     log_no = str(log_no).strip()
-    url = f"https://m.blog.naver.com/{BLOG_ID}/{log_no}"
+    
+    # URL에서 블로그 ID 추출 시도
+    blog_id = BLOG_ID
+    if "blog.naver.com" in log_no:
+        m = re.search(r'blog\.naver\.com/([a-zA-Z0-9_-]+)/(\d+)', log_no)
+        if m:
+            blog_id = m.group(1)
+            log_no = m.group(2)
+    
+    url = f"https://m.blog.naver.com/{blog_id}/{log_no}"
 
     print(f"\n{'='*60}")
     print(f"  [크롤러] 네이버 블로그 크롤러 - 하수구수사대")
@@ -729,24 +749,54 @@ def run(log_no):
 
     # 이미지 다운로드
     print(f"[4/4] 이미지 다운로드 중...")
+    
+    # 1. 커버 이미지 다운로드
+    cover_image_local = ""
+    if data["cover_image"]:
+        cover_url = data["cover_image"]
+        ext = os.path.splitext(cover_url.split("?")[0])[1]
+        if not ext or len(ext) > 5:
+            ext = ".jpg"
+        cover_filename = f"cover{ext}"
+        cover_save_path = os.path.join(images_dir, cover_filename)
+        
+        print(f"      [커버 이미지] {cover_filename} 다운로드 중...", end=" ", flush=True)
+        if download_image(cover_url, cover_save_path):
+            print("OK")
+            cover_image_local = f"images/{log_no}/{cover_filename}"
+        else:
+            print("FAIL")
+    
+    # 2. 본문 이미지 다운로드 및 매핑
     downloaded = 0
+    img_map = {}
     for i, img_url in enumerate(data["images"], 1):
-        filename = os.path.basename(img_url.split("?")[0])
-        if not filename or "." not in filename:
-            filename = f"image_{i}.jpg"
-        save_path = os.path.join(images_dir, filename)
-        print(f"      [{i}/{len(data['images'])}] {filename} ...", end=" ", flush=True)
+        base_url = img_url.split("?")[0]
+        ext = os.path.splitext(base_url)[1]
+        if not ext or len(ext) > 5:
+            ext = ".jpg"
+        safe_filename = f"image_{i}{ext}"
+        save_path = os.path.join(images_dir, safe_filename)
+        
+        print(f"      [{i}/{len(data['images'])}] {safe_filename} ...", end=" ", flush=True)
         if download_image(img_url, save_path):
             print("OK")
             downloaded += 1
+            img_map[base_url] = f"images/{log_no}/{safe_filename}"
         else:
             print("FAIL")
         time.sleep(0.3)  # 서버 부하 방지
 
     print(f"\n      다운로드 완료: {downloaded}/{len(data['images'])}개\n")
 
+    # 3. 커버 이미지 미획득 시 첫 번째 본문 이미지로 대체
+    if not cover_image_local and img_map:
+        first_img_path = list(img_map.values())[0]
+        print(f"      [안내] 커버 이미지가 없거나 실패하여 첫 번째 이미지({first_img_path})를 커버로 대체합니다.")
+        cover_image_local = first_img_path
+
     # HTML 생성
-    output_html = generate_html(data, log_no)
+    output_html = generate_html(data, log_no, img_map, cover_image_local)
     html_path = os.path.join(BLOG_DIR, f"{log_no}.html")
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(output_html)
@@ -758,7 +808,7 @@ def run(log_no):
         "description": data["description"],
         "date": data["date"],
         "category": data["category"],
-        "cover_image": f"images/{log_no}/{os.path.basename(data['cover_image'].split('?')[0])}" if data["cover_image"] else "",
+        "cover_image": cover_image_local,
         "html_file": f"{log_no}.html",
         "images_count": downloaded,
         "crawled_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -908,10 +958,12 @@ def update_blog_index():
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print()
-        print("사용법: python blog_crawler.py [블로그 포스트 번호]")
+        print("사용법: python blog_crawler.py [블로그 포스트 번호 또는 URL]")
         print("예시 : python blog_crawler.py 224300839005")
+        print("       python blog_crawler.py https://m.blog.naver.com/hasugu2118/223789808499")
         print()
         sys.exit(1)
 
-    log_no = sys.argv[1]
+    input_arg = sys.argv[1]
+    log_no = extract_log_no(input_arg)
     run(log_no)
