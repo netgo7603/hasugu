@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /index_files/
-Disallow: /blog/images/img1/
 
 Sitemap: https://hasugu2.lymin80.shop/sitemap.xml

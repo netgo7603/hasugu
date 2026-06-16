@@ -2,11 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
   <!-- 메인 페이지 -->
   <url>
     <loc>https://hasugu2.lymin80.shop/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -20,34 +19,15 @@
       <image:caption>하수구수사대 공식 로고</image:caption>
     </image:image>
   </url>
-
-  <!-- 시공사례 블로그 상세 페이지 -->
+  
+  <!-- 블로그 목록 페이지 -->
   <url>
-    <loc>https://hasugu2.lymin80.shop/blog-sample.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <loc>https://hasugu2.lymin80.shop/blog/index.html</loc>
+    <lastmod>2026-06-16</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://hasugu2.lymin80.shop/blog/images/224304522855/title.jpg</image:loc>
-      <image:title>영통구 이의동 베란다 누수 우수관교체 방수공사 사례</image:title>
-      <image:caption>하수구수사대 시공사례 - 수원 영통구 베란다 누수 해결 현장</image:caption>
-    </image:image>
+    <priority>0.9</priority>
   </url>
-
-  <!-- 시공사례: 용인 풍덕천동 음식물처리기 배관막힘 하수관 청소 -->
-  <url>
-    <loc>https://hasugu2.lymin80.shop/blog/yongin-pungdeokcheon-food-waste-disposer-drain-cleaning-224300839005.html</loc>
-    <lastmod>2026-05-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://hasugu2.lymin80.shop/blog/images/224300839005/title.jpg</image:loc>
-      <image:title>용인 풍덕천동 음식물처리기 배관막힘 하수관 청소 사례</image:title>
-      <image:caption>하수구수사대 시공사례 - 용인 수지구 풍덕천동 음식물처리기 배관막힘 해결 현장</image:caption>
-    </image:image>
-  </url>
-
-  <!-- 시공사례: 영통구 이의동 베란다누수 우수관교체 -->
+  <!-- 시공사례: 영통구 이의동 베란다누수, 우수관교체 방수공사 전문 -->
   <url>
     <loc>https://hasugu2.lymin80.shop/blog/suwon-yeongtong-balcony-leakage-224304522855.html</loc>
     <lastmod>2026-06-03</lastmod>
@@ -55,9 +35,92 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://hasugu2.lymin80.shop/blog/images/224304522855/title.jpg</image:loc>
-      <image:title>영통구 이의동 베란다 누수 우수관교체 방수공사 사례</image:title>
-      <image:caption>하수구수사대 시공사례 - 수원 영통구 베란다 누수 해결 현장</image:caption>
+      <image:title>영통구 이의동 베란다누수, 우수관교체 방수공사 전문</image:title>
+      <image:caption>하수구수사대 시공사례 - 영통구 이의동 베란다누수, 우수관교체 방수공사 전문</image:caption>
     </image:image>
   </url>
-
+  <!-- 시공사례: 용인 풍덕천동 음식물처리기 배관막힘, 하수관 청소작업 -->
+  <url>
+    <loc>https://hasugu2.lymin80.shop/blog/yongin-pungdeokcheon-food-waste-disposer-drain-cleaning-224300839005.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hasugu2.lymin80.shop/blog/images/224300839005/title.jpg</image:loc>
+      <image:title>용인 풍덕천동 음식물처리기 배관막힘, 하수관 청소작업</image:title>
+      <image:caption>하수구수사대 시공사례 - 용인 풍덕천동 음식물처리기 배관막힘, 하수관 청소작업</image:caption>
+    </image:image>
+  </url>
+  <!-- 시공사례: 오산 가수동 싱크대배수관막힘 수청동 하수도역류 뚫는업체 설비 -->
+  <url>
+    <loc>https://hasugu2.lymin80.shop/blog/osan-gasudong-sink-drain-clogged-sewer-backflow-224013046491.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hasugu2.lymin80.shop/blog/images/224013046491/cover.jpg</image:loc>
+      <image:title>오산 가수동 싱크대배수관막힘 수청동 하수도역류 뚫는업체 설비</image:title>
+      <image:caption>하수구수사대 시공사례 - 오산 가수동 싱크대배수관막힘 수청동 하수도역류 뚫는업체 설비</image:caption>
+    </image:image>
+  </url>
+  <!-- 시공사례: 새솔동 싱크대배수관막힘 해양동 주방배관역류 하수구업체 -->
+  <url>
+    <loc>https://hasugu2.lymin80.shop/blog/saesoldong-haeyangdong-sink-drain-clogged-kitchen-pipe-backflow-223976249977.html</loc>
+    <lastmod>2025-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hasugu2.lymin80.shop/blog/images/223976249977/cover.jpg</image:loc>
+      <image:title>새솔동 싱크대배수관막힘 해양동 주방배관역류 하수구업체</image:title>
+      <image:caption>하수구수사대 시공사례 - 새솔동 싱크대배수관막힘 해양동 주방배관역류 하수구업체</image:caption>
+    </image:image>
+  </url>
+  <!-- 시공사례: 웰릭스 음식물 처리기 배관 막힘 수리 업체 -->
+  <url>
+    <loc>https://hasugu2.lymin80.shop/blog/welix-food-waste-disposer-drain-clogged-repair-223789808499.html</loc>
+    <lastmod>2025-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hasugu2.lymin80.shop/blog/images/223789808499/cover.jpg</image:loc>
+      <image:title>웰릭스 음식물 처리기 배관 막힘 수리 업체</image:title>
+      <image:caption>하수구수사대 시공사례 - 웰릭스 음식물 처리기 배관 막힘 수리 업체</image:caption>
+    </image:image>
+  </url>
+  <!-- 시공사례: 웰릭스 싱크리더 음식물처리기막힘 해결 전문 업체로 -->
+  <url>
+    <loc>https://hasugu2.lymin80.shop/blog/welix-sinkleader-food-waste-disposer-clogged-223039921838.html</loc>
+    <lastmod>2023-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hasugu2.lymin80.shop/blog/images/223039921838/cover.jpg</image:loc>
+      <image:title>웰릭스 싱크리더 음식물처리기막힘 해결 전문 업체로</image:title>
+      <image:caption>하수구수사대 시공사례 - 웰릭스 싱크리더 음식물처리기막힘 해결 전문 업체로</image:caption>
+    </image:image>
+  </url>
+  <!-- 시공사례: 화성 향남싱크대막힘 상신리 하길리 확실한 해결! -->
+  <url>
+    <loc>https://hasugu2.lymin80.shop/blog/hwaseong-hyangnam-sink-clogged-drain-cleaning-223023595407.html</loc>
+    <lastmod>2023-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hasugu2.lymin80.shop/blog/images/223023595407/cover.png</image:loc>
+      <image:title>화성 향남싱크대막힘 상신리 하길리 확실한 해결!</image:title>
+      <image:caption>하수구수사대 시공사례 - 화성 향남싱크대막힘 상신리 하길리 확실한 해결!</image:caption>
+    </image:image>
+  </url>
+  <!-- 시공사례: 처인구하수구막힘은 하수구막힘에서 -->
+  <url>
+    <loc>https://hasugu2.lymin80.shop/blog/yongin-cheoinggu-sewer-clogged-drain-cleaning-222634871204.html</loc>
+    <lastmod>2022-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hasugu2.lymin80.shop/blog/images/222634871204/cover.jpg</image:loc>
+      <image:title>처인구하수구막힘은 하수구막힘에서</image:title>
+      <image:caption>하수구수사대 시공사례 - 처인구하수구막힘은 하수구막힘에서</image:caption>
+    </image:image>
+  </url>
 </urlset>
