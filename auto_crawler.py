@@ -109,9 +109,16 @@ def parse_rss_items(xml_data):
 # ============================================================
 def deploy_to_docker():
     print("\n🐳 Docker 배포 중...")
+    sitemap_path = os.path.join(BASE_DIR, "sitemap.xml")
+    robots_path = os.path.join(BASE_DIR, "robots.txt")
+    
     commands = [
         # blog 폴더 전체를 컨테이너 내 Nginx 경로로 복사
         f"docker cp {BLOG_DIR}/. memo-app:/usr/share/nginx/html/blog/",
+        # sitemap.xml 복사
+        f"docker cp {sitemap_path} memo-app:/usr/share/nginx/html/",
+        # robots.txt 복사
+        f"docker cp {robots_path} memo-app:/usr/share/nginx/html/",
         # nginx 설정 재적용
         "docker exec memo-app nginx -s reload"
     ]
@@ -172,12 +179,24 @@ def main():
             print(f"      ❌ 크롤링 실패 (Exit Code: {result.returncode})")
             print(f"      에러 로그: {result.stderr.strip()[:500]}")
             
-    # 새로 크롤링한 포스트가 있다면 Docker 배포
+    # 새로 크롤링한 포스트가 있다면 최적화 및 배포
     if new_crawled_count > 0:
         print(f"\n🎉 {new_crawled_count}개의 새로운 포스트가 추가되었습니다.")
+        
+        # 1. SEO/GEO 복구 및 사이트맵/목록 갱신 스크립트 실행
+        print("\n🔄 SEO/GEO 최적화 및 사이트맵/목록 페이지 갱신 중...")
+        seo_script = os.path.join(BASE_DIR, "process_seo_geo_all.py")
+        seo_result = subprocess.run(["python3", seo_script], capture_output=True, text=True)
+        if seo_result.returncode == 0:
+            print("  ✅ SEO/GEO 최적화 및 사이트맵 갱신 완료!")
+        else:
+            print("  ❌ [오류] SEO/GEO 최적화 실패")
+            print(seo_result.stderr)
+            
+        # 2. Docker 배포 수행
         deploy_to_docker()
     else:
-        print("\n✨ 새로운 포스트가 없습니다. 배포 단계를 생략합니다.")
+        print("\n✨ 새로운 포스트가 없습니다. 최적화 및 배포 단계를 생략합니다.")
         
     print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 자동화 스크립트 실행 종료\n")
 
