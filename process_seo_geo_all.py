@@ -321,7 +321,11 @@ def extract_paragraphs_and_images_from_html(html_file_path: Path) -> dict:
         
     if idx_sec2 != -1 and idx_sec3 != -1:
         sec2_html = html_content[idx_sec2:idx_sec3]
-        sections["sec2"] = [re.sub(r'<[^>]+>', '', p).strip() for p in p_pattern.findall(sec2_html)]
+        sections["sec2"] = [
+            re.sub(r'<[^>]+>', '', p).strip() 
+            for p in p_pattern.findall(sec2_html)
+            if "전문가 진단:" not in p
+        ]
         
     if idx_sec3 != -1 and idx_sec4 != -1:
         sec3_html = html_content[idx_sec3:idx_sec4]
@@ -1020,6 +1024,7 @@ def main():
             }
         else:
             geo_seo_info = analyze_geo_seo(title, body_text_clean)
+            geo_seo_info["slug"] = f"{geo_seo_info['slug']}-{log_no}"
             
         slug = geo_seo_info["slug"]
         new_html_name = f"{slug}.html"

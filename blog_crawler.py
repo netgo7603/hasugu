@@ -191,7 +191,8 @@ def parse_blog(html, log_no):
     image_urls = []
     seen = set()
 
-    lazy_imgs = re.findall(r'data-lazy-src="(https://mblogthumb[^"]+)"', html)
+    target_html = content_html if content_html else html
+    lazy_imgs = re.findall(r'data-lazy-src="(https://mblogthumb[^"]+)"', target_html)
     for url in lazy_imgs:
         base = url.split("?")[0]
         if base not in seen:
@@ -199,7 +200,7 @@ def parse_blog(html, log_no):
             image_urls.append(base)
 
     # data-linkdata src 에서도 보완 수집
-    link_data_imgs = re.findall(r'"src"\s*:\s*"(https://mblogthumb[^"]+)"', html)
+    link_data_imgs = re.findall(r'"src"\s*:\s*"(https://mblogthumb[^"]+)"', target_html)
     for url in link_data_imgs:
         base = url.split("?")[0]
         if base not in seen:
