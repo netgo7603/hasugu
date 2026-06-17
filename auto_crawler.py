@@ -139,10 +139,16 @@ def deploy_to_docker():
 # 메인 제어 루프
 # ============================================================
 def main():
-    print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 블로그 자동화 스크립트 실행 시작")
+    # RSS URL을 인자로 넘겨받았는지 확인 (없으면 기본값 RSS_URL 사용)
+    rss_url = RSS_URL
+    if len(sys.argv) > 1 and (sys.argv[1].startswith("http://") or sys.argv[1].startswith("https://")):
+        rss_url = sys.argv[1].strip()
+        print(f"ℹ️ 커스텀 RSS URL이 입력되었습니다: {rss_url}")
+        
+    print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 블로그 자동화 스크립트 실행 시작 (대상 RSS: {rss_url})")
     
     # RSS 피드 가져오기
-    xml_data = fetch_rss(RSS_URL)
+    xml_data = fetch_rss(rss_url)
     posts = parse_rss_items(xml_data)
     
     if not posts:
