@@ -78,7 +78,12 @@ SUB_AREA_MAP = {
     "지동": "jidong", "와우리": "wau", "봉담": "bongdam", "호계동": "hogye",
     "갈산동": "galsan", "이의동": "uiui", "풍덕천동": "pungdeokcheon", "가수동": "gasu",
     "수청동": "sucheong", "새솔동": "saesol", "해양동": "haeyang", "상신리": "sangshin",
-    "하길리": "hagil", "역북동": "yeokbuk", "김량장동": "gimryangjang"
+    "하길리": "hagil", "역북동": "yeokbuk", "김량장동": "gimryangjang",
+    "곡반정동": "gokbanjeong", "모현읍": "mohyeon", "동천동": "dongcheon", "우만동": "uman",
+    "매탄동": "maetan", "서천동": "seocheon", "망포동": "mangpo", "영덕동": "yeongdeok",
+    "판교동": "pangyo", "고색동": "gosaek", "발안": "baran", "봉담읍": "bongdam",
+    "정남면": "jeongnam", "양지면": "yangji", "마도면": "mado", "송산": "songsan",
+    "천리": "cheonri"
 }
 
 # 8개 초기 수동 매핑 포스트 정보 (기존 퀄리티 완전 보존)
