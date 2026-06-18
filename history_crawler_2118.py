@@ -4,7 +4,7 @@
 hasugu2118 전용 블로그 과거 글 수집 및 자동 배포기 (2개씩 수집)
 사용법: python3 history_crawler_2118.py
 네이버 비동기 목록 API를 호출하여 hasugu2118 블로그의 신규 글 2개를 크롤링하고
-SEO/GEO 최적화, Git Commit & Push, Docker 배포까지 수행합니다.
+SEO/GEO 최적화 및 Git Commit & Push까지 수행합니다.
 """
 
 import os
@@ -36,37 +36,6 @@ HEADERS = {
     "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
 }
-
-# ============================================================
-# Docker 배포
-# ============================================================
-def deploy_to_docker():
-    print("\n🐳 Docker 배포 중...")
-    sitemap_path = os.path.join(BASE_DIR, "sitemap.xml")
-    robots_path = os.path.join(BASE_DIR, "robots.txt")
-    
-    commands = [
-        # blog 폴더 전체를 컨테이너 내 Nginx 경로로 복사
-        f"docker cp {BLOG_DIR}/. memo-app:/usr/share/nginx/html/blog/",
-        # sitemap.xml 복사
-        f"docker cp {sitemap_path} memo-app:/usr/share/nginx/html/",
-        # robots.txt 복사
-        f"docker cp {robots_path} memo-app:/usr/share/nginx/html/",
-        # nginx 설정 재적용
-        "docker exec memo-app nginx -s reload"
-    ]
-    
-    success = True
-    for cmd in commands:
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-        if result.returncode != 0:
-            print(f"  ⚠️ 명령 실패: {cmd}")
-            print(f"  에러: {result.stderr.strip()[:200]}")
-            success = False
-        else:
-            print(f"  ✅ {cmd[:50]}... 성공")
-            
-    return success
 
 # ============================================================
 # Git Commit & Push
@@ -212,8 +181,7 @@ def main():
             print("  ❌ [오류] SEO/GEO 최적화 실패")
             print(seo_result.stderr)
             
-        # Nginx Docker 컨테이너 배포 및 리로드
-        deploy_to_docker()
+
     else:
         print("\n✨ 새로 수집된 포스트가 없습니다. 최적화 및 배포 단계를 생략합니다.")
 
