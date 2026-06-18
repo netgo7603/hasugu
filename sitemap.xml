@@ -5,7 +5,7 @@
   <!-- 메인 페이지 -->
   <url>
     <loc>https://hasugu2.lymin80.shop/</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -23,7 +23,7 @@
   <!-- 블로그 목록 페이지 -->
   <url>
     <loc>https://hasugu2.lymin80.shop/blog/index.html</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -2905,6 +2905,18 @@
       <image:loc>https://hasugu2.lymin80.shop/blog/images/223848646556/cover.jpg</image:loc>
       <image:title>노원구 공릉동변기배관막힘 상계동 하수구뚫는곳 물샘전문업체</image:title>
       <image:caption>하수구수사대 시공사례 - 노원구 공릉동변기배관막힘 상계동 하수구뚫는곳 물샘전문업체</image:caption>
+    </image:image>
+  </url>
+  <!-- 시공사례: 장호원읍 하수구 막힘 이천 호법면 화장실 바닥 배관 뚫는 전문 업체 -->
+  <url>
+    <loc>https://hasugu2.lymin80.shop/blog/yongin-sewer-clogged-223847918338.html</loc>
+    <lastmod>2025-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hasugu2.lymin80.shop/blog/images/223847918338/cover.jpg</image:loc>
+      <image:title>장호원읍 하수구 막힘 이천 호법면 화장실 바닥 배관 뚫는 전문 업체</image:title>
+      <image:caption>하수구수사대 시공사례 - 장호원읍 하수구 막힘 이천 호법면 화장실 바닥 배관 뚫는 전문 업체</image:caption>
     </image:image>
   </url>
   <!-- 시공사례: 인천 당하동싱크대뚫음 신현원창동 하수구뚫는비용 배관공사 -->
@@ -15709,6 +15721,18 @@
       <image:loc>https://hasugu2.lymin80.shop/blog/images/222532941708/cover.jpg</image:loc>
       <image:title>인계동 오목천동 호매실동 변기막힘 권선구 변기막힘해결</image:title>
       <image:caption>하수구수사대 시공사례 - 인계동 오목천동 호매실동 변기막힘 권선구 변기막힘해결</image:caption>
+    </image:image>
+  </url>
+  <!-- 시공사례: 권선구 곡선동 욕실 하수구역류, 하수관 석회 제거 청소로 해결 -->
+  <url>
+    <loc>https://hasugu2.lymin80.shop/blog/suwon-sewer-backflow-224319692704.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hasugu2.lymin80.shop/blog/images/224319692704/cover.jpg</image:loc>
+      <image:title>권선구 곡선동 욕실 하수구역류, 하수관 석회 제거 청소로 해결</image:title>
+      <image:caption>하수구수사대 시공사례 - 권선구 곡선동 욕실 하수구역류, 하수관 석회 제거 청소로 해결</image:caption>
     </image:image>
   </url>
 </urlset>
