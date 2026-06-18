@@ -1890,10 +1890,10 @@
         var currentImages = [];
         var currentIdx = 0;
 
-        // Open lightbox gallery - click navigates to blog-sample.html
+        // Open lightbox gallery - click navigates to /blog/index.html
         document.querySelectorAll('.portfolio-item[data-gallery]').forEach(function(item) {
             item.addEventListener('click', function() {
-                window.location.href = 'blog-sample.html';
+                window.location.href = '/blog/index.html';
             });
         });
 
