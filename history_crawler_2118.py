@@ -44,14 +44,14 @@ def git_commit_and_push():
     print("\n🐙 Git Commit & Push 진행 중...")
     try:
         # git add
-        subprocess.run(["git", "add", "."], check=True)
+        subprocess.run(["git", "add", "."], cwd=BASE_DIR, check=True)
         
         # git commit
         commit_message = f"auto(blog): crawl and process 2 posts for {BLOG_ID} - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-        subprocess.run(["git", "commit", "-m", commit_message], check=True)
+        subprocess.run(["git", "commit", "-m", commit_message], cwd=BASE_DIR, check=True)
         
         # git push
-        subprocess.run(["git", "push"], check=True)
+        subprocess.run(["git", "push"], cwd=BASE_DIR, check=True)
         print("✅ Git Commit & Push 완료!")
         return True
     except subprocess.CalledProcessError as e:
@@ -147,7 +147,7 @@ def main():
             
             # 딜레이를 주어 IP 블록을 사전에 차단
             time.sleep(0.8)
-            result = subprocess.run(cmd, capture_output=True, text=True)
+            result = subprocess.run(cmd, cwd=BASE_DIR, capture_output=True, text=True)
 
             if result.returncode == 0:
                 print(f"      ✅ 크롤링 성공")
@@ -170,7 +170,7 @@ def main():
         # SEO/GEO 최적화 및 sitemap.xml / robots.txt / index.html 일괄 재생성
         print("\n🔄 전체 포스트 SEO/GEO 최적화 및 사이트맵/목록 페이지 갱신 중...")
         seo_script = os.path.join(BASE_DIR, "process_seo_geo_all.py")
-        seo_result = subprocess.run(["python3", seo_script], capture_output=True, text=True)
+        seo_result = subprocess.run(["python3", seo_script], cwd=BASE_DIR, capture_output=True, text=True)
         
         if seo_result.returncode == 0:
             print("  ✅ SEO/GEO 최적화 및 사이트맵 갱신 완료!")
