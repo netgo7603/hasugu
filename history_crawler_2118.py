@@ -43,15 +43,19 @@ HEADERS = {
 def git_commit_and_push():
     print("\n🐙 Git Commit & Push 진행 중...")
     try:
-        # git add
+        # 1. dev 브랜치 강제 전환 및 최신화
+        subprocess.run(["git", "checkout", "dev"], cwd=BASE_DIR, check=True)
+        subprocess.run(["git", "pull", "origin", "dev", "--rebase"], cwd=BASE_DIR, check=True)
+
+        # 2. git add
         subprocess.run(["git", "add", "."], cwd=BASE_DIR, check=True)
         
-        # git commit
+        # 3. git commit
         commit_message = f"auto(blog): crawl and process 2 posts for {BLOG_ID} - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
         subprocess.run(["git", "commit", "-m", commit_message], cwd=BASE_DIR, check=True)
         
-        # git push
-        subprocess.run(["git", "push"], cwd=BASE_DIR, check=True)
+        # 4. git push
+        subprocess.run(["git", "push", "origin", "dev"], cwd=BASE_DIR, check=True)
         print("✅ Git Commit & Push 완료!")
         return True
     except subprocess.CalledProcessError as e:
