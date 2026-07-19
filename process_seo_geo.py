@@ -18,7 +18,7 @@ BLOG_DIR = PROJECT_DIR / "blog"
 SITEMAP_FILE = PROJECT_DIR / "sitemap.xml"
 ROBOTS_FILE = PROJECT_DIR / "robots.txt"
 
-DOMAIN = "https://hasugu2.lymin80.shop"
+DOMAIN = "https://www.lymin80.shop"
 COMPANY_NAME = "하수구수사대"
 COMPANY_PHONE = "010-5615-2118"
 SERVICE_AREAS = ["서울", "경기도", "인천"]

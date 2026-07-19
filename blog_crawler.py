@@ -392,7 +392,7 @@ def generate_html(data, log_no, img_map, cover_image_local):
     
     COMPANY_NAME = "하수구수사대"
     COMPANY_PHONE = "010-5615-2118"
-    DOMAIN = "https://hasugu2.lymin80.shop"
+    DOMAIN = "https://www.lymin80.shop"
     
     # 텍스트 추출 및 정제
     content_html = clean_content_for_website(data["content_html"], log_no, img_map)

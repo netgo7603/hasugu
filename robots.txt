@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /index_files/
 
-Sitemap: https://hasugu2.lymin80.shop/sitemap.xml
+Sitemap: https://www.lymin80.shop/sitemap.xml

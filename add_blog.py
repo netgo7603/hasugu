@@ -22,7 +22,7 @@ PROJECT_DIR = Path("/Users/lee/projects/hasugu")
 BLOG_DIR = PROJECT_DIR / "blog"
 IMAGES_DIR = BLOG_DIR / "images"
 SITEMAP_FILE = PROJECT_DIR / "sitemap.xml"
-DOMAIN = "https://hasugu2.lymin80.shop"
+DOMAIN = "https://www.lymin80.shop"
 COMPANY_NAME = "하수구수사대"
 COMPANY_PHONE = "010-5615-2118"
 SERVICE_AREAS = ["서울", "경기도", "인천"]
@@ -238,13 +238,14 @@ def generate_seo_html(meta: dict) -> str:
   <title>{title} | {COMPANY_NAME}</title>
   <meta name="description" content="{desc}">
   <meta name="keywords" content="{', '.join(seo_keywords)}">
+  <link rel="canonical" href="{DOMAIN}/blog/{slug}">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{title} | {COMPANY_NAME}">
   <meta property="og:description" content="{desc}">
   <meta property="og:image" content="{img_prefix}/title.jpg">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="{DOMAIN}/blog/{slug}.html">
+  <meta property="og:url" content="{DOMAIN}/blog/{slug}">
 
   <!-- Schema.org: Article -->
   <script type="application/ld+json">
@@ -266,7 +267,7 @@ def generate_seo_html(meta: dict) -> str:
     }},
     "mainEntityOfPage": {{
       "@type": "WebPage",
-      "@id": "{DOMAIN}/blog/{slug}.html"
+      "@id": "{DOMAIN}/blog/{slug}"
     }}
   }}
   </script>
@@ -611,8 +612,8 @@ def update_sitemap(meta: dict, image_files: list):
 </urlset>'''
     
     # 이미 존재하는지 확인
-    if f"/blog/{slug}.html" in sitemap_content:
-        print(f"  ⏭️  sitemap에 이미 존재: {slug}.html")
+    if f"/blog/{slug}" in sitemap_content or f"/blog/{slug}.html" in sitemap_content:
+        print(f"  ⏭️  sitemap에 이미 존재: {slug}")
         return
     
     # 이미지 엔트리
@@ -631,7 +632,7 @@ def update_sitemap(meta: dict, image_files: list):
     new_entry = f'''
   <!-- 시공사례: {title} -->
   <url>
-    <loc>{DOMAIN}/blog/{slug}.html</loc>
+    <loc>{DOMAIN}/blog/{slug}</loc>
     <lastmod>{date}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -644,7 +645,7 @@ def update_sitemap(meta: dict, image_files: list):
     with open(SITEMAP_FILE, 'w', encoding='utf-8') as f:
         f.write(sitemap_content)
     
-    print(f"  ✅ sitemap.xml 갱신: /blog/{slug}.html")
+    print(f"  ✅ sitemap.xml 갱신: /blog/{slug}")
 
 # ============================================================
 # 7. Docker 배포

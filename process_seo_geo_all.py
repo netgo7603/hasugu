@@ -22,7 +22,7 @@ BLOG_DIR = PROJECT_DIR / "blog"
 SITEMAP_FILE = PROJECT_DIR / "sitemap.xml"
 ROBOTS_FILE = PROJECT_DIR / "robots.txt"
 
-DOMAIN = "https://hasugu2.lymin80.shop"
+DOMAIN = "https://www.lymin80.shop"
 COMPANY_NAME = "하수구수사대"
 COMPANY_PHONE = "010-5615-2118"
 
@@ -84,6 +84,25 @@ SUB_AREA_MAP = {
     "판교동": "pangyo", "고색동": "gosaek", "발안": "baran", "봉담읍": "bongdam",
     "정남면": "jeongnam", "양지면": "yangji", "마도면": "mado", "송산": "songsan",
     "천리": "cheonri"
+}
+
+# ============================================================
+# 1-1. 서울 및 인천 행정구 데이터
+# ============================================================
+SEOUL_DISTRICTS = {
+    "광진": "gwangjin", "노원": "nowon", "성북": "seongbuk", "강동": "gangdong", 
+    "은평": "eunpyeong", "서초": "seocho", "중랑": "jungnang", "서대문": "seodaemun", 
+    "금천": "geumcheon", "동대문": "dongdaemun", "동작": "dongjak", "영등포": "yeongdeungpo", 
+    "관악": "gwanak", "강남": "gangnam", "송파": "songpa", "강서": "gangseo", 
+    "양천": "yangcheon", "구로": "guro", "마포": "mapo", "용산": "yongsan", 
+    "성동": "seongdong", "종로": "jongno", "도봉": "dobong", "강북": "gangbuk",
+    "중구": "jung-gu"
+}
+
+INCHEON_DISTRICTS = {
+    "부평": "bupyeong", "계양": "gyeyang", "미추홀": "michuhol", "연수": "yeonsu", 
+    "남동": "namdong", "강화": "ganghwa", "옹진": "ongjin", "동구": "donggu",
+    "서구": "seogu"
 }
 
 # 8개 초기 수동 매핑 포스트 정보 (기존 퀄리티 완전 보존)
@@ -176,29 +195,95 @@ def clean_html_to_text(html_content: str) -> str:
 # 2. 신규 포스트의 지역 및 서비스 스마트 분석기
 # ============================================================
 def analyze_geo_seo(title: str, body_text: str) -> dict:
-    """한글 제목과 본문에서 지명(Geo)과 서비스(SEO) 정보를 정밀 추출"""
-    city_ko = "용인"  # default
+    """한글 제목과 본문에서 지명(Geo)과 서비스(SEO) 정보를 정밀 추출 (타이틀 우선 매칭)"""
+    city_ko = ""
+    sub_area_ko = ""
+    
+    # --- [1단계: 제목(Title) 매칭 - 최우선] ---
+    # 1-1. 제목에서 기존 GEO_DATA 도시 매칭 (용인, 수원, 화성 등)
     for city in GEO_DATA.keys():
         if city in title:
             city_ko = city
             break
-    else:
+            
+    # 1-2. 제목에서 서울 구 매칭
+    if not city_ko:
+        for dist in SEOUL_DISTRICTS.keys():
+            if f"{dist}구" in title or dist in title:
+                city_ko = "서울"
+                sub_area_ko = f"{dist}구"
+                break
+                
+    # 1-3. 제목에서 인천 구 매칭
+    if not city_ko:
+        for dist in INCHEON_DISTRICTS.keys():
+            if dist in ["중구", "서구", "동구"]:
+                if f"{dist}" in title:
+                    if "인천" in title or "인천" in body_text:
+                        city_ko = "인천"
+                        sub_area_ko = f"{dist}"
+                        break
+            else:
+                if f"{dist}구" in title or dist in title:
+                    city_ko = "인천"
+                    sub_area_ko = f"{dist}구"
+                    break
+                    
+    # 1-4. 제목에서 세부 지명(동/읍/면) 매칭 및 시군 유추
+    if not sub_area_ko:
+        for sub in SUB_AREA_MAP.keys():
+            if sub in title:
+                sub_area_ko = sub
+                if not city_ko:
+                    eng = SUB_AREA_MAP[sub]
+                    for city, info in GEO_DATA.items():
+                        if info["en"] == eng:
+                            city_ko = city
+                            break
+                break
+
+    # --- [2단계: 본문(Body) 매칭 - 제목에서 매칭되지 않았을 때만] ---
+    if not city_ko:
+        # 2-1. 본문에서 기존 GEO_DATA 도시 매칭
         for city in GEO_DATA.keys():
             if city in body_text:
                 city_ko = city
                 break
-
-    sub_area_ko = ""
-    for sub in SUB_AREA_MAP.keys():
-        if sub in title:
-            sub_area_ko = sub
-            break
-    else:
+                
+    # 2-2. 본문에서 서울 구 매칭
+    if not city_ko:
+        for dist in SEOUL_DISTRICTS.keys():
+            if f"{dist}구" in body_text or dist in body_text:
+                city_ko = "서울"
+                sub_area_ko = f"{dist}구"
+                break
+                
+    # 2-3. 본문에서 인천 구 매칭
+    if not city_ko:
+        for dist in INCHEON_DISTRICTS.keys():
+            if dist not in ["중구", "서구", "동구"]:
+                if f"{dist}구" in body_text or dist in body_text:
+                    city_ko = "인천"
+                    sub_area_ko = f"{dist}구"
+                    break
+                    
+    # 2-4. 본문에서 세부 지명(동/읍/면) 매칭 및 시군 유추
+    if not sub_area_ko:
         for sub in SUB_AREA_MAP.keys():
             if sub in body_text:
                 sub_area_ko = sub
+                if not city_ko:
+                    eng = SUB_AREA_MAP[sub]
+                    for city, info in GEO_DATA.items():
+                        if info["en"] == eng:
+                            city_ko = city
+                            break
                 break
 
+    # --- [3단계: 기본값 예외 처리] ---
+    if not city_ko:
+        city_ko = "용인"
+        
     areas = []
     if sub_area_ko:
         areas.append(f"{city_ko} {sub_area_ko}")
@@ -233,13 +318,23 @@ def analyze_geo_seo(title: str, body_text: str) -> dict:
     service_types = list(dict.fromkeys(service_types))
     if not service_types:
         service_types = ["배관막힘", "하수구역류"]
-
+ 
     primary_area = f"{city_ko} {sub_area_ko}" if sub_area_ko else city_ko
     primary_service = service_types[0] if service_types else "배관막힘"
-
+ 
     city_en = GEO_DATA[city_ko]["en"]
-    sub_en = SUB_AREA_MAP[sub_area_ko] if sub_area_ko else ""
     
+    # 영문 서브 지역명 동적 분석
+    sub_en = ""
+    if sub_area_ko:
+        clean_sub = sub_area_ko.replace("구", "").replace("군", "").strip()
+        if clean_sub in SEOUL_DISTRICTS:
+            sub_en = SEOUL_DISTRICTS[clean_sub]
+        elif clean_sub in INCHEON_DISTRICTS:
+            sub_en = INCHEON_DISTRICTS[clean_sub]
+        elif sub_area_ko in SUB_AREA_MAP:
+            sub_en = SUB_AREA_MAP[sub_area_ko]
+            
     service_en = "drain-clogged"
     if "싱크대" in title or "씽크대" in title or "싱크대" in body_text or "씽크대" in body_text:
         service_en = "sink-clogged"
@@ -264,7 +359,7 @@ def analyze_geo_seo(title: str, body_text: str) -> dict:
     slug_parts.append(service_en)
     
     slug = "-".join(slug_parts)
-
+ 
     seo_keywords = [
         f"{primary_area} {primary_service}",
         f"{city_ko} {primary_service}",
@@ -277,7 +372,7 @@ def analyze_geo_seo(title: str, body_text: str) -> dict:
     if sub_area_ko:
         seo_keywords.append(f"{sub_area_ko} {primary_service}")
         seo_keywords.append(f"{sub_area_ko} 하수구역류")
-
+ 
     return {
         "city_ko": city_ko,
         "sub_area_ko": sub_area_ko,
@@ -510,7 +605,7 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
   <title>{title} | {COMPANY_NAME}</title>
   <meta name="description" content="{desc}">
   <meta name="keywords" content="{', '.join(seo_keywords)}">
-  <link rel="canonical" href="{DOMAIN}/blog/{slug}.html">
+  <link rel="canonical" href="{DOMAIN}/blog/{slug}">
 
   <!-- Naver SEO & GEO Tags -->
   <meta name="geo.region" content="{geo_region}">
@@ -523,7 +618,7 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
   <meta property="og:description" content="{desc}">
   <meta property="og:image" content="{cover_image_absolute}">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="{DOMAIN}/blog/{slug}.html">
+  <meta property="og:url" content="{DOMAIN}/blog/{slug}">
 
   <!-- Schema.org: Article -->
   <script type="application/ld+json">
@@ -545,7 +640,7 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
     }},
     "mainEntityOfPage": {{
       "@type": "WebPage",
-      "@id": "{DOMAIN}/blog/{slug}.html"
+      "@id": "{DOMAIN}/blog/{slug}"
     }}
   }}
   </script>
@@ -764,7 +859,7 @@ def rebuild_sitemap(posts: list):
   
   <!-- 블로그 목록 페이지 -->
   <url>
-    <loc>{DOMAIN}/blog/index.html</loc>
+    <loc>{DOMAIN}/blog/</loc>
     <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -795,7 +890,7 @@ def rebuild_sitemap(posts: list):
         entry = f'''
   <!-- 시공사례: {title} -->
   <url>
-    <loc>{DOMAIN}/blog/{slug}.html</loc>
+    <loc>{DOMAIN}/blog/{slug}</loc>
     <lastmod>{date_str}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -828,11 +923,39 @@ Sitemap: {DOMAIN}/sitemap.xml
     print("  ✅ robots.txt 갱신 완료!")
 
 def update_blog_index(posts: list):
-    """블로그 목록 페이지(blog/index.html)를 갱신"""
-    print("📋 blog/index.html 갱신 중...")
+    """블로그 목록 페이지(blog/index.html) 및 posts.json 갱신"""
+    print("📋 blog/index.html 및 posts.json 갱신 중...")
     
-    cards_html = ""
+    # 1. posts.json 파일 생성 (전체 목록)
+    posts_json_data = []
     for p in posts:
+        slug = p["slug"]
+        cover = p.get("cover_image", "")
+        if cover.startswith("/blog/"):
+            cover = cover[6:]
+        elif cover.startswith("/"):
+            cover = cover[1:]
+        if cover.startswith("blog/"):
+            cover = cover[5:]
+            
+        posts_json_data.append({
+            "title": p.get("title", ""),
+            "slug": slug,
+            "cover_image": cover,
+            "category": p.get("category", ""),
+            "description": p.get("description", ""),
+            "date": p.get("date", "")
+        })
+        
+    posts_json_path = BLOG_DIR / "posts.json"
+    with open(posts_json_path, 'w', encoding='utf-8') as f:
+        json.dump(posts_json_data, f, ensure_ascii=False, indent=2)
+    print("  ✅ blog/posts.json 생성 완료!")
+
+    # 2. 첫 24개 포스트만 정적 HTML 카드로 렌더링 (나머지는 JS로 비동기 로드)
+    static_posts = posts[:24]
+    cards_html = ""
+    for p in static_posts:
         slug = p["slug"]
         cover = p.get("cover_image", "")
         
@@ -852,7 +975,7 @@ def update_blog_index(posts: list):
         date_clean = p.get('date', '')
         
         cards_html += f"""
-        <article class="post-card" onclick="location.href='{slug}.html'" role="button" tabindex="0">
+        <article class="post-card" onclick="location.href='{slug}'" role="button" tabindex="0">
             {cover_html}
             <div class="card-body">
                 {"" if not p.get("category") else f'<span class="card-badge">{p["category"]}</span>'}
@@ -896,7 +1019,7 @@ def update_blog_index(posts: list):
         .page-hero h1 {{ font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; margin-bottom: 12px; }}
         .page-hero p {{ opacity: .8; font-size: 1rem; }}
         .post-count {{ display: inline-block; background: var(--accent); color: #fff; padding: 4px 14px; border-radius: 20px; font-size: .8rem; font-weight: 700; margin-top: 16px; }}
-        .posts-grid {{ max-width: 1100px; margin: 0 auto; padding: 56px 24px 80px; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }}
+        .posts-grid {{ max-width: 1100px; margin: 0 auto; padding: 56px 24px 40px; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }}
         .post-card {{ background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; cursor: pointer; transition: transform .25s, box-shadow .25s; display: flex; flex-direction: column; }}
         .post-card:hover {{ transform: translateY(-6px); box-shadow: var(--shadow-md); }}
         .card-img {{ height: 210px; overflow: hidden; background: #e8eaf0; }}
@@ -910,9 +1033,13 @@ def update_blog_index(posts: list):
         .card-meta {{ display: flex; justify-content: space-between; align-items: center; font-size: .8rem; color: var(--text-light); margin-top: 8px; }}
         .card-read {{ color: var(--primary); font-weight: 600; }}
         .empty-state {{ text-align: center; padding: 80px 24px; color: var(--text-light); grid-column: 1/-1; }}
+        .load-more-container {{ text-align: center; margin: 20px 0 80px; }}
+        .load-more-btn {{ background: var(--primary); color: white; border: none; padding: 12px 36px; font-size: 1rem; font-weight: 600; border-radius: var(--radius-sm); cursor: pointer; box-shadow: var(--shadow-sm); transition: background .2s, transform .2s; }}
+        .load-more-btn:hover {{ background: var(--primary-dark); transform: translateY(-2px); }}
+        .load-more-btn:active {{ transform: translateY(0); }}
         .site-footer {{ background: #1a1a2e; color: rgba(255,255,255,.55); text-align: center; padding: 32px 24px; font-size: .82rem; line-height: 1.8; }}
         .site-footer strong {{ color: rgba(255,255,255,.85); }}
-        @media (max-width: 768px) {{ .posts-grid {{ padding: 32px 16px 60px; gap: 20px; }} .header-nav {{ display: none; }} }}
+        @media (max-width: 768px) {{ .posts-grid {{ padding: 32px 16px 40px; gap: 20px; }} .header-nav {{ display: none; }} }}
     </style>
 </head>
 <body>
@@ -934,14 +1061,76 @@ def update_blog_index(posts: list):
     <p>하수구수사대의 실제 현장 시공 후기를 확인하세요</p>
     <span class="post-count">총 {len(posts)}개 포스트</span>
 </section>
-<div class="posts-grid">
+<div class="posts-grid" id="posts-container">
     {cards_html if cards_html else '<div class="empty-state"><p>아직 블로그 포스트가 없습니다.</p></div>'}
+</div>
+<div class="load-more-container">
+    <button id="load-more-btn" class="load-more-btn">더 보기</button>
 </div>
 <footer class="site-footer">
     <strong>하수구수사대</strong><br>
     용인·수원·화성 하수구 막힘 전문 청소업체<br>
     © {datetime.now().year} 하수구수사대. All rights reserved.
 </footer>
+
+<script>
+    let allPosts = [];
+    let currentIndex = 24;
+    const limit = 24;
+    const container = document.getElementById('posts-container');
+    const loadMoreBtn = document.getElementById('load-more-btn');
+
+    // posts.json 파일 비동기 로드
+    fetch('posts.json')
+        .then(response => response.json())
+        .then(data => {{
+            allPosts = data;
+            // 만약 전체 포스트가 24개 이하라면 더보기 버튼 숨김
+            if (allPosts.length <= currentIndex) {{
+                if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+            }}
+        }})
+        .catch(err => console.error('Failed to load posts:', err));
+
+    if (loadMoreBtn) {{
+        loadMoreBtn.addEventListener('click', () => {{
+            const nextPosts = allPosts.slice(currentIndex, currentIndex + limit);
+            nextPosts.forEach(p => {{
+                const card = document.createElement('article');
+                card.className = 'post-card';
+                card.setAttribute('role', 'button');
+                card.setAttribute('tabindex', '0');
+                card.onclick = () => location.href = p.slug;
+                
+                const coverHtml = p.cover_image ? 
+                    `<div class="card-img"><img src="${{p.cover_image}}" alt="${{p.title}}" loading="lazy"></div>` :
+                    `<div class="card-img card-img-placeholder">🔧</div>`;
+                
+                const categoryHtml = p.category ? `<span class="card-badge">${{p.category}}</span>` : '';
+                const descTrunc = p.description.length > 80 ? p.description.slice(0, 80) + '...' : p.description;
+
+                card.innerHTML = `
+                    \${{coverHtml}}
+                    <div class="card-body">
+                        \${{categoryHtml}}
+                        <h2 class="card-title">\${{p.title}}</h2>
+                        <p class="card-desc">\${{descTrunc}}</p>
+                        <div class="card-meta">
+                            <span>📅 \${{p.date}}</span>
+                            <span class="card-read">자세히 보기 →</span>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            }});
+
+            currentIndex += limit;
+            if (currentIndex >= allPosts.length) {{
+                loadMoreBtn.style.display = 'none';
+            }}
+        }});
+    }}
+</script>
 </body>
 </html>"""
     index_path = BLOG_DIR / "index.html"
@@ -956,7 +1145,7 @@ def main():
     print("🚀 블로그 SEO/GEO 일괄 복구 및 사이트맵 갱신 프로세스 시작")
     print(f"   블로그 경로: {BLOG_DIR}")
 
-    json_files = sorted([f for f in os.listdir(BLOG_DIR) if f.endswith(".json")])
+    json_files = sorted([f for f in os.listdir(BLOG_DIR) if f.endswith(".json") and f != "posts.json"])
     print(f"   수집된 JSON 메타데이터 개수: {len(json_files)}개")
 
     final_posts = []
