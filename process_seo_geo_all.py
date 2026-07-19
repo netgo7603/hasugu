@@ -995,6 +995,7 @@ def update_blog_index(posts: list):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="하수구수사대 시공 후기 및 블로그 - 용인·수원·화성 하수구 막힘 전문 청소업체">
     <title>블로그 - 하수구수사대</title>
+    <link rel="canonical" href="{DOMAIN}/blog/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
