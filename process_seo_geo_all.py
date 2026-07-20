@@ -975,18 +975,20 @@ def update_blog_index(posts: list):
         date_clean = p.get('date', '')
         
         cards_html += f"""
-        <article class="post-card" onclick="location.href='{slug}'" role="button" tabindex="0">
-            {cover_html}
-            <div class="card-body">
-                {"" if not p.get("category") else f'<span class="card-badge">{p["category"]}</span>'}
-                <h2 class="card-title">{p['title']}</h2>
-                <p class="card-desc">{p.get('description', '')[:80]}{"..." if len(p.get("description","")) > 80 else ""}</p>
-                <div class="card-meta">
-                    <span>📅 {date_clean}</span>
-                    <span class="card-read">자세히 보기 →</span>
+        <a href="{slug}" class="post-card" style="text-decoration: none; color: inherit;">
+            <article>
+                {cover_html}
+                <div class="card-body">
+                    {"" if not p.get("category") else f'<span class="card-badge">{p["category"]}</span>'}
+                    <h2 class="card-title">{p['title']}</h2>
+                    <p class="card-desc">{p.get('description', '')[:80]}{"..." if len(p.get("description","")) > 80 else ""}</p>
+                    <div class="card-meta">
+                        <span>📅 {date_clean}</span>
+                        <span class="card-read">자세히 보기 →</span>
+                    </div>
                 </div>
-            </div>
-        </article>"""
+            </article>
+        </a>"""
 
     index_html = f"""<!DOCTYPE html>
 <html lang="ko">
@@ -1097,11 +1099,11 @@ def update_blog_index(posts: list):
         loadMoreBtn.addEventListener('click', () => {{
             const nextPosts = allPosts.slice(currentIndex, currentIndex + limit);
             nextPosts.forEach(p => {{
-                const card = document.createElement('article');
+                const card = document.createElement('a');
+                card.href = p.slug;
                 card.className = 'post-card';
-                card.setAttribute('role', 'button');
-                card.setAttribute('tabindex', '0');
-                card.onclick = () => location.href = p.slug;
+                card.style.textDecoration = 'none';
+                card.style.color = 'inherit';
                 
                 const coverHtml = p.cover_image ? 
                     `<div class="card-img"><img src="${{p.cover_image}}" alt="${{p.title}}" loading="lazy"></div>` :
@@ -1111,16 +1113,18 @@ def update_blog_index(posts: list):
                 const descTrunc = p.description.length > 80 ? p.description.slice(0, 80) + '...' : p.description;
 
                 card.innerHTML = `
-                    \${{coverHtml}}
-                    <div class="card-body">
-                        \${{categoryHtml}}
-                        <h2 class="card-title">\${{p.title}}</h2>
-                        <p class="card-desc">\${{descTrunc}}</p>
-                        <div class="card-meta">
-                            <span>📅 \${{p.date}}</span>
-                            <span class="card-read">자세히 보기 →</span>
+                    <article style="height: 100%; display: flex; flex-direction: column;">
+                        \${{coverHtml}}
+                        <div class="card-body" style="flex: 1; display: flex; flex-direction: column; gap: 8px;">
+                            \${{categoryHtml}}
+                            <h2 class="card-title">\${{p.title}}</h2>
+                            <p class="card-desc">\${{descTrunc}}</p>
+                            <div class="card-meta">
+                                <span>📅 \${{p.date}}</span>
+                                <span class="card-read">자세히 보기 →</span>
+                            </div>
                         </div>
-                    </div>
+                    </article>
                 `;
                 container.appendChild(card);
             }});
