@@ -1301,11 +1301,16 @@ def main():
             }
         else:
             geo_seo_info = analyze_geo_seo(title, body_text_clean)
+        
         slug = geo_seo_info["slug"]
+        if not slug.endswith(f"-{log_no}"):
+            slug = f"{slug}-{log_no}"
+        geo_seo_info["slug"] = slug
         new_html_name = f"{slug}.html"
 
         meta["html_file"] = new_html_name
         meta["slug"] = slug
+
 
         meta["content"] = content
         meta["geo_seo_info"] = geo_seo_info
