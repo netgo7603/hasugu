@@ -22,7 +22,8 @@ PROJECT_DIR = Path("/Users/lee/projects/hasugu")
 BLOG_DIR = PROJECT_DIR / "blog"
 IMAGES_DIR = BLOG_DIR / "images"
 SITEMAP_FILE = PROJECT_DIR / "sitemap.xml"
-DOMAIN = "https://www.lymin80.shop"
+DOMAIN = "https://lymin80.shop"
+
 COMPANY_NAME = "하수구수사대"
 COMPANY_PHONE = "010-5615-2118"
 SERVICE_AREAS = ["서울", "경기도", "인천"]
