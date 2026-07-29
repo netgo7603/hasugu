@@ -866,78 +866,43 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
 # 5. 글로벌 빌드 기능 (Sitemap, Index, Robots)
 # ============================================================
 def rebuild_sitemap(posts: list):
-    """sitemap.xml을 최신 상태로 처음부터 안전하게 다시 구축"""
+    """sitemap.xml을 최신 상태로 네이버/구글 서치어드바이저 표준 규격에 맞게 재구축"""
     print("🕸️ sitemap.xml 재구축 중...")
     
-    sitemap_entries = [f'''  <!-- 메인 페이지 -->
-  <url>
+    sitemap_entries = [f'''  <url>
     <loc>{DOMAIN}/</loc>
     <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>{DOMAIN}/images/Top_Bg_2.png</image:loc>
-      <image:title>하수구수사대 배관케어 전문업체 메인</image:title>
-      <image:caption>하수구수사대 - 하수구막힘, 누수탐지, 고압세척 전문업체</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>{DOMAIN}/images/logo.png</image:loc>
-      <image:title>하수구수사대 로고</image:title>
-      <image:caption>하수구수사대 공식 로고</image:caption>
-    </image:image>
   </url>
-  
-  <!-- 블로그 목록 페이지 -->
   <url>
-    <loc>{DOMAIN}/blog/</loc>
+    <loc>{DOMAIN}/blog/index.html</loc>
     <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>''']
-  
+
     for p in posts:
         slug = p["slug"]
         date_str = format_date(p["date"])
-        title = p["title"]
-        cover_image = p.get("cover_image", "")
         
-        if cover_image.startswith("/blog/"):
-            cover_image = cover_image[6:]
-        elif cover_image.startswith("/"):
-            cover_image = cover_image[1:]
-        if cover_image.startswith("blog/"):
-            cover_image = cover_image[5:]
-
-        image_block = ""
-        if cover_image:
-            img_url = f"{DOMAIN}/blog/{cover_image}"
-            image_block = f'''    <image:image>
-      <image:loc>{img_url}</image:loc>
-      <image:title>{title}</image:title>
-      <image:caption>{COMPANY_NAME} 시공사례 - {title}</image:caption>
-    </image:image>'''
-            
-        entry = f'''
-  <!-- 시공사례: {title} -->
-  <url>
-    <loc>{DOMAIN}/blog/{slug}</loc>
+        entry = f'''  <url>
+    <loc>{DOMAIN}/blog/{slug}.html</loc>
     <lastmod>{date_str}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-{image_block}
   </url>'''
         sitemap_entries.append(entry)
         
     sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-{"".join(sitemap_entries)}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{chr(10).join(sitemap_entries)}
 </urlset>
 '''
     with open(SITEMAP_FILE, 'w', encoding='utf-8') as f:
         f.write(sitemap_content)
     print(f"  ✅ sitemap.xml 재구축 완료! ({len(posts)}개 포스트 반영)")
+
 
 def format_rss_date(date_str: str) -> str:
     """날짜 문자열을 RFC 822 포맷(예: Wed, 29 Jul 2026 00:00:00 +0900)으로 변환"""
