@@ -938,8 +938,17 @@ def rebuild_sitemap(posts: list):
         f.write(sitemap_content)
     print(f"  ✅ sitemap.xml 재구축 완료! ({len(posts)}개 포스트 반영)")
 
+def format_rss_date(date_str: str) -> str:
+    """날짜 문자열을 RFC 822 포맷(예: Wed, 29 Jul 2026 00:00:00 +0900)으로 변환"""
+    clean_d = format_date(date_str)
+    try:
+        dt = datetime.strptime(clean_d, "%Y-%m-%d")
+        return dt.strftime("%a, %d %b %Y %H:%M:%S +0900")
+    except Exception:
+        return datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0900")
+
 def rebuild_rss(posts: list):
-    """rss.xml 파일 생성/갱신"""
+    """rss.xml 파일 생성/갱신 (네이버 서치어드바이저 RSS 피드 가이드 준수)"""
     print("📡 rss.xml 갱신 중...")
     rss_items = []
     for p in posts[:50]:
@@ -947,14 +956,15 @@ def rebuild_rss(posts: list):
         slug = p.get('slug', '')
         link = f"{DOMAIN}/blog/{slug}"
         desc = p.get('description', '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
-        date_str = p.get('date', '')
+        raw_date = p.get('date', '')
+        pub_date = format_rss_date(raw_date)
         
         rss_items.append(f'''    <item>
       <title>{title}</title>
       <link>{link}</link>
       <description>{desc}</description>
+      <pubDate>{pub_date}</pubDate>
       <guid isPermaLink="true">{link}</guid>
-      <pubDate>{date_str}</pubDate>
     </item>''')
 
     rss_items_joined = "\n".join(rss_items)
@@ -977,6 +987,7 @@ def rebuild_rss(posts: list):
     print(f"  ✅ rss.xml 갱신 완료! ({len(posts[:50])}개 포스트 반영)")
 
 def rebuild_robots():
+
     """robots.txt 파일 생성/갱신"""
     print("🤖 robots.txt 갱신 중...")
     robots_content = f'''User-agent: *
