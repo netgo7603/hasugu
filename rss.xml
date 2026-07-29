@@ -2,8 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title><![CDATA[하수구수사대 시공후기 & 블로그]]></title>
-    <link>https://www.lymin80.shop/blog/index.html</link>
+    <link>https://www.lymin80.shop/blog/</link>
     <description><![CDATA[용인·수원·화성 하수구막힘, 누수탐지, 고압세척 전문업체 하수구수사대 시공사례 피드]]></description>
+
     <language>ko-KR</language>
     <atom:link href="https://www.lymin80.shop/rss.xml" rel="self" type="application/rss+xml" />
     <item>

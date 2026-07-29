@@ -743,7 +743,7 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
 
   <!-- 브레드크럼 -->
   <div class="breadcrumb">
-    <a href="/">홈</a> &gt; <a href="/blog/index.html">시공사례</a> &gt; <span>{primary_area} {primary_service}</span>
+    <a href="/">홈</a> &gt; <a href="/blog/">시공사례</a> &gt; <span>{primary_area} {primary_service}</span>
   </div>
 
   <!-- 헤더 -->
@@ -954,8 +954,9 @@ def rebuild_rss(posts: list):
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title><![CDATA[{COMPANY_NAME} 시공후기 & 블로그]]></title>
-    <link>{DOMAIN}/blog/index.html</link>
+    <link>{DOMAIN}/blog/</link>
     <description><![CDATA[용인·수원·화성 하수구막힘, 누수탐지, 고압세척 전문업체 {COMPANY_NAME} 시공사례 피드]]></description>
+
     <language>ko-KR</language>
     <atom:link href="{DOMAIN}/rss.xml" rel="self" type="application/rss+xml" />
 {rss_items_joined}
