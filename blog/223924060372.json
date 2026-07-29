@@ -1,13 +1,10 @@
 {
-  "log_no": "223924060372",
+  "blog_id": null,
   "title": "정남면 하수구 막힘 화성 팔탄면 공장 화장실 배관 역류 고압세척",
-  "description": "안녕하세요. 정남면 하수구 막힘, 화성 팔탄면 공장 화장실 배관 역류 고압세척 현장에 다녀온 하수구 다큐...",
   "date": "2025. 7. 6. 22:23",
   "category": "고압세척",
+  "description": "안녕하세요. 정남면 하수구 막힘, 화성 팔탄면 공장 화장실 배관 역류 고압세척 현장에 다녀온 하수구 다큐...",
   "cover_image": "images/223924060372/cover.png",
-  "html_file": "hwaseong-paltan-sewer-backflow-223924060372.html",
-  "images_count": 14,
-  "crawled_at": "2026-06-17 09:50:59",
-  "naver_url": "https://blog.naver.com/hasugu2118/223924060372",
-  "slug": "hwaseong-paltan-sewer-backflow-223924060372"
+  "html_file": "hwaseong-paltan-sewer-backflow.html",
+  "slug": "hwaseong-paltan-sewer-backflow"
 }

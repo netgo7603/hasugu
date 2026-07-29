@@ -1,13 +1,10 @@
 {
-  "log_no": "222518743925",
+  "blog_id": null,
   "title": "수원싱크대막힘 시원하게 해결했어요",
-  "description": "안녕하세요. 수원싱크대막힘 해결하러 오늘도 출동한 하수구수사대 입니다. 다들 이번 추석연휴 잘보내셨나...",
   "date": "2021. 9. 27. 21:08",
   "category": "싱크대막힘",
+  "description": "안녕하세요. 수원싱크대막힘 해결하러 오늘도 출동한 하수구수사대 입니다. 다들 이번 추석연휴 잘보내셨나...",
   "cover_image": "images/222518743925/cover.png",
-  "html_file": "suwon-sink-clogged-222518743925.html",
-  "images_count": 13,
-  "crawled_at": "2026-06-17 16:06:54",
-  "naver_url": "https://blog.naver.com/hasugu80/222518743925",
-  "slug": "suwon-sink-clogged-222518743925"
+  "html_file": "suwon-sink-clogged.html",
+  "slug": "suwon-sink-clogged"
 }

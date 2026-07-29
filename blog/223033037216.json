@@ -1,13 +1,10 @@
 {
-  "log_no": "223033037216",
+  "blog_id": null,
   "title": "화성시 화산동 안녕동 하수구막힘 해결은?",
-  "description": "안녕하세요 하수구수사대입니다. 우리는 평소에 많은 생활하수를 흘려보내면서 생활을 하고 있습니다. 이러...",
   "date": "2023. 3. 2. 23:19",
   "category": "하수구막힘",
+  "description": "안녕하세요 하수구수사대입니다. 우리는 평소에 많은 생활하수를 흘려보내면서 생활을 하고 있습니다. 이러...",
   "cover_image": "images/223033037216/cover.png",
-  "html_file": "hwaseong-sink-clogged-223033037216.html",
-  "images_count": 11,
-  "crawled_at": "2026-06-17 15:34:25",
-  "naver_url": "https://blog.naver.com/hasugu80/223033037216",
-  "slug": "hwaseong-sink-clogged-223033037216"
+  "html_file": "hwaseong-sink-clogged.html",
+  "slug": "hwaseong-sink-clogged"
 }

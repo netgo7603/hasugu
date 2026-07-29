@@ -1,13 +1,10 @@
 {
-  "log_no": "223099477405",
+  "blog_id": null,
   "title": "화성시 병점하수구막힘 진안동 반월동 하수구 배관 해결",
-  "description": "안녕하세요. 하수구수사대입니다. 일상생활을 하다 보면 언제든지 발생을 할 수 있는 것이 바로 배관 막힘...",
   "date": "2023. 5. 11. 17:51",
   "category": "하수구막힘",
+  "description": "안녕하세요. 하수구수사대입니다. 일상생활을 하다 보면 언제든지 발생을 할 수 있는 것이 바로 배관 막힘...",
   "cover_image": "images/223099477405/cover.png",
-  "html_file": "hwaseong-byeongjeom-sink-clogged-223099477405.html",
-  "images_count": 11,
-  "crawled_at": "2026-06-17 15:29:51",
-  "naver_url": "https://blog.naver.com/hasugu80/223099477405",
-  "slug": "hwaseong-byeongjeom-sink-clogged-223099477405"
+  "html_file": "hwaseong-byeongjeom-sink-clogged.html",
+  "slug": "hwaseong-byeongjeom-sink-clogged"
 }

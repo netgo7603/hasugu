@@ -1,13 +1,10 @@
 {
-  "log_no": "222974436676",
+  "blog_id": null,
   "title": "화성시 향남하수구막힘 역류해결 전문가의 도움이 필요해요.",
-  "description": "안녕하세요 하수구수사대입니다! 일상 속에서 하수구를 이용하는 일이 많이 있습니다. 배관 같은 경우는 보...",
   "date": "2023. 1. 4. 9:45",
   "category": "하수구막힘",
+  "description": "안녕하세요 하수구수사대입니다! 일상 속에서 하수구를 이용하는 일이 많이 있습니다. 배관 같은 경우는 보...",
   "cover_image": "images/222974436676/cover.png",
-  "html_file": "hwaseong-hyangnam-sewer-backflow-222974436676.html",
-  "images_count": 14,
-  "crawled_at": "2026-06-17 15:38:07",
-  "naver_url": "https://blog.naver.com/hasugu80/222974436676",
-  "slug": "hwaseong-hyangnam-sewer-backflow-222974436676"
+  "html_file": "hwaseong-hyangnam-sewer-backflow.html",
+  "slug": "hwaseong-hyangnam-sewer-backflow"
 }

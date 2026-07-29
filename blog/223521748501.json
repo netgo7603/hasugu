@@ -1,13 +1,10 @@
 {
-  "log_no": "223521748501",
+  "blog_id": null,
   "title": "종로 교남동하수도뚫음 청진동 오수맨홀청소 누수탐지",
-  "description": "종로 교남동하수도뚫음 청진동 오수맨홀청소 누수탐지 역류들이 나타나게된다면 수도사용에 문제들이 커지...",
   "date": "2024. 7. 22. 19:14",
   "category": "게시판",
+  "description": "종로 교남동하수도뚫음 청진동 오수맨홀청소 누수탐지 역류들이 나타나게된다면 수도사용에 문제들이 커지...",
   "cover_image": "images/223521748501/cover.jpg",
-  "html_file": "seoul-jongno-sewer-clogged-223521748501.html",
-  "images_count": 9,
-  "crawled_at": "2026-06-17 14:49:00",
-  "naver_url": "https://blog.naver.com/hasugu80/223521748501",
-  "slug": "seoul-jongno-sewer-clogged-223521748501"
+  "html_file": "seoul-jongno-sewer-clogged.html",
+  "slug": "seoul-jongno-sewer-clogged"
 }

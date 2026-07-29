@@ -1,13 +1,10 @@
 {
-  "log_no": "223526722630",
+  "blog_id": null,
   "title": "부천 심곡본동하수구역류 송내동 하수구청소 통수전문",
-  "description": "부천 심곡본동하수구역류 송내동 하수구청소 통수전문 자주 발생되는 배수구와 연관된 문제들을 완화시키고...",
   "date": "2024. 7. 26. 21:51",
   "category": "게시판",
+  "description": "부천 심곡본동하수구역류 송내동 하수구청소 통수전문 자주 발생되는 배수구와 연관된 문제들을 완화시키고...",
   "cover_image": "images/223526722630/cover.jpg",
-  "html_file": "seoul-sewer-backflow-223526722630.html",
-  "images_count": 9,
-  "crawled_at": "2026-06-17 14:48:14",
-  "naver_url": "https://blog.naver.com/hasugu80/223526722630",
-  "slug": "seoul-sewer-backflow-223526722630"
+  "html_file": "seoul-sewer-backflow.html",
+  "slug": "seoul-sewer-backflow"
 }

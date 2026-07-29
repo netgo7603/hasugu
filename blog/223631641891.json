@@ -1,13 +1,10 @@
 {
-  "log_no": "223631641891",
+  "blog_id": null,
   "title": "중구 예관동싱크대역류 중림동 배수구뚫기 누수탐지공사",
-  "description": "중구 예관동싱크대역류 중림동 배수구뚫기 누수탐지공사 하수관의 오류를 시작으로 집수정의 물이 범람하면...",
   "date": "2024. 10. 24. 13:21",
   "category": "게시판",
+  "description": "중구 예관동싱크대역류 중림동 배수구뚫기 누수탐지공사 하수관의 오류를 시작으로 집수정의 물이 범람하면...",
   "cover_image": "images/223631641891/cover.jpg",
-  "html_file": "seoul-sink-clogged-223631641891.html",
-  "images_count": 10,
-  "crawled_at": "2026-06-17 14:34:26",
-  "naver_url": "https://blog.naver.com/hasugu80/223631641891",
-  "slug": "seoul-sink-clogged-223631641891"
+  "html_file": "seoul-sink-clogged.html",
+  "slug": "seoul-sink-clogged"
 }

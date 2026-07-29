@@ -1,13 +1,10 @@
 {
-  "log_no": "223727162874",
+  "blog_id": null,
   "title": "금정동하수구역류 궁내동 배수로뚫기 누수공사",
-  "description": "금정동하수구역류 궁내동 배수로뚫기 누수공사 하수관은 주택이나 가게같은 곳에 당연히 배치되는 시설이예...",
   "date": "2025. 1. 15. 23:39",
   "category": "게시판",
+  "description": "금정동하수구역류 궁내동 배수로뚫기 누수공사 하수관은 주택이나 가게같은 곳에 당연히 배치되는 시설이예...",
   "cover_image": "images/223727162874/cover.jpg",
-  "html_file": "yongin-sewer-backflow-223727162874.html",
-  "images_count": 8,
-  "crawled_at": "2026-06-17 14:14:53",
-  "naver_url": "https://blog.naver.com/hasugu80/223727162874",
-  "slug": "yongin-sewer-backflow-223727162874"
+  "html_file": "yongin-sewer-backflow.html",
+  "slug": "yongin-sewer-backflow"
 }

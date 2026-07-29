@@ -1,13 +1,10 @@
 {
-  "log_no": "223664756602",
+  "blog_id": null,
   "title": "이천 고담동하수도역류 장호원읍 배관뚫기 부속수리",
-  "description": "이천 고담동하수도역류 장호원읍 배관뚫기 부속수리 욕실 내의 하수구가 막힘이 생겨서 수돗물이 소통될 수...",
   "date": "2024. 11. 18. 12:03",
   "category": "게시판",
+  "description": "이천 고담동하수도역류 장호원읍 배관뚫기 부속수리 욕실 내의 하수구가 막힘이 생겨서 수돗물이 소통될 수...",
   "cover_image": "images/223664756602/cover.jpg",
-  "html_file": "seoul-sewer-backflow-223664756602.html",
-  "images_count": 10,
-  "crawled_at": "2026-06-17 14:29:22",
-  "naver_url": "https://blog.naver.com/hasugu80/223664756602",
-  "slug": "seoul-sewer-backflow-223664756602"
+  "html_file": "seoul-sewer-backflow.html",
+  "slug": "seoul-sewer-backflow"
 }

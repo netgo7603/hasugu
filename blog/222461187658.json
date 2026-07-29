@@ -1,13 +1,10 @@
 {
-  "log_no": "222461187658",
+  "blog_id": null,
   "title": "싱크대배관역류 싱크대막힘 막힘해결",
-  "description": "안녕하세요 여러분!! 올 여름은 유난히도 더운듯 합니다. 코로나가 4단계가 연장되면서 자영업자들의 걱정...",
   "date": "2021. 8. 7. 23:23",
   "category": "싱크대막힘",
+  "description": "안녕하세요 여러분!! 올 여름은 유난히도 더운듯 합니다. 코로나가 4단계가 연장되면서 자영업자들의 걱정...",
   "cover_image": "images/222461187658/cover.jpg",
-  "html_file": "seoul-sink-clogged-222461187658.html",
-  "images_count": 10,
-  "crawled_at": "2026-06-17 16:08:44",
-  "naver_url": "https://blog.naver.com/hasugu80/222461187658",
-  "slug": "seoul-sink-clogged-222461187658"
+  "html_file": "seoul-sink-clogged.html",
+  "slug": "seoul-sink-clogged"
 }

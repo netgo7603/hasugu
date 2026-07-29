@@ -1,13 +1,10 @@
 {
-  "log_no": "222906868319",
+  "blog_id": null,
   "title": "오산시 궐동하수구막힘 은계동 남촌동 하수구업체 제대로 뚫은 현장입니다!",
-  "description": "안녕하세요. 하수구수사대입니다. 빌라나 아파트와 같은 다세대 주택들에서 살고 있으신 분들이 많이 있습...",
   "date": "2022. 10. 22. 1:14",
   "category": "하수구막힘",
+  "description": "안녕하세요. 하수구수사대입니다. 빌라나 아파트와 같은 다세대 주택들에서 살고 있으신 분들이 많이 있습...",
   "cover_image": "images/222906868319/cover.jpg",
-  "html_file": "osan-sewer-clogged-222906868319.html",
-  "images_count": 11,
-  "crawled_at": "2026-06-17 15:42:54",
-  "naver_url": "https://blog.naver.com/hasugu80/222906868319",
-  "slug": "osan-sewer-clogged-222906868319"
+  "html_file": "osan-sewer-clogged.html",
+  "slug": "osan-sewer-clogged"
 }

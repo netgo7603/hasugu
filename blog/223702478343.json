@@ -1,13 +1,10 @@
 {
-  "log_no": "223702478343",
+  "blog_id": null,
   "title": "달성 화장실하수구뚫음 경산시 주택하수구막힘",
-  "description": "달성 화장실하수구뚫음 경산시 주택하수구막힘 다세대 주택 내부에 설치 되어있는 하수시설을 점검하지 않...",
   "date": "2024. 12. 23. 1:20",
   "category": "게시판",
+  "description": "달성 화장실하수구뚫음 경산시 주택하수구막힘 다세대 주택 내부에 설치 되어있는 하수시설을 점검하지 않...",
   "cover_image": "images/223702478343/cover.jpg",
-  "html_file": "yongin-sewer-clogged-223702478343.html",
-  "images_count": 9,
-  "crawled_at": "2026-06-17 14:20:22",
-  "naver_url": "https://blog.naver.com/hasugu80/223702478343",
-  "slug": "yongin-sewer-clogged-223702478343"
+  "html_file": "yongin-sewer-clogged.html",
+  "slug": "yongin-sewer-clogged"
 }

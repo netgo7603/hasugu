@@ -1,13 +1,10 @@
 {
-  "log_no": "222519913248",
+  "blog_id": null,
   "title": "화성 음식물분쇄기 싱크대막힘 해결현장",
-  "description": "안녕하세요 ㅎㅎ 화성 음식물분쇄기 싱크대막힘 현장을 해결하러 오늘도 출동한 하수구수사대 입니다. 저희...",
   "date": "2021. 9. 28. 20:55",
   "category": "싱크대막힘",
+  "description": "안녕하세요 ㅎㅎ 화성 음식물분쇄기 싱크대막힘 현장을 해결하러 오늘도 출동한 하수구수사대 입니다. 저희...",
   "cover_image": "images/222519913248/cover.png",
-  "html_file": "hwaseong-sink-clogged-222519913248.html",
-  "images_count": 16,
-  "crawled_at": "2026-06-17 16:06:43",
-  "naver_url": "https://blog.naver.com/hasugu80/222519913248",
-  "slug": "hwaseong-sink-clogged-222519913248"
+  "html_file": "hwaseong-sink-clogged.html",
+  "slug": "hwaseong-sink-clogged"
 }

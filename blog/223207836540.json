@@ -1,13 +1,10 @@
 {
-  "log_no": "223207836540",
+  "blog_id": null,
   "title": "화성 정남 하수구맨홀 역류 향남 고압세척 하수구뚫는곳",
-  "description": "모든 사람들이 살아가는 공간과 환경은 비슷비슷하겠지만 배수구배관의 위치나 모양,크기는 모두 다른 모습...",
   "date": "2023. 9. 11. 0:34",
   "category": "게시판",
+  "description": "모든 사람들이 살아가는 공간과 환경은 비슷비슷하겠지만 배수구배관의 위치나 모양,크기는 모두 다른 모습...",
   "cover_image": "images/223207836540/cover.png",
-  "html_file": "hwaseong-hyangnam-sewer-backflow-223207836540.html",
-  "images_count": 12,
-  "crawled_at": "2026-06-17 15:25:05",
-  "naver_url": "https://blog.naver.com/hasugu80/223207836540",
-  "slug": "hwaseong-hyangnam-sewer-backflow-223207836540"
+  "html_file": "hwaseong-hyangnam-sewer-backflow.html",
+  "slug": "hwaseong-hyangnam-sewer-backflow"
 }

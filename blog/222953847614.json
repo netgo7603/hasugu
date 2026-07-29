@@ -1,13 +1,10 @@
 {
-  "log_no": "222953847614",
+  "blog_id": null,
   "title": "평택 송탄하수구막힘 고덕 여염리 배관내시경으로 확실한 원인 파악!",
-  "description": "안녕하세요 하수구수사대입니다:) 이번에 방문한 현장은 평택 송탄하수구막힘 고덕 여염리에 있는 한 식당...",
   "date": "2022. 12. 12. 23:20",
   "category": "하수구막힘",
+  "description": "안녕하세요 하수구수사대입니다:) 이번에 방문한 현장은 평택 송탄하수구막힘 고덕 여염리에 있는 한 식당...",
   "cover_image": "images/222953847614/cover.png",
-  "html_file": "pyeongtaek-sink-clogged-222953847614.html",
-  "images_count": 13,
-  "crawled_at": "2026-06-17 15:40:07",
-  "naver_url": "https://blog.naver.com/hasugu80/222953847614",
-  "slug": "pyeongtaek-sink-clogged-222953847614"
+  "html_file": "pyeongtaek-sink-clogged.html",
+  "slug": "pyeongtaek-sink-clogged"
 }

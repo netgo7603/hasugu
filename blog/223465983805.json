@@ -1,13 +1,10 @@
 {
-  "log_no": "223465983805",
+  "blog_id": null,
   "title": "부곡동 서동 변기막힘 금사동 변기배관막힘",
-  "description": "부곡동 서동 변기막힘 금사동 변기배관막힘 일상에서 물들을 쓰려면 무조건 오수들이 배출되는 배수시설들...",
   "date": "2024. 6. 1. 23:12",
   "category": "게시판",
+  "description": "부곡동 서동 변기막힘 금사동 변기배관막힘 일상에서 물들을 쓰려면 무조건 오수들이 배출되는 배수시설들...",
   "cover_image": "images/223465983805/cover.jpg",
-  "html_file": "seoul-sink-clogged-223465983805.html",
-  "images_count": 9,
-  "crawled_at": "2026-06-17 14:59:15",
-  "naver_url": "https://blog.naver.com/hasugu80/223465983805",
-  "slug": "seoul-sink-clogged-223465983805"
+  "html_file": "seoul-sink-clogged.html",
+  "slug": "seoul-sink-clogged"
 }

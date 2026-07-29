@@ -1,13 +1,10 @@
 {
-  "log_no": "223096369726",
+  "blog_id": null,
   "title": "안산 상록구 해양동 사동 싱크대하수구막힘 뚫음 현장 후기",
-  "description": "안녕하세요. 하수구수사대입니다. 일상생활을 하면서 필요한 정보라고 할 수 있는 것 중 하나가 바로 배관 ...",
   "date": "2023. 5. 8. 15:12",
   "category": "싱크대막힘",
+  "description": "안녕하세요. 하수구수사대입니다. 일상생활을 하면서 필요한 정보라고 할 수 있는 것 중 하나가 바로 배관 ...",
   "cover_image": "images/223096369726/cover.png",
-  "html_file": "ansan-haeyang-sink-clogged-223096369726.html",
-  "images_count": 10,
-  "crawled_at": "2026-06-17 15:29:59",
-  "naver_url": "https://blog.naver.com/hasugu80/223096369726",
-  "slug": "ansan-haeyang-sink-clogged-223096369726"
+  "html_file": "ansan-haeyang-sink-clogged.html",
+  "slug": "ansan-haeyang-sink-clogged"
 }

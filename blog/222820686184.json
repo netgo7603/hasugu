@@ -1,13 +1,10 @@
 {
-  "log_no": "222820686184",
+  "blog_id": null,
   "title": "화성시 안녕동 화산동 하수구막힘 고압세척의 진행으로 손상 없이 시공 완료하였습니다!",
-  "description": "안녕하세요.하수구수사대 입니다.반갑습니다. 매일매일 쉼 없이 돌아가야 하는 공장과 같은 곳에서 하수구...",
   "date": "2022. 7. 20. 12:24",
   "category": "게시판",
+  "description": "안녕하세요.하수구수사대 입니다.반갑습니다. 매일매일 쉼 없이 돌아가야 하는 공장과 같은 곳에서 하수구...",
   "cover_image": "images/222820686184/cover.png",
-  "html_file": "hwaseong-sewer-clogged-222820686184.html",
-  "images_count": 13,
-  "crawled_at": "2026-06-17 15:47:56",
-  "naver_url": "https://blog.naver.com/hasugu80/222820686184",
-  "slug": "hwaseong-sewer-clogged-222820686184"
+  "html_file": "hwaseong-sewer-clogged.html",
+  "slug": "hwaseong-sewer-clogged"
 }

@@ -1,13 +1,10 @@
 {
-  "log_no": "223860050150",
+  "blog_id": null,
   "title": "막계동욕실역류 별양동 하수구뚫어주는곳 배관공사",
-  "description": "막계동욕실역류 별양동 하수구뚫어주는곳 배관공사 관로가 정체되는 문제는 한번쯤은 경험하셨으리라 생각...",
   "date": "2025. 5. 9. 12:48",
   "category": "게시판",
+  "description": "막계동욕실역류 별양동 하수구뚫어주는곳 배관공사 관로가 정체되는 문제는 한번쯤은 경험하셨으리라 생각...",
   "cover_image": "images/223860050150/cover.jpg",
-  "html_file": "seoul-sewer-backflow-223860050150.html",
-  "images_count": 8,
-  "crawled_at": "2026-06-17 10:12:01",
-  "naver_url": "https://blog.naver.com/hasugu80/223860050150",
-  "slug": "seoul-sewer-backflow-223860050150"
+  "html_file": "seoul-sewer-backflow.html",
+  "slug": "seoul-sewer-backflow"
 }

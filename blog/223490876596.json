@@ -1,13 +1,10 @@
 {
-  "log_no": "223490876596",
+  "blog_id": null,
   "title": "구리시 인창동하수구역류 동구동 하수구청소 설비업체",
-  "description": "구리시 인창동하수구역류 동구동 하수구청소 설비업체 화장실 방향으로 향하면 뭔가 썩는 듯한 냄새 분자가...",
   "date": "2024. 6. 25. 16:09",
   "category": "게시판",
+  "description": "구리시 인창동하수구역류 동구동 하수구청소 설비업체 화장실 방향으로 향하면 뭔가 썩는 듯한 냄새 분자가...",
   "cover_image": "images/223490876596/cover.jpg",
-  "html_file": "seoul-sewer-backflow-223490876596.html",
-  "images_count": 9,
-  "crawled_at": "2026-06-17 14:54:14",
-  "naver_url": "https://blog.naver.com/hasugu80/223490876596",
-  "slug": "seoul-sewer-backflow-223490876596"
+  "html_file": "seoul-sewer-backflow.html",
+  "slug": "seoul-sewer-backflow"
 }

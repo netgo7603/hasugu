@@ -1,13 +1,10 @@
 {
-  "log_no": "223153515675",
+  "blog_id": null,
   "title": "평택 팔탄 공장하수구막힘 완벽하게 해결 현장 후기",
-  "description": "안녕하세요. 하수구수사대입니다. 우리 주변에는 눈에 보이지는 않지만 물을 사용하는 곳이라면 어디든 배...",
   "date": "2023. 7. 12. 0:20",
   "category": "하수구막힘",
+  "description": "안녕하세요. 하수구수사대입니다. 우리 주변에는 눈에 보이지는 않지만 물을 사용하는 곳이라면 어디든 배...",
   "cover_image": "images/223153515675/cover.png",
-  "html_file": "pyeongtaek-paltan-sewer-clogged-223153515675.html",
-  "images_count": 11,
-  "crawled_at": "2026-06-17 15:26:51",
-  "naver_url": "https://blog.naver.com/hasugu80/223153515675",
-  "slug": "pyeongtaek-paltan-sewer-clogged-223153515675"
+  "html_file": "pyeongtaek-paltan-sewer-clogged.html",
+  "slug": "pyeongtaek-paltan-sewer-clogged"
 }

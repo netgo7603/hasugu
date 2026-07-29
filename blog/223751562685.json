@@ -1,13 +1,10 @@
 {
-  "log_no": "223751562685",
+  "blog_id": null,
   "title": "성남 수진동하수도역류 고등동 배수구뚫기 설비공사",
-  "description": "성남 수진동하수도역류 고등동 배수구뚫기 설비공사 공동 주택 내부에 설치 되어있는 하수시설을 관리하지 ...",
   "date": "2025. 2. 7. 16:38",
   "category": "게시판",
+  "description": "성남 수진동하수도역류 고등동 배수구뚫기 설비공사 공동 주택 내부에 설치 되어있는 하수시설을 관리하지 ...",
   "cover_image": "images/223751562685/cover.jpg",
-  "html_file": "seongnam-sewer-backflow-223751562685.html",
-  "images_count": 9,
-  "crawled_at": "2026-06-17 14:08:09",
-  "naver_url": "https://blog.naver.com/hasugu80/223751562685",
-  "slug": "seongnam-sewer-backflow-223751562685"
+  "html_file": "seongnam-sewer-backflow.html",
+  "slug": "seongnam-sewer-backflow"
 }

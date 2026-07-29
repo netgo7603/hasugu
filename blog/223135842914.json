@@ -1,13 +1,10 @@
 {
-  "log_no": "223135842914",
+  "blog_id": null,
   "title": "이천시 하수구막힘 마장 덕평 하수구해결현장 후기 공유",
-  "description": "안녕하세요. 하수구수사대입니다. 우리는 일상생활을 하면서 항상 사용하게 되는 곳이 바로 배관시설입니다...",
   "date": "2023. 6. 22. 14:37",
   "category": "하수구막힘",
+  "description": "안녕하세요. 하수구수사대입니다. 우리는 일상생활을 하면서 항상 사용하게 되는 곳이 바로 배관시설입니다...",
   "cover_image": "images/223135842914/cover.png",
-  "html_file": "yongin-toilet-clogged-223135842914.html",
-  "images_count": 11,
-  "crawled_at": "2026-06-17 15:27:28",
-  "naver_url": "https://blog.naver.com/hasugu80/223135842914",
-  "slug": "yongin-toilet-clogged-223135842914"
+  "html_file": "yongin-toilet-clogged.html",
+  "slug": "yongin-toilet-clogged"
 }

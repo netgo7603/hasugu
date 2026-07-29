@@ -1,13 +1,10 @@
 {
-  "log_no": "223672085523",
+  "blog_id": null,
   "title": "송파구 가락동하수구역류 잠실7동 배관내시경카메라 누수",
-  "description": "송파구 가락동하수구역류 잠실7동 배관내시경카메라 누수 본 글에선 배관막힘이 발발해 굴착을 통하여 해결...",
   "date": "2024. 11. 25. 12:22",
   "category": "게시판",
+  "description": "송파구 가락동하수구역류 잠실7동 배관내시경카메라 누수 본 글에선 배관막힘이 발발해 굴착을 통하여 해결...",
   "cover_image": "images/223672085523/cover.jpg",
-  "html_file": "seoul-songpa-sewer-backflow-223672085523.html",
-  "images_count": 11,
-  "crawled_at": "2026-06-17 14:27:16",
-  "naver_url": "https://blog.naver.com/hasugu80/223672085523",
-  "slug": "seoul-songpa-sewer-backflow-223672085523"
+  "html_file": "seoul-songpa-sewer-backflow.html",
+  "slug": "seoul-songpa-sewer-backflow"
 }

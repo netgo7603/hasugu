@@ -1,13 +1,10 @@
 {
-  "log_no": "223636637946",
+  "blog_id": null,
   "title": "능곡동화장실하수구역류 정왕1동 맨홀막힘 배관전문",
-  "description": "능곡동화장실하수구역류 정왕1동 맨홀막힘 배관전문 날마다 사용하게 되는 물은 하수구 구멍마다 따로 배수...",
   "date": "2024. 10. 28. 13:23",
   "category": "게시판",
+  "description": "능곡동화장실하수구역류 정왕1동 맨홀막힘 배관전문 날마다 사용하게 되는 물은 하수구 구멍마다 따로 배수...",
   "cover_image": "images/223636637946/cover.jpg",
-  "html_file": "seoul-sewer-backflow-223636637946.html",
-  "images_count": 16,
-  "crawled_at": "2026-06-17 14:33:50",
-  "naver_url": "https://blog.naver.com/hasugu80/223636637946",
-  "slug": "seoul-sewer-backflow-223636637946"
+  "html_file": "seoul-sewer-backflow.html",
+  "slug": "seoul-sewer-backflow"
 }

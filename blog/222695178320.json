@@ -1,13 +1,10 @@
 {
-  "log_no": "222695178320",
+  "blog_id": null,
   "title": "화장실 변기가 막혔다면 이것부터!",
-  "description": "평소에는 잘만 사용하고 있었던 변기가 갑작스럽게 막혀 버린다면 아마 그것만큼 당황스러운 일도 없을 거...",
   "date": "2022. 4. 11. 10:10",
   "category": "생활정보글",
+  "description": "평소에는 잘만 사용하고 있었던 변기가 갑작스럽게 막혀 버린다면 아마 그것만큼 당황스러운 일도 없을 거...",
   "cover_image": "images/222695178320/cover.png",
-  "html_file": "yongin-toilet-clogged-222695178320.html",
-  "images_count": 6,
-  "crawled_at": "2026-06-17 15:50:45",
-  "naver_url": "https://blog.naver.com/hasugu80/222695178320",
-  "slug": "yongin-toilet-clogged-222695178320"
+  "html_file": "yongin-toilet-clogged.html",
+  "slug": "yongin-toilet-clogged"
 }

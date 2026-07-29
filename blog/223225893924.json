@@ -1,13 +1,10 @@
 {
-  "log_no": "223225893924",
+  "blog_id": null,
   "title": "오산 초평동싱크대하수구역류 남촌동하수구막힘뚫음",
-  "description": "안녕하세요. 설비전문업체 &amp;quot;하수구수사대&amp;quot;를 찾아주셔서 감사합니다. 우리는 살아가면서 정말 필...",
   "date": "2023. 10. 1. 23:12",
   "category": "게시판",
+  "description": "안녕하세요. 설비전문업체 &amp;quot;하수구수사대&amp;quot;를 찾아주셔서 감사합니다. 우리는 살아가면서 정말 필...",
   "cover_image": "images/223225893924/cover.png",
-  "html_file": "osan-sink-clogged-223225893924.html",
-  "images_count": 12,
-  "crawled_at": "2026-06-17 15:21:11",
-  "naver_url": "https://blog.naver.com/hasugu80/223225893924",
-  "slug": "osan-sink-clogged-223225893924"
+  "html_file": "osan-sink-clogged.html",
+  "slug": "osan-sink-clogged"
 }

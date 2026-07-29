@@ -1,13 +1,10 @@
 {
-  "log_no": "222934873328",
+  "blog_id": null,
   "title": "화성시 화장실하수구역류 뚫음 해결했어요 제대로 뚫은 현장입니다!",
-  "description": "안녕하세요. 하수구수사대입니다. 이번에 다녀온 현장의 경우에는 주택가에 있는 화장실 내부에서 역류 현...",
   "date": "2022. 11. 22. 1:04",
   "category": "욕실바닥막힘",
+  "description": "안녕하세요. 하수구수사대입니다. 이번에 다녀온 현장의 경우에는 주택가에 있는 화장실 내부에서 역류 현...",
   "cover_image": "images/222934873328/cover.jpg",
-  "html_file": "hwaseong-sewer-backflow-222934873328.html",
-  "images_count": 12,
-  "crawled_at": "2026-06-17 15:41:07",
-  "naver_url": "https://blog.naver.com/hasugu80/222934873328",
-  "slug": "hwaseong-sewer-backflow-222934873328"
+  "html_file": "hwaseong-sewer-backflow.html",
+  "slug": "hwaseong-sewer-backflow"
 }

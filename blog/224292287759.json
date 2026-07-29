@@ -1,13 +1,10 @@
 {
-  "log_no": "224292287759",
+  "blog_id": null,
   "title": "동탄 반송동 요리학원 하수구역류, 배수구 청소 현장",
-  "description": "동탄 반송동 요리학원 하수구역류, 배수구 청소로 기름때 제거 완료. 안녕하세요. 동탄 반송동 하수구역류 ...",
   "date": "2026. 5. 21. 13:00",
   "category": "하수구막힘",
+  "description": "동탄 반송동 요리학원 하수구역류, 배수구 청소로 기름때 제거 완료. 안녕하세요. 동탄 반송동 하수구역류 ...",
   "cover_image": "images/224292287759/cover.jpg",
-  "html_file": "seoul-sink-clogged-224292287759.html",
-  "images_count": 12,
-  "crawled_at": "2026-06-17 10:10:04",
-  "naver_url": "https://blog.naver.com/hasugu2118/224292287759",
-  "slug": "seoul-sink-clogged-224292287759"
+  "html_file": "seoul-sink-clogged.html",
+  "slug": "seoul-sink-clogged"
 }

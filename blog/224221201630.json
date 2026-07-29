@@ -1,13 +1,10 @@
 {
-  "log_no": "224221201630",
+  "blog_id": null,
   "title": "화성 만세구 세탁실 하수구역류, 욕실 동시 역류 원인 공개합니다",
-  "description": "화성 만세구 전원주택 하수구와 욕실 역류 동시에 발생한 원인을 공개합니다. 안녕하세요? 화성 만세구 세...",
   "date": "2026. 3. 18. 17:38",
   "category": "하수구막힘",
+  "description": "화성 만세구 전원주택 하수구와 욕실 역류 동시에 발생한 원인을 공개합니다. 안녕하세요? 화성 만세구 세...",
   "cover_image": "images/224221201630/cover.jpg",
-  "html_file": "hwaseong-sewer-backflow-224221201630.html",
-  "images_count": 11,
-  "crawled_at": "2026-06-17 10:17:15",
-  "naver_url": "https://blog.naver.com/hasugu2118/224221201630",
-  "slug": "hwaseong-sewer-backflow-224221201630"
+  "html_file": "hwaseong-sewer-backflow.html",
+  "slug": "hwaseong-sewer-backflow"
 }

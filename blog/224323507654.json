@@ -1,13 +1,10 @@
 {
-  "log_no": "224323507654",
+  "blog_id": null,
   "title": "안산 선부동 빌라 하수구역류, 싱크대 사용하면 화장실에서 물이 역류해요",
-  "description": "안산 단원구 선부동 하수구역류 사례, 싱크대를 사용 후 화장실에서 물이 역류하는 문제를 고압세척으로 해...",
   "date": "8시간 전",
   "category": "하수구막힘",
+  "description": "안산 단원구 선부동 하수구역류 사례, 싱크대를 사용 후 화장실에서 물이 역류하는 문제를 고압세척으로 해...",
   "cover_image": "images/224323507654/cover.jpg",
-  "html_file": "ansan-sink-clogged-224323507654.html",
-  "images_count": 12,
-  "crawled_at": "2026-06-23 00:00:53",
-  "naver_url": "https://blog.naver.com/hasugu2118/224323507654",
-  "slug": "ansan-sink-clogged-224323507654"
+  "html_file": "ansan-sink-clogged.html",
+  "slug": "ansan-sink-clogged"
 }

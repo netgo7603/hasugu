@@ -1,13 +1,10 @@
 {
-  "log_no": "222545401690",
+  "blog_id": null,
   "title": "처인구하수구막힘 역북동 중앙동 유림동 하수구막힘",
-  "description": "처인구하수구막힘 역북동 중앙동 유림동 하수구막힘 안녕하세요 오늘은 처인구에 위치한 농장을 다녀왔습니...",
   "date": "2021. 10. 23. 1:05",
   "category": "하수구막힘",
+  "description": "처인구하수구막힘 역북동 중앙동 유림동 하수구막힘 안녕하세요 오늘은 처인구에 위치한 농장을 다녀왔습니...",
   "cover_image": "images/222545401690/cover.jpg",
-  "html_file": "seoul-jungang-sink-clogged-222545401690.html",
-  "images_count": 15,
-  "crawled_at": "2026-06-17 16:04:34",
-  "naver_url": "https://blog.naver.com/hasugu80/222545401690",
-  "slug": "seoul-jungang-sink-clogged-222545401690"
+  "html_file": "seoul-jungang-sink-clogged.html",
+  "slug": "seoul-jungang-sink-clogged"
 }

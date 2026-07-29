@@ -1,13 +1,10 @@
 {
-  "log_no": "222900607539",
+  "blog_id": null,
   "title": "화성 향남싱크대막힘 상신리 하길리 하수구업체 마무리한 현장!",
-  "description": "안녕하세요. 하수구수사대입니다. 일상에서 배관 막힘은 상당히 불편함을 야기할 수 있는 상황이라고 할 수...",
   "date": "2022. 10. 15. 1:33",
   "category": "싱크대막힘",
+  "description": "안녕하세요. 하수구수사대입니다. 일상에서 배관 막힘은 상당히 불편함을 야기할 수 있는 상황이라고 할 수...",
   "cover_image": "images/222900607539/cover.jpg",
-  "html_file": "hwaseong-hyangnam-sink-clogged-222900607539.html",
-  "images_count": 10,
-  "crawled_at": "2026-06-17 15:43:17",
-  "naver_url": "https://blog.naver.com/hasugu80/222900607539",
-  "slug": "hwaseong-hyangnam-sink-clogged-222900607539"
+  "html_file": "hwaseong-hyangnam-sink-clogged.html",
+  "slug": "hwaseong-hyangnam-sink-clogged"
 }

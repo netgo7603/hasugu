@@ -1,13 +1,10 @@
 {
-  "log_no": "223125383145",
+  "blog_id": null,
   "title": "화성시 망포동 반월동 하수구막힘 역류 고압세척 해결",
-  "description": "안녕하세요. 하수구수사대입니다. 우리는 평소에 눈에 보이지 않는 것들은 크게 신경을 쓰지 않고 살아가게...",
   "date": "2023. 6. 10. 20:29",
   "category": "고압세척",
+  "description": "안녕하세요. 하수구수사대입니다. 우리는 평소에 눈에 보이지 않는 것들은 크게 신경을 쓰지 않고 살아가게...",
   "cover_image": "images/223125383145/cover.png",
-  "html_file": "hwaseong-mangpo-sewer-backflow-223125383145.html",
-  "images_count": 11,
-  "crawled_at": "2026-06-17 15:28:20",
-  "naver_url": "https://blog.naver.com/hasugu80/223125383145",
-  "slug": "hwaseong-mangpo-sewer-backflow-223125383145"
+  "html_file": "hwaseong-mangpo-sewer-backflow.html",
+  "slug": "hwaseong-mangpo-sewer-backflow"
 }

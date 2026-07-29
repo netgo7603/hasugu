@@ -1,13 +1,10 @@
 {
-  "log_no": "223690694212",
+  "blog_id": null,
   "title": "양평시 하수구역류 파주시 아파트화장실하수구막힘",
-  "description": "양평시 하수구역류 파주시 아파트화장실하수구막힘 하수구시스템이 무너진다면 어떤장소든지 불편할수밖에...",
   "date": "2024. 12. 12. 9:16",
   "category": "게시판",
+  "description": "양평시 하수구역류 파주시 아파트화장실하수구막힘 하수구시스템이 무너진다면 어떤장소든지 불편할수밖에...",
   "cover_image": "images/223690694212/cover.jpg",
-  "html_file": "paju-sewer-backflow-223690694212.html",
-  "images_count": 11,
-  "crawled_at": "2026-06-17 14:22:35",
-  "naver_url": "https://blog.naver.com/hasugu80/223690694212",
-  "slug": "paju-sewer-backflow-223690694212"
+  "html_file": "paju-sewer-backflow.html",
+  "slug": "paju-sewer-backflow"
 }

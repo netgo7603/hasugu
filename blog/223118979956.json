@@ -1,13 +1,10 @@
 {
-  "log_no": "223118979956",
+  "blog_id": null,
   "title": "의왕시 고천동 싱크대막힘 오전동 하수구업체 궁금하시다면?",
-  "description": "안녕하세요. 하수구수사대입니다. 배관 막힘은 누구에게나 불편함을 줄 수 있는 것이라고 할 수 있습니다. ...",
   "date": "2023. 6. 3. 1:02",
   "category": "싱크대막힘",
+  "description": "안녕하세요. 하수구수사대입니다. 배관 막힘은 누구에게나 불편함을 줄 수 있는 것이라고 할 수 있습니다. ...",
   "cover_image": "images/223118979956/cover.png",
-  "html_file": "yongin-sink-clogged-223118979956.html",
-  "images_count": 11,
-  "crawled_at": "2026-06-17 15:28:41",
-  "naver_url": "https://blog.naver.com/hasugu80/223118979956",
-  "slug": "yongin-sink-clogged-223118979956"
+  "html_file": "yongin-sink-clogged.html",
+  "slug": "yongin-sink-clogged"
 }

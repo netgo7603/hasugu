@@ -1,13 +1,10 @@
 {
-  "log_no": "222904887015",
+  "blog_id": null,
   "title": "동탄하수구역류 동탄 하수구업체 어디가 좋을지 고민이시라면?",
-  "description": "안녕하세요. 하수구수사대입니다. 가정에서 갑작스럽게 싱크대가 막히거나 역류하는 현상이 일어날 때가 있...",
   "date": "2022. 10. 19. 22:17",
   "category": "싱크대막힘",
+  "description": "안녕하세요. 하수구수사대입니다. 가정에서 갑작스럽게 싱크대가 막히거나 역류하는 현상이 일어날 때가 있...",
   "cover_image": "images/222904887015/cover.jpg",
-  "html_file": "hwaseong-sink-clogged-222904887015.html",
-  "images_count": 10,
-  "crawled_at": "2026-06-17 15:43:01",
-  "naver_url": "https://blog.naver.com/hasugu80/222904887015",
-  "slug": "hwaseong-sink-clogged-222904887015"
+  "html_file": "hwaseong-sink-clogged.html",
+  "slug": "hwaseong-sink-clogged"
 }

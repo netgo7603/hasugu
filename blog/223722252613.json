@@ -1,13 +1,10 @@
 {
-  "log_no": "223722252613",
+  "blog_id": null,
   "title": "수원 평동화장실하수구역류 곡선동 오수맨홀청소 누수",
-  "description": "수원 평동화장실하수구역류 곡선동 오수맨홀청소 누수 하수관이 차단되는 사태는 누구나 한번씩은 경험하셨...",
   "date": "2025. 1. 11. 7:03",
   "category": "게시판",
+  "description": "수원 평동화장실하수구역류 곡선동 오수맨홀청소 누수 하수관이 차단되는 사태는 누구나 한번씩은 경험하셨...",
   "cover_image": "images/223722252613/cover.jpg",
-  "html_file": "suwon-sink-clogged-223722252613.html",
-  "images_count": 8,
-  "crawled_at": "2026-06-17 14:15:51",
-  "naver_url": "https://blog.naver.com/hasugu80/223722252613",
-  "slug": "suwon-sink-clogged-223722252613"
+  "html_file": "suwon-sink-clogged.html",
+  "slug": "suwon-sink-clogged"
 }

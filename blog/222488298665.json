@@ -1,13 +1,10 @@
 {
-  "log_no": "222488298665",
+  "blog_id": null,
   "title": "배관세척 막힘 해결 고압세척",
-  "description": "안녕하세요 여러분 일하기 좋은 계절입니다. 평일에 쉬고 있는 저는 오늘 일요일도 어김없이 현장을 다니면...",
   "date": "2021. 8. 29. 23:09",
   "category": "하수구막힘",
+  "description": "안녕하세요 여러분 일하기 좋은 계절입니다. 평일에 쉬고 있는 저는 오늘 일요일도 어김없이 현장을 다니면...",
   "cover_image": "images/222488298665/cover.jpg",
-  "html_file": "suwon-sink-clogged-222488298665.html",
-  "images_count": 16,
-  "crawled_at": "2026-06-17 16:08:20",
-  "naver_url": "https://blog.naver.com/hasugu80/222488298665",
-  "slug": "suwon-sink-clogged-222488298665"
+  "html_file": "suwon-sink-clogged.html",
+  "slug": "suwon-sink-clogged"
 }

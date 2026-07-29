@@ -1,13 +1,10 @@
 {
-  "log_no": "223578095137",
+  "blog_id": null,
   "title": "부천 소사동오수관막힘 약대동 횡주관청소 배관설비공사",
-  "description": "부천 소사동오수관막힘 약대동 횡주관청소 배관설비공사 주거지에서 하수시설들이 솟구치는 문제들이 야기...",
   "date": "2024. 9. 9. 18:02",
   "category": "게시판",
+  "description": "부천 소사동오수관막힘 약대동 횡주관청소 배관설비공사 주거지에서 하수시설들이 솟구치는 문제들이 야기...",
   "cover_image": "images/223578095137/cover.jpg",
-  "html_file": "seoul-toilet-clogged-223578095137.html",
-  "images_count": 10,
-  "crawled_at": "2026-06-17 14:40:38",
-  "naver_url": "https://blog.naver.com/hasugu80/223578095137",
-  "slug": "seoul-toilet-clogged-223578095137"
+  "html_file": "seoul-toilet-clogged.html",
+  "slug": "seoul-toilet-clogged"
 }

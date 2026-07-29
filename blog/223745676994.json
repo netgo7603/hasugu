@@ -1,13 +1,10 @@
 {
-  "log_no": "223745676994",
+  "blog_id": null,
   "title": "안산 와동하수도역류 백운동 맨홀막힘 누수탐지",
-  "description": "안산 와동하수도역류 백운동 맨홀막힘 누수탐지 하수구가 막혔을때 단순하게 끝난다면 문제없지만 방치할경...",
   "date": "2025. 2. 3. 2:34",
   "category": "게시판",
+  "description": "안산 와동하수도역류 백운동 맨홀막힘 누수탐지 하수구가 막혔을때 단순하게 끝난다면 문제없지만 방치할경...",
   "cover_image": "images/223745676994/cover.jpg",
-  "html_file": "ansan-sink-clogged-223745676994.html",
-  "images_count": 9,
-  "crawled_at": "2026-06-17 14:09:16",
-  "naver_url": "https://blog.naver.com/hasugu80/223745676994",
-  "slug": "ansan-sink-clogged-223745676994"
+  "html_file": "ansan-sink-clogged.html",
+  "slug": "ansan-sink-clogged"
 }

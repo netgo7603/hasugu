@@ -1,13 +1,10 @@
 {
-  "log_no": "222484896833",
+  "blog_id": null,
   "title": "변기막힘 변기뚫음 해결 변기음식물",
-  "description": "안녕하세요^^ 오늘은 일상에서 변기막힘현장에 대한 글을 올려보려고 합니다. 일상에서 변기를 사용하다보...",
   "date": "2021. 8. 26. 22:11",
   "category": "변기막힘",
+  "description": "안녕하세요^^ 오늘은 일상에서 변기막힘현장에 대한 글을 올려보려고 합니다. 일상에서 변기를 사용하다보...",
   "cover_image": "images/222484896833/cover.jpg",
-  "html_file": "seoul-toilet-clogged-222484896833.html",
-  "images_count": 8,
-  "crawled_at": "2026-06-17 16:08:27",
-  "naver_url": "https://blog.naver.com/hasugu80/222484896833",
-  "slug": "seoul-toilet-clogged-222484896833"
+  "html_file": "seoul-toilet-clogged.html",
+  "slug": "seoul-toilet-clogged"
 }

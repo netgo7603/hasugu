@@ -1,13 +1,10 @@
 {
-  "log_no": "223583360982",
+  "blog_id": null,
   "title": "구로구 신도림동화장실역류 천왕동 하수구청소 부속수리",
-  "description": "구로구 신도림동화장실역류 천왕동 하수구청소 부속수리 다수의 세대가 함께 옹기종기 모여있다면 여러가지...",
   "date": "2024. 9. 13. 21:39",
   "category": "게시판",
+  "description": "구로구 신도림동화장실역류 천왕동 하수구청소 부속수리 다수의 세대가 함께 옹기종기 모여있다면 여러가지...",
   "cover_image": "images/223583360982/cover.jpg",
-  "html_file": "seoul-sewer-backflow-223583360982.html",
-  "images_count": 9,
-  "crawled_at": "2026-06-17 14:39:48",
-  "naver_url": "https://blog.naver.com/hasugu80/223583360982",
-  "slug": "seoul-sewer-backflow-223583360982"
+  "html_file": "seoul-sewer-backflow.html",
+  "slug": "seoul-sewer-backflow"
 }

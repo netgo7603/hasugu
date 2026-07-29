@@ -1,13 +1,10 @@
 {
-  "log_no": "223976950876",
+  "blog_id": null,
   "title": "진안동 하수구 막힘 화성 병점동 빌라 화장실 역류 고압세척 현장",
-  "description": "안녕하세요. 화성 병점동 빌라 화장실 역류 고압세척 현장 출동하는 에스원 설비입니다. 세탁기가 멈춰 서...",
   "date": "2025. 8. 21. 10:00",
   "category": "하수구막힘",
+  "description": "안녕하세요. 화성 병점동 빌라 화장실 역류 고압세척 현장 출동하는 에스원 설비입니다. 세탁기가 멈춰 서...",
   "cover_image": "images/223976950876/cover.jpg",
-  "html_file": "hwaseong-byeongjeom-sewer-backflow-223976950876.html",
-  "images_count": 16,
-  "crawled_at": "2026-06-17 10:19:43",
-  "naver_url": "https://blog.naver.com/hasugu2118/223976950876",
-  "slug": "hwaseong-byeongjeom-sewer-backflow-223976950876"
+  "html_file": "hwaseong-byeongjeom-sewer-backflow.html",
+  "slug": "hwaseong-byeongjeom-sewer-backflow"
 }

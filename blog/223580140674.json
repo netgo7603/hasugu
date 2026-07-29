@@ -1,13 +1,10 @@
 {
-  "log_no": "223580140674",
+  "blog_id": null,
   "title": "도봉 방학동씽크대배수관막힘 도봉동 맨홀역류 통수전문",
-  "description": "하수라인이 막혀 흐르지 않으면 배관 내부를 보는 기기를 써서 진단후 꽉 막혀버린 배수라인을 뚫어내는 일...",
   "date": "2024. 9. 11. 10:59",
   "category": "게시판",
+  "description": "하수라인이 막혀 흐르지 않으면 배관 내부를 보는 기기를 써서 진단후 꽉 막혀버린 배수라인을 뚫어내는 일...",
   "cover_image": "images/223580140674/cover.jpg",
-  "html_file": "seoul-dobong-sink-clogged-223580140674.html",
-  "images_count": 8,
-  "crawled_at": "2026-06-17 14:40:18",
-  "naver_url": "https://blog.naver.com/hasugu80/223580140674",
-  "slug": "seoul-dobong-sink-clogged-223580140674"
+  "html_file": "seoul-dobong-sink-clogged.html",
+  "slug": "seoul-dobong-sink-clogged"
 }

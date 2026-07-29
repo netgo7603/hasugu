@@ -1,13 +1,10 @@
 {
-  "log_no": "223678219367",
+  "blog_id": null,
   "title": "구로구 구로동싱크대막힘 오류동 배관뚫기 누수탐지",
-  "description": "구로구 구로동싱크대막힘 오류동 배관뚫기 누수탐지 배수시설에 이상들이 야기되어 정체가 걷잡을 수 없단 ...",
   "date": "2024. 11. 30. 21:03",
   "category": "게시판",
+  "description": "구로구 구로동싱크대막힘 오류동 배관뚫기 누수탐지 배수시설에 이상들이 야기되어 정체가 걷잡을 수 없단 ...",
   "cover_image": "images/223678219367/cover.jpg",
-  "html_file": "seoul-sink-clogged-223678219367.html",
-  "images_count": 8,
-  "crawled_at": "2026-06-17 14:25:58",
-  "naver_url": "https://blog.naver.com/hasugu80/223678219367",
-  "slug": "seoul-sink-clogged-223678219367"
+  "html_file": "seoul-sink-clogged.html",
+  "slug": "seoul-sink-clogged"
 }

@@ -1,13 +1,10 @@
 {
-  "log_no": "222967771736",
+  "blog_id": null,
   "title": "화성시 향남하수구막힘 향남2지구 하수구전문 불편한 상황에는 빠르게 하수구수사대!",
-  "description": "안녕하세요 하수구수사대입니다. 하수구막힘이 발생하는 경우에는 여러모로 불편한 상황이 생길 수밖에 없...",
   "date": "2022. 12. 28. 0:51",
   "category": "하수구막힘",
+  "description": "안녕하세요 하수구수사대입니다. 하수구막힘이 발생하는 경우에는 여러모로 불편한 상황이 생길 수밖에 없...",
   "cover_image": "images/222967771736/cover.png",
-  "html_file": "hwaseong-hyangnam-sewer-clogged-222967771736.html",
-  "images_count": 11,
-  "crawled_at": "2026-06-17 15:38:43",
-  "naver_url": "https://blog.naver.com/hasugu80/222967771736",
-  "slug": "hwaseong-hyangnam-sewer-clogged-222967771736"
+  "html_file": "hwaseong-hyangnam-sewer-clogged.html",
+  "slug": "hwaseong-hyangnam-sewer-clogged"
 }

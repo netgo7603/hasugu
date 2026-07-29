@@ -1,13 +1,10 @@
 {
-  "log_no": "222909459864",
+  "blog_id": null,
   "title": "화성시 봉담하수구막힘 하수구역류 해결 완벽하게 뚫은 현장!",
-  "description": "안녕하세요. 하수구수사대입니다. 평소에 화장실이나 싱크대를 사용을 하다 보면 배수구 막힘으로 인해서 ...",
   "date": "2022. 10. 24. 21:45",
   "category": "하수구막힘",
+  "description": "안녕하세요. 하수구수사대입니다. 평소에 화장실이나 싱크대를 사용을 하다 보면 배수구 막힘으로 인해서 ...",
   "cover_image": "images/222909459864/cover.jpg",
-  "html_file": "hwaseong-bongdam-sink-clogged-222909459864.html",
-  "images_count": 12,
-  "crawled_at": "2026-06-17 15:42:45",
-  "naver_url": "https://blog.naver.com/hasugu80/222909459864",
-  "slug": "hwaseong-bongdam-sink-clogged-222909459864"
+  "html_file": "hwaseong-bongdam-sink-clogged.html",
+  "slug": "hwaseong-bongdam-sink-clogged"
 }

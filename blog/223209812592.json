@@ -1,13 +1,10 @@
 {
-  "log_no": "223209812592",
+  "blog_id": null,
   "title": "오산 대원동 싱크대배수구수리 남촌동 하수구막힘뚫음",
-  "description": "여러 곳에서도 퇴수구는 우리들의 주위에서 많이 접할 수 있으며 생활하면서 어떠한 경우에도 배제할수 없...",
   "date": "2023. 9. 12. 23:25",
   "category": "게시판",
+  "description": "여러 곳에서도 퇴수구는 우리들의 주위에서 많이 접할 수 있으며 생활하면서 어떠한 경우에도 배제할수 없...",
   "cover_image": "images/223209812592/cover.png",
-  "html_file": "osan-wondong-sink-clogged-223209812592.html",
-  "images_count": 11,
-  "crawled_at": "2026-06-17 15:24:38",
-  "naver_url": "https://blog.naver.com/hasugu80/223209812592",
-  "slug": "osan-wondong-sink-clogged-223209812592"
+  "html_file": "osan-wondong-sink-clogged.html",
+  "slug": "osan-wondong-sink-clogged"
 }

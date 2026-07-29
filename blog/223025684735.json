@@ -1,13 +1,10 @@
 {
-  "log_no": "223025684735",
+  "blog_id": null,
   "title": "온풍기 소비전력 공간에 따라 필요한게 달라요!",
-  "description": "안녕하세요. 하수구수사대입니다. 겨울이 되면 집안에서는 따뜻한 기온을 유지하기 위해서 온풍기나 보일러...",
   "date": "2023. 2. 23. 21:40",
   "category": "생활정보글",
+  "description": "안녕하세요. 하수구수사대입니다. 겨울이 되면 집안에서는 따뜻한 기온을 유지하기 위해서 온풍기나 보일러...",
   "cover_image": "images/223025684735/cover.png",
-  "html_file": "yongin-sewer-clogged-223025684735.html",
-  "images_count": 7,
-  "crawled_at": "2026-06-17 15:34:59",
-  "naver_url": "https://blog.naver.com/hasugu80/223025684735",
-  "slug": "yongin-sewer-clogged-223025684735"
+  "html_file": "yongin-sewer-clogged.html",
+  "slug": "yongin-sewer-clogged"
 }

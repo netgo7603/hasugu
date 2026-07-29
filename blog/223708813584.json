@@ -1,13 +1,10 @@
 {
-  "log_no": "223708813584",
+  "blog_id": null,
   "title": "홍천 하수구역류 화장실변기누수 횡주배관 하수도동파",
-  "description": "홍천 하수구역류 화장실변기누수 횡주배관 하수도동파 2주전에 물막힘이 생겨 여러 피해를 받으셨던 고객께...",
   "date": "2024. 12. 29. 23:14",
   "category": "게시판",
+  "description": "홍천 하수구역류 화장실변기누수 횡주배관 하수도동파 2주전에 물막힘이 생겨 여러 피해를 받으셨던 고객께...",
   "cover_image": "images/223708813584/cover.jpg",
-  "html_file": "yongin-toilet-clogged-223708813584.html",
-  "images_count": 8,
-  "crawled_at": "2026-06-17 14:19:03",
-  "naver_url": "https://blog.naver.com/hasugu80/223708813584",
-  "slug": "yongin-toilet-clogged-223708813584"
+  "html_file": "yongin-toilet-clogged.html",
+  "slug": "yongin-toilet-clogged"
 }

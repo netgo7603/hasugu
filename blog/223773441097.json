@@ -1,13 +1,10 @@
 {
-  "log_no": "223773441097",
+  "blog_id": null,
   "title": "안양 관양동씽크대역류 갈산동 배수구뚫기 배관공사",
-  "description": "안양 관양동씽크대역류 갈산동 배수구뚫기 배관공사 복합적인 상가에서 하수관의 역행이 벌어졌다는 이야기...",
   "date": "2025. 2. 25. 18:06",
   "category": "게시판",
+  "description": "안양 관양동씽크대역류 갈산동 배수구뚫기 배관공사 복합적인 상가에서 하수관의 역행이 벌어졌다는 이야기...",
   "cover_image": "images/223773441097/cover.jpg",
-  "html_file": "anyang-galsan-sink-clogged-223773441097.html",
-  "images_count": 10,
-  "crawled_at": "2026-06-17 14:03:56",
-  "naver_url": "https://blog.naver.com/hasugu80/223773441097",
-  "slug": "anyang-galsan-sink-clogged-223773441097"
+  "html_file": "anyang-galsan-sink-clogged.html",
+  "slug": "anyang-galsan-sink-clogged"
 }

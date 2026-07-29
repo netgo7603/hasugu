@@ -1,13 +1,10 @@
 {
-  "log_no": "223212556316",
+  "blog_id": null,
   "title": "의왕시 내손동 싱크대하수구막힘뚫음 월암동 배수관설비",
-  "description": "우리는 가정이나 직장에서 의식하지 못하고 다양한 설비시설 특히 퇴수구시설을 접하고 살아갑니다. 싱크대...",
   "date": "2023. 9. 15. 19:33",
   "category": "게시판",
+  "description": "우리는 가정이나 직장에서 의식하지 못하고 다양한 설비시설 특히 퇴수구시설을 접하고 살아갑니다. 싱크대...",
   "cover_image": "images/223212556316/cover.png",
-  "html_file": "yongin-sink-clogged-223212556316.html",
-  "images_count": 12,
-  "crawled_at": "2026-06-17 15:23:46",
-  "naver_url": "https://blog.naver.com/hasugu80/223212556316",
-  "slug": "yongin-sink-clogged-223212556316"
+  "html_file": "yongin-sink-clogged.html",
+  "slug": "yongin-sink-clogged"
 }

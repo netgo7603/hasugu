@@ -1,13 +1,10 @@
 {
-  "log_no": "222984977475",
+  "blog_id": null,
   "title": "기흥구 동백동 싱크대막힘역류 해결 방치해두면 안됩니다!",
-  "description": "안녕하세요 하수구수사대입니다. 반갑습니다! 우리는 일상생활 속에서 자주 물을 사용하게 됩니다. 이러한 ...",
   "date": "2023. 1. 15. 18:06",
   "category": "싱크대막힘",
+  "description": "안녕하세요 하수구수사대입니다. 반갑습니다! 우리는 일상생활 속에서 자주 물을 사용하게 됩니다. 이러한 ...",
   "cover_image": "images/222984977475/cover.png",
-  "html_file": "yongin-giheung-sink-clogged-222984977475.html",
-  "images_count": 13,
-  "crawled_at": "2026-06-17 15:37:16",
-  "naver_url": "https://blog.naver.com/hasugu80/222984977475",
-  "slug": "yongin-giheung-sink-clogged-222984977475"
+  "html_file": "yongin-giheung-sink-clogged.html",
+  "slug": "yongin-giheung-sink-clogged"
 }

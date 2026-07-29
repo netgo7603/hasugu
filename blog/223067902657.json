@@ -1,13 +1,10 @@
 {
-  "log_no": "223067902657",
+  "blog_id": null,
   "title": "냉장고 소비전력 계산 어렵지 않게 가능!",
-  "description": "반갑습니다. 하수구수사대입니다. 각 가정에서 냉장고를 구입할 경우 냉장고 소비전력을 중요하게 고려하는...",
   "date": "2023. 4. 7. 17:26",
   "category": "생활정보글",
+  "description": "반갑습니다. 하수구수사대입니다. 각 가정에서 냉장고를 구입할 경우 냉장고 소비전력을 중요하게 고려하는...",
   "cover_image": "images/223067902657/cover.png",
-  "html_file": "yongin-sewer-clogged-223067902657.html",
-  "images_count": 7,
-  "crawled_at": "2026-06-17 15:31:42",
-  "naver_url": "https://blog.naver.com/hasugu80/223067902657",
-  "slug": "yongin-sewer-clogged-223067902657"
+  "html_file": "yongin-sewer-clogged.html",
+  "slug": "yongin-sewer-clogged"
 }

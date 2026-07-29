@@ -1,13 +1,10 @@
 {
-  "log_no": "223038183929",
+  "blog_id": null,
   "title": "계란껍질버리기 어디에 버려야할까?",
-  "description": "안녕하세요. 하수구수사대 입니다. 오늘은 계란껍질버리기에 대해서 알아보도록 하겠습니다. 음식물 쓰레기...",
   "date": "2023. 3. 8. 9:06",
   "category": "생활정보글",
+  "description": "안녕하세요. 하수구수사대 입니다. 오늘은 계란껍질버리기에 대해서 알아보도록 하겠습니다. 음식물 쓰레기...",
   "cover_image": "images/223038183929/cover.png",
-  "html_file": "yongin-sewer-clogged-223038183929.html",
-  "images_count": 11,
-  "crawled_at": "2026-06-17 15:33:58",
-  "naver_url": "https://blog.naver.com/hasugu80/223038183929",
-  "slug": "yongin-sewer-clogged-223038183929"
+  "html_file": "yongin-sewer-clogged.html",
+  "slug": "yongin-sewer-clogged"
 }

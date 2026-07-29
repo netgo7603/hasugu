@@ -1,13 +1,10 @@
 {
-  "log_no": "223861130929",
+  "blog_id": null,
   "title": "성북구 정릉동대변기막힘 장위동 집수정청소 누수",
-  "description": "성북구 정릉동대변기막힘 장위동 집수정청소 누수 공동 주택의 배수라인을 관리하지 않고 사용하시면 이물...",
   "date": "2025. 5. 10. 14:00",
   "category": "게시판",
+  "description": "성북구 정릉동대변기막힘 장위동 집수정청소 누수 공동 주택의 배수라인을 관리하지 않고 사용하시면 이물...",
   "cover_image": "images/223861130929/cover.jpg",
-  "html_file": "seoul-seongbuk-toilet-clogged-223861130929.html",
-  "images_count": 9,
-  "crawled_at": "2026-06-17 10:09:58",
-  "naver_url": "https://blog.naver.com/hasugu80/223861130929",
-  "slug": "seoul-seongbuk-toilet-clogged-223861130929"
+  "html_file": "seoul-seongbuk-toilet-clogged.html",
+  "slug": "seoul-seongbuk-toilet-clogged"
 }

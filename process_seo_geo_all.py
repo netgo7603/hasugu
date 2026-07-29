@@ -461,8 +461,9 @@ def extract_paragraphs_and_images_from_html(html_file_path: Path) -> dict:
 # ============================================================
 # 4. HTML 템플릿 제너레이터
 # ============================================================
-def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id: str) -> str:
+def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id: str, prev_post: dict = None, next_post: dict = None) -> str:
     """완전한 Naver SEO/GEO 메타 태그와 Schema 구조화 데이터를 갖춘 프리미엄 HTML 리턴"""
+
     title = meta["title"]
     date_str = meta["date"]
     
@@ -597,8 +598,20 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
     service_type_schema = ", ".join([f'"{s}"' for s in service_types])
     tag_html = "\n".join([f"      <span>#{tag}</span>" for tag in seo_keywords])
 
+    prev_nav_html = f'''<a href="{prev_post['slug']}" class="nav-card">
+      <span class="nav-label">◀ 이전 시공사례</span>
+      <span class="nav-title">{prev_post['title']}</span>
+    </a>''' if prev_post else '<div style="visibility: hidden;"></div>'
+
+    next_nav_html = f'''<a href="{next_post['slug']}" class="nav-card" style="text-align: right;">
+      <span class="nav-label">다음 시공사례 ▶</span>
+      <span class="nav-title">{next_post['title']}</span>
+    </a>''' if next_post else '<div style="visibility: hidden;"></div>'
+
     html_content = f'''<!DOCTYPE html>
 <html lang="ko">
+
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -701,6 +714,11 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
     .cta p {{ opacity: 0.9; }}
     .tag-list {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }}
     .tag-list span {{ background: #e8f4fd; color: #2980b9; padding: 4px 12px; border-radius: 20px; font-size: 13px; }}
+    .prev-next-nav {{ display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 30px 0; }}
+    .nav-card {{ background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 20px; text-decoration: none; color: #333; transition: all 0.2s ease; display: flex; flex-direction: column; }}
+    .nav-card:hover {{ border-color: #2980b9; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(41,128,185,0.15); }}
+    .nav-card .nav-label {{ font-size: 13px; color: #2980b9; font-weight: bold; margin-bottom: 6px; }}
+    .nav-card .nav-title {{ font-size: 15px; font-weight: 600; line-height: 1.4; color: #1a5276; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }}
     .footer {{ text-align: center; padding: 20px; color: #888; font-size: 13px; }}
     .breadcrumb {{ font-size: 14px; color: #888; margin-bottom: 15px; }}
     .breadcrumb a {{ color: #2980b9; text-decoration: none; }}
@@ -710,8 +728,11 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
       .section {{ padding: 20px; }}
       .image-grid {{ grid-template-columns: 1fr; }}
       .cta .phone {{ font-size: 26px; }}
+      .prev-next-nav {{ grid-template-columns: 1fr; }}
     }}
   </style>
+
+
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 </head>
@@ -819,7 +840,15 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
     </div>
   </div>
 
+  <!-- 이전글 / 다음글 네비게이션 -->
+  <div class="prev-next-nav">
+    {prev_nav_html}
+    {next_nav_html}
+  </div>
+
+
   <!-- 푸터 -->
+
   <div class="footer">
     <p>© {datetime.now().year} {COMPANY_NAME}. All rights reserved.</p>
     <p>본 콘텐츠는 실제 현장 시공 사례를 기반으로 작성되었습니다.</p>
@@ -909,6 +938,44 @@ def rebuild_sitemap(posts: list):
         f.write(sitemap_content)
     print(f"  ✅ sitemap.xml 재구축 완료! ({len(posts)}개 포스트 반영)")
 
+def rebuild_rss(posts: list):
+    """rss.xml 파일 생성/갱신"""
+    print("📡 rss.xml 갱신 중...")
+    rss_items = []
+    for p in posts[:50]:
+        title = p.get('title', '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+        slug = p.get('slug', '')
+        link = f"{DOMAIN}/blog/{slug}"
+        desc = p.get('description', '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+        date_str = p.get('date', '')
+        
+        rss_items.append(f'''    <item>
+      <title>{title}</title>
+      <link>{link}</link>
+      <description>{desc}</description>
+      <guid isPermaLink="true">{link}</guid>
+      <pubDate>{date_str}</pubDate>
+    </item>''')
+
+    rss_items_joined = "\n".join(rss_items)
+    rss_content = f'''<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{COMPANY_NAME} 시공후기 &amp; 블로그</title>
+    <link>{DOMAIN}/blog/</link>
+    <description>용인·수원·화성 하수구막힘, 누수탐지, 고압세척 전문업체 {COMPANY_NAME} 시공사례 피드</description>
+    <language>ko-KR</language>
+    <atom:link href="{DOMAIN}/rss.xml" rel="self" type="application/rss+xml" />
+{rss_items_joined}
+  </channel>
+</rss>
+'''
+
+    rss_path = PROJECT_DIR / "rss.xml"
+    with open(rss_path, 'w', encoding='utf-8') as f:
+        f.write(rss_content)
+    print(f"  ✅ rss.xml 갱신 완료! ({len(posts[:50])}개 포스트 반영)")
+
 def rebuild_robots():
     """robots.txt 파일 생성/갱신"""
     print("🤖 robots.txt 갱신 중...")
@@ -917,10 +984,12 @@ Allow: /
 Disallow: /index_files/
 
 Sitemap: {DOMAIN}/sitemap.xml
+Sitemap: {DOMAIN}/rss.xml
 '''
     with open(ROBOTS_FILE, 'w', encoding='utf-8') as f:
         f.write(robots_content)
     print("  ✅ robots.txt 갱신 완료!")
+
 
 def update_blog_index(posts: list):
     """블로그 목록 페이지(blog/index.html) 및 posts.json 갱신"""
@@ -1221,29 +1290,63 @@ def main():
             }
         else:
             geo_seo_info = analyze_geo_seo(title, body_text_clean)
-            geo_seo_info["slug"] = f"{geo_seo_info['slug']}-{log_no}"
-            
         slug = geo_seo_info["slug"]
         new_html_name = f"{slug}.html"
-        new_html_path = BLOG_DIR / new_html_name
-        
-        new_html = generate_seo_geo_html(meta, content, geo_seo_info, log_no)
-        with open(new_html_path, 'w', encoding='utf-8') as f:
-            f.write(new_html)
 
         meta["html_file"] = new_html_name
         meta["slug"] = slug
+
+        meta["content"] = content
+        meta["geo_seo_info"] = geo_seo_info
+        meta["log_no"] = log_no
+        meta["json_path"] = json_path
+        meta["html_path"] = html_path
+
         with open(json_path, 'w', encoding='utf-8') as f:
-            json.dump(meta, f, ensure_ascii=False, indent=2)
+            json.dump({
+                "blog_id": meta.get("blog_id"),
+                "title": meta.get("title"),
+                "date": meta.get("date"),
+                "category": meta.get("category"),
+                "description": meta.get("description"),
+                "cover_image": meta.get("cover_image"),
+                "html_file": new_html_name,
+                "slug": slug
+            }, f, ensure_ascii=False, indent=2)
 
         if html_path.name != new_html_name:
             old_files_to_delete.append(html_path)
 
         final_posts.append(meta)
         processed_log_nos.add(log_no)
-        print(f"  ✨ {log_no} -> blog/{new_html_name} 생성 완료 (지명: {geo_seo_info['primary_area']})")
+
+    # 날짜 역순 정렬 (최신글이 맨 앞)
+    final_posts.sort(key=lambda x: x.get("date", ""), reverse=True)
+
+    # 2단계: 이전글/다음글 포함 HTML 최종 생성 및 저장
+    print("\n🔗 이전글 / 다음글 체인 링크 렌더링 중...")
+    total_len = len(final_posts)
+    for idx, post in enumerate(final_posts):
+        prev_post = final_posts[idx - 1] if idx > 0 else None
+        next_post = final_posts[idx + 1] if idx < total_len - 1 else None
+        
+        slug = post["slug"]
+        new_html_name = f"{slug}.html"
+        new_html_path = BLOG_DIR / new_html_name
+        
+        new_html = generate_seo_geo_html(
+            meta=post,
+            content=post["content"],
+            geo_seo_info=post["geo_seo_info"],
+            blog_id=post["log_no"],
+            prev_post=prev_post,
+            next_post=next_post
+        )
+        with open(new_html_path, 'w', encoding='utf-8') as f:
+            f.write(new_html)
 
     print(f"\n🗑️ 이전 오폭 파일 정리 중 (총 {len(old_files_to_delete)}개)...")
+
     for f in old_files_to_delete:
         try:
             if f.exists():
@@ -1256,7 +1359,9 @@ def main():
 
     update_blog_index(final_posts)
     rebuild_sitemap(final_posts)
+    rebuild_rss(final_posts)
     rebuild_robots()
+
 
     print(f"\n🎉 모든 작업이 성공적으로 완료되었습니다! 총 {len(final_posts)}개의 포스트가 올바르게 최적화 및 등록되었습니다.")
 

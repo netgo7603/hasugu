@@ -1,13 +1,10 @@
 {
-  "log_no": "223549574663",
+  "blog_id": null,
   "title": "중구 청구동세탁기배수구막힘 삼각동 고압세척비용 설비공사",
-  "description": "하수라인이 꽉 막혔다면 배수관로 내시경기기를 사용하여 진단해보고 꽉 막혀버린 모습을 파악해보고 통수...",
   "date": "2024. 8. 16. 9:51",
   "category": "게시판",
+  "description": "하수라인이 꽉 막혔다면 배수관로 내시경기기를 사용하여 진단해보고 꽉 막혀버린 모습을 파악해보고 통수...",
   "cover_image": "images/223549574663/cover.jpg",
-  "html_file": "seoul-sewer-clogged-223549574663.html",
-  "images_count": 8,
-  "crawled_at": "2026-06-17 14:44:23",
-  "naver_url": "https://blog.naver.com/hasugu80/223549574663",
-  "slug": "seoul-sewer-clogged-223549574663"
+  "html_file": "seoul-sewer-clogged.html",
+  "slug": "seoul-sewer-clogged"
 }

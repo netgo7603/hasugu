@@ -1,13 +1,10 @@
 {
-  "log_no": "222713753185",
+  "blog_id": null,
   "title": "화성시 남양 하수구 막힘 뚫음 해결 북양리 비봉 하수구 깨끗하게 바꿔드렸어요",
-  "description": "화성시 남양 하수구 막힘 뚫음 해결 북양리 비봉 하수구 날이 따뜻해지면서 잘 느껴지지 않았던 악취들이 ...",
   "date": "2022. 4. 27. 23:26",
   "category": "하수구막힘",
+  "description": "화성시 남양 하수구 막힘 뚫음 해결 북양리 비봉 하수구 날이 따뜻해지면서 잘 느껴지지 않았던 악취들이 ...",
   "cover_image": "images/222713753185/cover.jpg",
-  "html_file": "hwaseong-namyang-sewer-clogged-222713753185.html",
-  "images_count": 12,
-  "crawled_at": "2026-06-17 15:49:53",
-  "naver_url": "https://blog.naver.com/hasugu80/222713753185",
-  "slug": "hwaseong-namyang-sewer-clogged-222713753185"
+  "html_file": "hwaseong-namyang-sewer-clogged.html",
+  "slug": "hwaseong-namyang-sewer-clogged"
 }

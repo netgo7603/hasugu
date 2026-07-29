@@ -1,13 +1,10 @@
 {
-  "log_no": "222686657000",
+  "blog_id": null,
   "title": "배관은 왜 꺾여 있을까?",
-  "description": "우리가 하루에도 몇 번씩 사용하고 있는 변기, 발견한 지 얼마 되지 않았을 것 같지만 그 역사는 500년이 ...",
   "date": "2022. 3. 31. 10:00",
   "category": "생활정보글",
+  "description": "우리가 하루에도 몇 번씩 사용하고 있는 변기, 발견한 지 얼마 되지 않았을 것 같지만 그 역사는 500년이 ...",
   "cover_image": "images/222686657000/cover.png",
-  "html_file": "yongin-toilet-clogged-222686657000.html",
-  "images_count": 6,
-  "crawled_at": "2026-06-17 15:51:54",
-  "naver_url": "https://blog.naver.com/hasugu80/222686657000",
-  "slug": "yongin-toilet-clogged-222686657000"
+  "html_file": "yongin-toilet-clogged.html",
+  "slug": "yongin-toilet-clogged"
 }

@@ -1,13 +1,10 @@
 {
-  "log_no": "222858253563",
+  "blog_id": null,
   "title": "처인구 하수구막힘 역북동 김량장동 상황에 맞는 장비로 빠른 해결해 드렸습니다!",
-  "description": "안녕하세요.하수구수사대 입니다.반갑습니다. 평소 물을 자주 사용하는 공간은 어디든 배수구가 위치해있는...",
   "date": "2022. 8. 25. 22:36",
   "category": "하수구막힘",
+  "description": "안녕하세요.하수구수사대 입니다.반갑습니다. 평소 물을 자주 사용하는 공간은 어디든 배수구가 위치해있는...",
   "cover_image": "images/222858253563/cover.png",
-  "html_file": "yongin-cheoinggu-sewer-clogged-222858253563.html",
-  "images_count": 3,
-  "crawled_at": "2026-06-17 15:45:31",
-  "naver_url": "https://blog.naver.com/hasugu80/222858253563",
-  "slug": "yongin-cheoinggu-sewer-clogged-222858253563"
+  "html_file": "yongin-cheoinggu-sewer-clogged.html",
+  "slug": "yongin-cheoinggu-sewer-clogged"
 }

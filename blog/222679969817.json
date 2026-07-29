@@ -1,13 +1,10 @@
 {
-  "log_no": "222679969817",
+  "blog_id": null,
   "title": "왜 막힘이 이렇게 자주 발생할까요?",
-  "description": "살아가다 보면 다들 한 번쯤은 집 안의 배관이 막혀서 난감함을 겪는 상황들을 맞닥뜨리신 경험이 있을 겁...",
   "date": "2022. 3. 22. 17:54",
   "category": "생활정보글",
+  "description": "살아가다 보면 다들 한 번쯤은 집 안의 배관이 막혀서 난감함을 겪는 상황들을 맞닥뜨리신 경험이 있을 겁...",
   "cover_image": "images/222679969817/cover.png",
-  "html_file": "yongin-sink-clogged-222679969817.html",
-  "images_count": 6,
-  "crawled_at": "2026-06-17 15:52:26",
-  "naver_url": "https://blog.naver.com/hasugu80/222679969817",
-  "slug": "yongin-sink-clogged-222679969817"
+  "html_file": "yongin-sink-clogged.html",
+  "slug": "yongin-sink-clogged"
 }

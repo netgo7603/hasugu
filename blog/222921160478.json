@@ -1,13 +1,10 @@
 {
-  "log_no": "222921160478",
+  "blog_id": null,
   "title": "처인구하수구막힘 역북동 김량장동 싱크대역류 완벽히 뚫은 현장입니다!",
-  "description": "안녕하세요. 하수구수사대입니다. 싱크대로 물을 흘려보냈을 때 원활히 배수되지 않고 물이 빠르게 배수되...",
   "date": "2022. 11. 6. 10:50",
   "category": "하수구막힘",
+  "description": "안녕하세요. 하수구수사대입니다. 싱크대로 물을 흘려보냈을 때 원활히 배수되지 않고 물이 빠르게 배수되...",
   "cover_image": "images/222921160478/cover.jpg",
-  "html_file": "yongin-cheoinggu-sink-clogged-222921160478.html",
-  "images_count": 11,
-  "crawled_at": "2026-06-17 15:41:57",
-  "naver_url": "https://blog.naver.com/hasugu80/222921160478",
-  "slug": "yongin-cheoinggu-sink-clogged-222921160478"
+  "html_file": "yongin-cheoinggu-sink-clogged.html",
+  "slug": "yongin-cheoinggu-sink-clogged"
 }

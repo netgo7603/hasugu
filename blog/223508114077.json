@@ -1,13 +1,10 @@
 {
-  "log_no": "223508114077",
+  "blog_id": null,
   "title": "관악구 청룡동하수구역류 대학동 맨홀막힘 배관공사",
-  "description": "관악구 청룡동하수구역류 대학동 맨홀막힘 배관공사 평상시대로 지내다가 하수구에서 막힘현상이 발생하면 ...",
   "date": "2024. 7. 10. 16:51",
   "category": "게시판",
+  "description": "관악구 청룡동하수구역류 대학동 맨홀막힘 배관공사 평상시대로 지내다가 하수구에서 막힘현상이 발생하면 ...",
   "cover_image": "images/223508114077/cover.jpg",
-  "html_file": "seoul-gwanak-sewer-backflow-223508114077.html",
-  "images_count": 8,
-  "crawled_at": "2026-06-17 14:51:18",
-  "naver_url": "https://blog.naver.com/hasugu80/223508114077",
-  "slug": "seoul-gwanak-sewer-backflow-223508114077"
+  "html_file": "seoul-gwanak-sewer-backflow.html",
+  "slug": "seoul-gwanak-sewer-backflow"
 }

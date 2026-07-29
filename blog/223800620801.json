@@ -1,13 +1,10 @@
 {
-  "log_no": "223800620801",
+  "blog_id": null,
   "title": "금천구 가산동씽크대뚫음 시흥동 하수구청소 배관막힘누수",
-  "description": "금천구 가산동씽크대뚫음 시흥동 하수구청소 배관막힘누수 얼마전 막히는 문제때문에 불편들을 호소하셨던 ...",
   "date": "2025. 3. 18. 14:03",
   "category": "게시판",
+  "description": "금천구 가산동씽크대뚫음 시흥동 하수구청소 배관막힘누수 얼마전 막히는 문제때문에 불편들을 호소하셨던 ...",
   "cover_image": "images/223800620801/cover.jpg",
-  "html_file": "siheung-sink-clogged-223800620801.html",
-  "images_count": 8,
-  "crawled_at": "2026-06-17 13:59:05",
-  "naver_url": "https://blog.naver.com/hasugu80/223800620801",
-  "slug": "siheung-sink-clogged-223800620801"
+  "html_file": "siheung-sink-clogged.html",
+  "slug": "siheung-sink-clogged"
 }

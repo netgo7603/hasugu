@@ -1,13 +1,10 @@
 {
-  "log_no": "223604065247",
+  "blog_id": null,
   "title": "고양시 창릉동세탁실역류 신원동 맨홀역류 누수",
-  "description": "고양시 창릉동세탁실역류 신원동 맨홀역류 누수 노폐물로 인해서 생겨난 막힘 이슈는 평온한 하루를 보내는...",
   "date": "2024. 10. 2. 11:11",
   "category": "게시판",
+  "description": "고양시 창릉동세탁실역류 신원동 맨홀역류 누수 노폐물로 인해서 생겨난 막힘 이슈는 평온한 하루를 보내는...",
   "cover_image": "images/223604065247/cover.jpg",
-  "html_file": "goyang-wondong-sewer-backflow-223604065247.html",
-  "images_count": 10,
-  "crawled_at": "2026-06-17 14:36:40",
-  "naver_url": "https://blog.naver.com/hasugu80/223604065247",
-  "slug": "goyang-wondong-sewer-backflow-223604065247"
+  "html_file": "goyang-wondong-sewer-backflow.html",
+  "slug": "goyang-wondong-sewer-backflow"
 }

@@ -1,13 +1,10 @@
 {
-  "log_no": "223654597670",
+  "blog_id": null,
   "title": "성남 창곡동화장실역류 시흥동 맨홀막힘 설비",
-  "description": "성남 창곡동화장실역류 시흥동 맨홀막힘 설비 평범한 생활 속에서 문제없이 수자원을 사용할 수 있다는건 ...",
   "date": "2024. 11. 10. 17:02",
   "category": "게시판",
+  "description": "성남 창곡동화장실역류 시흥동 맨홀막힘 설비 평범한 생활 속에서 문제없이 수자원을 사용할 수 있다는건 ...",
   "cover_image": "images/223654597670/cover.jpg",
-  "html_file": "siheung-sewer-backflow-223654597670.html",
-  "images_count": 8,
-  "crawled_at": "2026-06-17 14:31:47",
-  "naver_url": "https://blog.naver.com/hasugu80/223654597670",
-  "slug": "siheung-sewer-backflow-223654597670"
+  "html_file": "siheung-sewer-backflow.html",
+  "slug": "siheung-sewer-backflow"
 }

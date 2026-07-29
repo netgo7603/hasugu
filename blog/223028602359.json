@@ -1,13 +1,10 @@
 {
-  "log_no": "223028602359",
+  "blog_id": null,
   "title": "용인 수지하수구막힘 고기리 성복동 하수구역류 시원하게 해결",
-  "description": "안녕하세요. 하수구수사대입니다 반갑습니다! 집이나 밖에 있는 하수구에 물과 같이 이물질이 넘쳐나면서 ...",
   "date": "2023. 2. 27. 0:56",
   "category": "하수구막힘",
+  "description": "안녕하세요. 하수구수사대입니다 반갑습니다! 집이나 밖에 있는 하수구에 물과 같이 이물질이 넘쳐나면서 ...",
   "cover_image": "images/223028602359/cover.png",
-  "html_file": "yongin-sink-clogged-223028602359.html",
-  "images_count": 12,
-  "crawled_at": "2026-06-17 15:34:53",
-  "naver_url": "https://blog.naver.com/hasugu80/223028602359",
-  "slug": "yongin-sink-clogged-223028602359"
+  "html_file": "yongin-sink-clogged.html",
+  "slug": "yongin-sink-clogged"
 }

@@ -1,13 +1,10 @@
 {
-  "log_no": "222989200818",
+  "blog_id": null,
   "title": "평택시 고덕동 송탄하수구막힘 긴급출동 배관문제는 여러가지 이유로 발생해요!",
-  "description": "안녕하세요 하수구수사대입니다. 하수구 전문업체로서 추운 겨울이 되면 가장 먼저 걱정이 되는 것이 바로 ...",
   "date": "2023. 1. 19. 22:21",
   "category": "게시판",
+  "description": "안녕하세요 하수구수사대입니다. 하수구 전문업체로서 추운 겨울이 되면 가장 먼저 걱정이 되는 것이 바로 ...",
   "cover_image": "images/222989200818/cover.png",
-  "html_file": "pyeongtaek-toilet-clogged-222989200818.html",
-  "images_count": 12,
-  "crawled_at": "2026-06-17 15:36:53",
-  "naver_url": "https://blog.naver.com/hasugu80/222989200818",
-  "slug": "pyeongtaek-toilet-clogged-222989200818"
+  "html_file": "pyeongtaek-toilet-clogged.html",
+  "slug": "pyeongtaek-toilet-clogged"
 }

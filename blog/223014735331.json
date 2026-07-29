@@ -1,13 +1,10 @@
 {
-  "log_no": "223014735331",
+  "blog_id": null,
   "title": "전기요금 인상 대비 아껴 사용하는 법",
-  "description": "안녕하세요, 하수구수사대입니다. 다사다난했던 2022년이 저물고 2023년 계묘년 새해가 밝은지도 어느새 두...",
   "date": "2023. 2. 13. 23:46",
   "category": "생활정보글",
+  "description": "안녕하세요, 하수구수사대입니다. 다사다난했던 2022년이 저물고 2023년 계묘년 새해가 밝은지도 어느새 두...",
   "cover_image": "images/223014735331/cover.png",
-  "html_file": "incheon-ganghwa-sewer-clogged-223014735331.html",
-  "images_count": 8,
-  "crawled_at": "2026-06-17 15:35:41",
-  "naver_url": "https://blog.naver.com/hasugu80/223014735331",
-  "slug": "incheon-ganghwa-sewer-clogged-223014735331"
+  "html_file": "incheon-ganghwa-sewer-clogged.html",
+  "slug": "incheon-ganghwa-sewer-clogged"
 }

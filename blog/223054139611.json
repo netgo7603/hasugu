@@ -1,13 +1,10 @@
 {
-  "log_no": "223054139611",
+  "blog_id": null,
   "title": "뽁뽁이 분리수거 그냥 버리면 안 돼요!",
-  "description": "안녕하세요. 하수구수사대입니다. 오늘은 뽁뽁이 분리수거 활용하는 방법에 대해서 알아보는 시간을 가져보...",
   "date": "2023. 3. 24. 9:45",
   "category": "생활정보글",
+  "description": "안녕하세요. 하수구수사대입니다. 오늘은 뽁뽁이 분리수거 활용하는 방법에 대해서 알아보는 시간을 가져보...",
   "cover_image": "images/223054139611/cover.png",
-  "html_file": "yongin-sewer-clogged-223054139611.html",
-  "images_count": 8,
-  "crawled_at": "2026-06-17 15:32:44",
-  "naver_url": "https://blog.naver.com/hasugu80/223054139611",
-  "slug": "yongin-sewer-clogged-223054139611"
+  "html_file": "yongin-sewer-clogged.html",
+  "slug": "yongin-sewer-clogged"
 }

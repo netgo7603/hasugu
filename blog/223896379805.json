@@ -1,13 +1,10 @@
 {
-  "log_no": "223896379805",
+  "blog_id": null,
   "title": "천안 대흥동대변기역류 일봉동 배수구뚫기 누수탐지공사",
-  "description": "집안의 주방에서 음식을 만든 후에 남은 잔여물을 깔끔해지도록 폐기하지 않거나 설거지하는 과정에서 기름...",
   "date": "2025. 6. 12. 2:05",
   "category": "게시판",
+  "description": "집안의 주방에서 음식을 만든 후에 남은 잔여물을 깔끔해지도록 폐기하지 않거나 설거지하는 과정에서 기름...",
   "cover_image": "images/223896379805/cover.jpg",
-  "html_file": "cheonan-daeheung-sink-clogged-223896379805.html",
-  "images_count": 10,
-  "crawled_at": "2026-06-17 09:06:27",
-  "naver_url": "https://blog.naver.com/hasugu80/223896379805",
-  "slug": "cheonan-daeheung-sink-clogged-223896379805"
+  "html_file": "cheonan-daeheung-sink-clogged.html",
+  "slug": "cheonan-daeheung-sink-clogged"
 }

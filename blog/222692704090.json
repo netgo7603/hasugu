@@ -1,13 +1,10 @@
 {
-  "log_no": "222692704090",
+  "blog_id": null,
   "title": "수원 배관 막힘 고압세척으로 해결 완료했습니다.",
-  "description": "수원 배관 막힘 고압세척으로 해결 만약 갑작스럽게 화장실이나 주방과 연결된 배관이 막히게 되면 어떻게 ...",
   "date": "2022. 4. 5. 22:29",
   "category": "고압세척",
+  "description": "수원 배관 막힘 고압세척으로 해결 만약 갑작스럽게 화장실이나 주방과 연결된 배관이 막히게 되면 어떻게 ...",
   "cover_image": "images/222692704090/cover.jpg",
-  "html_file": "suwon-sewer-clogged-222692704090.html",
-  "images_count": 11,
-  "crawled_at": "2026-06-17 15:51:17",
-  "naver_url": "https://blog.naver.com/hasugu80/222692704090",
-  "slug": "suwon-sewer-clogged-222692704090"
+  "html_file": "suwon-sewer-clogged.html",
+  "slug": "suwon-sewer-clogged"
 }

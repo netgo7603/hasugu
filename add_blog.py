@@ -647,6 +647,40 @@ def update_sitemap(meta: dict, image_files: list):
     
     print(f"  ✅ sitemap.xml 갱신: /blog/{slug}")
 
+    # RSS 갱신
+    update_rss(slug, title, meta.get('description', title), date)
+
+def update_rss(slug: str, title: str, desc: str, date: str):
+    """rss.xml에 신규 포스트 삽입"""
+    rss_file = PROJECT_DIR / "rss.xml"
+    if not rss_file.exists():
+        return
+
+    try:
+        with open(rss_file, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        link = f"{DOMAIN}/blog/{slug}"
+        escaped_title = title.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+        escaped_desc = desc.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
+        new_item = f'''    <item>
+      <title>{escaped_title}</title>
+      <link>{link}</link>
+      <description>{escaped_desc}</description>
+      <guid isPermaLink="true">{link}</guid>
+      <pubDate>{date}</pubDate>
+    </item>'''
+
+        if link not in content:
+            content = content.replace('<channel>', f'<channel>\n{new_item}')
+            with open(rss_file, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"  ✅ rss.xml 갱신: /blog/{slug}")
+    except Exception as e:
+        print(f"  ⚠️ rss.xml 갱신 중 에러: {e}")
+
+
 # ============================================================
 # 7. Docker 배포
 # ============================================================

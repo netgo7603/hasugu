@@ -1,13 +1,10 @@
 {
-  "log_no": "224295863661",
+  "blog_id": null,
   "title": "화성 봉담 욕실 하수구막힘, 리모델링 후 배수구역류 해결",
-  "description": "화성 봉담 욕실하수구막힘 역류, 리모델링 후 배수구역류 원인은 이물질 유입 안녕하세요. 화성 봉담 욕실 ...",
   "date": "2026. 5. 25. 14:45",
   "category": "하수구막힘",
+  "description": "화성 봉담 욕실하수구막힘 역류, 리모델링 후 배수구역류 원인은 이물질 유입 안녕하세요. 화성 봉담 욕실 ...",
   "cover_image": "images/224295863661/cover.jpg",
-  "html_file": "hwaseong-bongdam-sewer-backflow-224295863661.html",
-  "images_count": 12,
-  "crawled_at": "2026-06-17 10:17:48",
-  "naver_url": "https://blog.naver.com/hasugu2118/224295863661",
-  "slug": "hwaseong-bongdam-sewer-backflow-224295863661"
+  "html_file": "hwaseong-bongdam-sewer-backflow.html",
+  "slug": "hwaseong-bongdam-sewer-backflow"
 }
