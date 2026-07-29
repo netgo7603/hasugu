@@ -619,7 +619,7 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
   <title>{title} | {COMPANY_NAME}</title>
   <meta name="description" content="{desc}">
   <meta name="keywords" content="{', '.join(seo_keywords)}">
-  <link rel="canonical" href="{DOMAIN}/blog/{slug}">
+  <link rel="canonical" href="{DOMAIN}/blog/{slug}.html">
 
   <!-- Naver SEO & GEO Tags -->
   <meta name="geo.region" content="{geo_region}">
@@ -632,7 +632,8 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
   <meta property="og:description" content="{desc}">
   <meta property="og:image" content="{cover_image_absolute}">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="{DOMAIN}/blog/{slug}">
+  <meta property="og:url" content="{DOMAIN}/blog/{slug}.html">
+
 
   <!-- Schema.org: Article -->
   <script type="application/ld+json">
@@ -654,8 +655,9 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
     }},
     "mainEntityOfPage": {{
       "@type": "WebPage",
-      "@id": "{DOMAIN}/blog/{slug}"
+      "@id": "{DOMAIN}/blog/{slug}.html"
     }}
+
   }}
   </script>
 
