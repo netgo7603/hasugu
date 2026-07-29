@@ -690,7 +690,8 @@ def update_rss(slug: str, title: str, desc: str, date: str):
         with open(rss_file, 'r', encoding='utf-8') as f:
             content = f.read()
 
-        link = f"{DOMAIN}/blog/{slug}"
+        link = f"{DOMAIN}/blog/{slug}.html"
+
         escaped_title = title.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
         escaped_desc = desc.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 

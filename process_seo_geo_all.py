@@ -954,7 +954,7 @@ def rebuild_rss(posts: list):
     for p in posts[:50]:
         title = p.get('title', '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
         slug = p.get('slug', '')
-        link = f"{DOMAIN}/blog/{slug}"
+        link = f"{DOMAIN}/blog/{slug}.html"
         desc = p.get('description', '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
         raw_date = p.get('date', '')
         pub_date = format_rss_date(raw_date)
@@ -966,6 +966,7 @@ def rebuild_rss(posts: list):
       <pubDate>{pub_date}</pubDate>
       <guid isPermaLink="true">{link}</guid>
     </item>''')
+
 
     rss_items_joined = "\n".join(rss_items)
     rss_content = f'''<?xml version="1.0" encoding="UTF-8"?>
