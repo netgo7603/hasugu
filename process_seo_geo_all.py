@@ -949,24 +949,44 @@ def format_rss_date(date_str: str) -> str:
         return datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0900")
 
 def rebuild_rss(posts: list):
-    """rss.xml 파일 생성/갱신 (네이버 서치어드바이저 RSS 피드 가이드 준수)"""
+    """rss.xml 파일 생성/갱신 (네이버 서치어드바이저 RSS 피드 가이드 - 본문 포함 규격 준수)"""
     print("📡 rss.xml 갱신 중...")
     rss_items = []
     for p in posts[:50]:
         title = p.get('title', '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
         slug = p.get('slug', '')
         link = f"{DOMAIN}/blog/{slug}.html"
-        desc = p.get('description', '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+        
+        # 네이버 가이드: 본문 전체 공개(full text) 포함
+        desc = p.get('description', '')
+        # HTML 파일에서 상세 본문 텍스트 읽어오기 시도
+        html_file = BLOG_DIR / f"{slug}.html"
+        if html_file.exists():
+            try:
+                with open(html_file, 'r', encoding='utf-8') as hf:
+                    html_str = hf.read()
+                    # 본문 섹션 추출
+                    m_sec = re.findall(r'<div class="section">(.*?)</div>', html_str, re.DOTALL)
+                    if m_sec:
+                        clean_sec = " ".join([re.sub(r'<[^>]+>', ' ', s) for s in m_sec])
+                        clean_sec = re.sub(r'\s+', ' ', clean_sec).strip()
+                        if len(clean_sec) > 100:
+                            desc = clean_sec
+            except Exception:
+                pass
+                
+        desc_escaped = desc.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
         raw_date = p.get('date', '')
         pub_date = format_rss_date(raw_date)
         
         rss_items.append(f'''    <item>
       <title>{title}</title>
       <link>{link}</link>
-      <description>{desc}</description>
+      <description>{desc_escaped}</description>
       <pubDate>{pub_date}</pubDate>
       <guid isPermaLink="true">{link}</guid>
     </item>''')
+
 
 
     rss_items_joined = "\n".join(rss_items)
