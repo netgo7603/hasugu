@@ -598,15 +598,16 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
     service_type_schema = ", ".join([f'"{s}"' for s in service_types])
     tag_html = "\n".join([f"      <span>#{tag}</span>" for tag in seo_keywords])
 
-    prev_nav_html = f'''<a href="{prev_post['slug']}" class="nav-card">
+    prev_nav_html = f'''<a href="{prev_post['slug']}.html" class="nav-card">
       <span class="nav-label">◀ 이전 시공사례</span>
       <span class="nav-title">{prev_post['title']}</span>
     </a>''' if prev_post else '<div style="visibility: hidden;"></div>'
 
-    next_nav_html = f'''<a href="{next_post['slug']}" class="nav-card" style="text-align: right;">
+    next_nav_html = f'''<a href="{next_post['slug']}.html" class="nav-card" style="text-align: right;">
       <span class="nav-label">다음 시공사례 ▶</span>
       <span class="nav-title">{next_post['title']}</span>
     </a>''' if next_post else '<div style="visibility: hidden;"></div>'
+
 
     html_content = f'''<!DOCTYPE html>
 <html lang="ko">
@@ -1056,7 +1057,7 @@ def update_blog_index(posts: list):
         date_clean = p.get('date', '')
         
         cards_html += f"""
-        <a href="{slug}" class="post-card" style="text-decoration: none; color: inherit;">
+        <a href="{slug}.html" class="post-card" style="text-decoration: none; color: inherit;">
             <article>
                 {cover_html}
                 <div class="card-body">
@@ -1072,6 +1073,7 @@ def update_blog_index(posts: list):
         </a>"""
 
     index_html = f"""<!DOCTYPE html>
+
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -1181,8 +1183,9 @@ def update_blog_index(posts: list):
             const nextPosts = allPosts.slice(currentIndex, currentIndex + limit);
             nextPosts.forEach(p => {{
                 const card = document.createElement('a');
-                card.href = p.slug;
+                card.href = p.slug.endsWith('.html') ? p.slug : p.slug + '.html';
                 card.className = 'post-card';
+
                 card.style.textDecoration = 'none';
                 card.style.color = 'inherit';
                 
