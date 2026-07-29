@@ -949,23 +949,21 @@ def format_rss_date(date_str: str) -> str:
         return datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0900")
 
 def rebuild_rss(posts: list):
-    """rss.xml 파일 생성/갱신 (네이버 서치어드바이저 RSS 피드 가이드 - 본문 포함 규격 준수)"""
+    """rss.xml 파일 생성/갱신 (네이버 서치어드바이저 RSS 피드 가이드 정밀 준수)"""
     print("📡 rss.xml 갱신 중...")
     rss_items = []
     for p in posts[:50]:
-        title = p.get('title', '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+        title = p.get('title', '').strip()
         slug = p.get('slug', '')
         link = f"{DOMAIN}/blog/{slug}.html"
         
-        # 네이버 가이드: 본문 전체 공개(full text) 포함
+        # 네이버 가이드: 본문 내용 포함 (CDATA 처리로 특수문자 및 HTML 안전성 확보)
         desc = p.get('description', '')
-        # HTML 파일에서 상세 본문 텍스트 읽어오기 시도
         html_file = BLOG_DIR / f"{slug}.html"
         if html_file.exists():
             try:
                 with open(html_file, 'r', encoding='utf-8') as hf:
                     html_str = hf.read()
-                    # 본문 섹션 추출
                     m_sec = re.findall(r'<div class="section">(.*?)</div>', html_str, re.DOTALL)
                     if m_sec:
                         clean_sec = " ".join([re.sub(r'<[^>]+>', ' ', s) for s in m_sec])
@@ -974,28 +972,25 @@ def rebuild_rss(posts: list):
                             desc = clean_sec
             except Exception:
                 pass
-                
-        desc_escaped = desc.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
         raw_date = p.get('date', '')
         pub_date = format_rss_date(raw_date)
         
         rss_items.append(f'''    <item>
-      <title>{title}</title>
+      <title><![CDATA[{title}]]></title>
       <link>{link}</link>
-      <description>{desc_escaped}</description>
+      <description><![CDATA[{desc}]]></description>
       <pubDate>{pub_date}</pubDate>
       <guid isPermaLink="true">{link}</guid>
     </item>''')
-
-
 
     rss_items_joined = "\n".join(rss_items)
     rss_content = f'''<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{COMPANY_NAME} 시공후기 &amp; 블로그</title>
-    <link>{DOMAIN}/blog/</link>
-    <description>용인·수원·화성 하수구막힘, 누수탐지, 고압세척 전문업체 {COMPANY_NAME} 시공사례 피드</description>
+    <title><![CDATA[{COMPANY_NAME} 시공후기 & 블로그]]></title>
+    <link>{DOMAIN}/blog/index.html</link>
+    <description><![CDATA[용인·수원·화성 하수구막힘, 누수탐지, 고압세척 전문업체 {COMPANY_NAME} 시공사례 피드]]></description>
     <language>ko-KR</language>
     <atom:link href="{DOMAIN}/rss.xml" rel="self" type="application/rss+xml" />
 {rss_items_joined}
@@ -1007,6 +1002,7 @@ def rebuild_rss(posts: list):
     with open(rss_path, 'w', encoding='utf-8') as f:
         f.write(rss_content)
     print(f"  ✅ rss.xml 갱신 완료! ({len(posts[:50])}개 포스트 반영)")
+
 
 def rebuild_robots():
 
