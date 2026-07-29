@@ -227,10 +227,27 @@ def generate_seo_html(meta: dict) -> str:
     # 태그 HTML
     tag_html = '\n'.join([f'      <span>#{tag}</span>' for tag in tags]) if tags else ''
     
-    # 지역 키워드 삽입
-    area_keyword = ' '.join(areas[:2]) if areas else primary_area
+    # 이전글 / 다음글 링크 체크 및 계산 (posts.json 활용)
+    prev_nav_html = '<div style="visibility: hidden;"></div>'
+    next_nav_html = '<div style="visibility: hidden;"></div>'
     
+    posts_json_path = BLOG_DIR / "posts.json"
+    if posts_json_path.exists():
+        try:
+            with open(posts_json_path, 'r', encoding='utf-8') as f:
+                all_posts = json.load(f)
+            if all_posts:
+                # 가장 최신 포스트(첫 번째)를 이전 포스트로 연결
+                latest_p = all_posts[0]
+                prev_nav_html = f'''<a href="{latest_p['slug']}" class="nav-card">
+      <span class="nav-label">◀ 이전 시공사례</span>
+      <span class="nav-title">{latest_p['title']}</span>
+    </a>'''
+    area_keyword = ' '.join(areas[:2]) if areas else primary_area
+
     html = f'''<!DOCTYPE html>
+
+
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
@@ -326,6 +343,11 @@ def generate_seo_html(meta: dict) -> str:
     .cta p {{ opacity: 0.9; }}
     .tag-list {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }}
     .tag-list span {{ background: #e8f4fd; color: #2980b9; padding: 4px 12px; border-radius: 20px; font-size: 13px; }}
+    .prev-next-nav {{ display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 30px 0; }}
+    .nav-card {{ background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 20px; text-decoration: none; color: #333; transition: all 0.2s ease; display: flex; flex-direction: column; }}
+    .nav-card:hover {{ border-color: #2980b9; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(41,128,185,0.15); }}
+    .nav-card .nav-label {{ font-size: 13px; color: #2980b9; font-weight: bold; margin-bottom: 6px; }}
+    .nav-card .nav-title {{ font-size: 15px; font-weight: 600; line-height: 1.4; color: #1a5276; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }}
     .footer {{ text-align: center; padding: 20px; color: #888; font-size: 13px; }}
     .breadcrumb {{ font-size: 14px; color: #888; margin-bottom: 15px; }}
     .breadcrumb a {{ color: #2980b9; text-decoration: none; }}
@@ -335,6 +357,7 @@ def generate_seo_html(meta: dict) -> str:
       .section {{ padding: 20px; }}
       .image-grid {{ grid-template-columns: 1fr; }}
       .cta .phone {{ font-size: 26px; }}
+      .prev-next-nav {{ grid-template-columns: 1fr; }}
     }}
   </style>
 </head>
@@ -344,7 +367,7 @@ def generate_seo_html(meta: dict) -> str:
 
   <!-- 브레드크럼 -->
   <div class="breadcrumb">
-    <a href="/">홈</a> &gt; <a href="/#cases">시공사례</a> &gt; <span>{primary_area} {primary_service}</span>
+    <a href="/">홈</a> &gt; <a href="/blog/index.html">시공사례</a> &gt; <span>{primary_area} {primary_service}</span>
   </div>
 
   <!-- 헤더 -->
@@ -399,6 +422,12 @@ def generate_seo_html(meta: dict) -> str:
     </div>
   </div>
 
+  <!-- 이전글 / 다음글 네비게이션 -->
+  <div class="prev-next-nav">
+    {prev_nav_html}
+    {next_nav_html}
+  </div>
+
   <!-- 푸터 -->
   <div class="footer">
     <p>© {datetime.now().year} {COMPANY_NAME}. All rights reserved.</p>
@@ -412,6 +441,7 @@ def generate_seo_html(meta: dict) -> str:
 </html>'''
     
     return html
+
 
 def split_into_sections(body_text: str, areas: list, service_types: list) -> dict:
     """본문 텍스트를 섹션으로 분할하여 HTML 생성"""
