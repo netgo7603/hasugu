@@ -11,7 +11,8 @@ import os
 import re
 import json
 import shutil
-from datetime import datetime
+from datetime import datetime, timedelta
+
 from pathlib import Path
 
 # ============================================================
@@ -907,13 +908,46 @@ def rebuild_sitemap(posts: list):
 
 
 def format_rss_date(date_str: str) -> str:
-    """날짜 문자열을 RFC 822 포맷(예: Wed, 29 Jul 2026 00:00:00 +0900)으로 변환"""
+    """날짜 문자열을 RFC 822 포맷(예: Wed, 29 Jul 2026 09:29:00 +0900)으로 변환"""
+    now = datetime.now()
+    if not date_str:
+        return now.strftime("%a, %d %b %Y %H:%M:%S +0900")
+        
+    m_h = re.search(r'(\d+)\s*시간\s*전', date_str)
+    if m_h:
+        dt = now - timedelta(hours=int(m_h.group(1)))
+        return dt.strftime("%a, %d %b %Y %H:%M:%S +0900")
+        
+    m_m = re.search(r'(\d+)\s*분\s*전', date_str)
+    if m_m:
+        dt = now - timedelta(minutes=int(m_m.group(1)))
+        return dt.strftime("%a, %d %b %Y %H:%M:%S +0900")
+        
+    m_d = re.search(r'(\d+)\s*일\s*전', date_str)
+    if m_d:
+        dt = now - timedelta(days=int(m_d.group(1)))
+        return dt.strftime("%a, %d %b %Y %H:%M:%S +0900")
+
+    m_full = re.search(r'(\d{4})\.\s*(\d{1,2})\.\s*(\d{1,2})\.?\s*(\d{1,2})?:?(\d{1,2})?', date_str)
+    if m_full:
+        year = int(m_full.group(1))
+        month = int(m_full.group(2))
+        day = int(m_full.group(3))
+        hour = int(m_full.group(4)) if m_full.group(4) else 12
+        minute = int(m_full.group(5)) if m_full.group(5) else 0
+        try:
+            dt = datetime(year, month, day, hour, minute)
+            return dt.strftime("%a, %d %b %Y %H:%M:%S +0900")
+        except Exception:
+            pass
+
     clean_d = format_date(date_str)
     try:
         dt = datetime.strptime(clean_d, "%Y-%m-%d")
-        return dt.strftime("%a, %d %b %Y %H:%M:%S +0900")
+        return dt.strftime("%a, %d %b %Y 12:00:00 +0900")
     except Exception:
-        return datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0900")
+        return now.strftime("%a, %d %b %Y %H:%M:%S +0900")
+
 
 def rebuild_rss(posts: list):
     """rss.xml 파일 생성/갱신 (네이버 서치어드바이저 RSS 피드 가이드 정밀 준수)"""
