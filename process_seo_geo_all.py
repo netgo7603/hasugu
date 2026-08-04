@@ -600,12 +600,12 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
     service_type_schema = ", ".join([f'"{s}"' for s in service_types])
     tag_html = "\n".join([f"      <span>#{tag}</span>" for tag in seo_keywords])
 
-    prev_nav_html = f'''<a href="{prev_post['slug']}.html" class="nav-card">
+    prev_nav_html = f'''<a href="{prev_post['slug']}" class="nav-card">
       <span class="nav-label">◀ 이전 시공사례</span>
       <span class="nav-title">{prev_post['title']}</span>
     </a>''' if prev_post else '<div style="visibility: hidden;"></div>'
 
-    next_nav_html = f'''<a href="{next_post['slug']}.html" class="nav-card" style="text-align: right;">
+    next_nav_html = f'''<a href="{next_post['slug']}" class="nav-card" style="text-align: right;">
       <span class="nav-label">다음 시공사례 ▶</span>
       <span class="nav-title">{next_post['title']}</span>
     </a>''' if next_post else '<div style="visibility: hidden;"></div>'
@@ -621,7 +621,7 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
   <title>{title} | {COMPANY_NAME}</title>
   <meta name="description" content="{desc}">
   <meta name="keywords" content="{', '.join(seo_keywords)}">
-  <link rel="canonical" href="{DOMAIN}/blog/{slug}.html">
+  <link rel="canonical" href="{DOMAIN}/blog/{slug}">
 
   <!-- Naver SEO & GEO Tags -->
   <meta name="geo.region" content="{geo_region}">
@@ -634,7 +634,7 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
   <meta property="og:description" content="{desc}">
   <meta property="og:image" content="{cover_image_absolute}">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="{DOMAIN}/blog/{slug}.html">
+  <meta property="og:url" content="{DOMAIN}/blog/{slug}">
 
 
   <!-- Schema.org: Article -->
@@ -657,7 +657,7 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
     }},
     "mainEntityOfPage": {{
       "@type": "WebPage",
-      "@id": "{DOMAIN}/blog/{slug}.html"
+      "@id": "{DOMAIN}/blog/{slug}"
     }}
 
   }}
@@ -880,7 +880,7 @@ def rebuild_sitemap(posts: list):
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>{DOMAIN}/blog/index.html</loc>
+    <loc>{DOMAIN}/blog/</loc>
     <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -891,7 +891,7 @@ def rebuild_sitemap(posts: list):
         date_str = format_date(p["date"])
         
         entry = f'''  <url>
-    <loc>{DOMAIN}/blog/{slug}.html</loc>
+    <loc>{DOMAIN}/blog/{slug}</loc>
     <lastmod>{date_str}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -957,7 +957,7 @@ def rebuild_rss(posts: list):
     for p in posts[:50]:
         title = p.get('title', '').strip().replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;').replace("'", '&apos;')
         slug = p.get('slug', '')
-        link = f"{DOMAIN}/blog/{slug}.html"
+        link = f"{DOMAIN}/blog/{slug}"
         
         # 요약 설명문 (특수문자 이스케이프)
         desc = p.get('description', '')
@@ -1076,7 +1076,7 @@ def update_blog_index(posts: list):
         date_clean = p.get('date', '')
         
         cards_html += f"""
-        <a href="{slug}.html" class="post-card" style="text-decoration: none; color: inherit;">
+        <a href="{slug}" class="post-card" style="text-decoration: none; color: inherit;">
             <article>
                 {cover_html}
                 <div class="card-body">
@@ -1150,14 +1150,14 @@ def update_blog_index(posts: list):
 <body>
 <header class="site-header">
     <div class="header-inner">
-        <a href="../index.html" class="logo">
+        <a href="/" class="logo">
             <div class="logo-icon">🔧</div>
             <span class="logo-text">하수구수사대</span>
         </a>
         <nav class="header-nav">
-            <a href="../index.html">홈</a>
-            <a href="index.html">블로그</a>
-            <a href="../index.html#contact">상담문의</a>
+            <a href="/">홈</a>
+            <a href="/blog/">블로그</a>
+            <a href="/#contact">상담문의</a>
         </nav>
     </div>
 </header>
@@ -1202,7 +1202,7 @@ def update_blog_index(posts: list):
             const nextPosts = allPosts.slice(currentIndex, currentIndex + limit);
             nextPosts.forEach(p => {{
                 const card = document.createElement('a');
-                card.href = p.slug.endsWith('.html') ? p.slug : p.slug + '.html';
+                card.href = p.slug.replace(/\.html$/, '');
                 card.className = 'post-card';
 
                 card.style.textDecoration = 'none';

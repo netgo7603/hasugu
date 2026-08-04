@@ -368,7 +368,7 @@ def generate_seo_html(meta: dict) -> str:
 
   <!-- 브레드크럼 -->
   <div class="breadcrumb">
-    <a href="/">홈</a> &gt; <a href="/blog/index.html">시공사례</a> &gt; <span>{primary_area} {primary_service}</span>
+    <a href="/">홈</a> &gt; <a href="/blog/">시공사례</a> &gt; <span>{primary_area} {primary_service}</span>
   </div>
 
   <!-- 헤더 -->
@@ -691,7 +691,7 @@ def update_rss(slug: str, title: str, desc: str, date: str):
         with open(rss_file, 'r', encoding='utf-8') as f:
             content = f.read()
 
-        link = f"{DOMAIN}/blog/{slug}.html"
+        link = f"{DOMAIN}/blog/{slug}"
 
         escaped_title = title.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
         escaped_desc = desc.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')

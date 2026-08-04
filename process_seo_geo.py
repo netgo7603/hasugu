@@ -336,14 +336,14 @@ def generate_seo_geo_html(meta: dict, content: dict, blog_id: str) -> str:
   <title>{title} | {COMPANY_NAME}</title>
   <meta name="description" content="{desc}">
   <meta name="keywords" content="{', '.join(seo_keywords)}">
-  <link rel="canonical" href="{DOMAIN}/blog/{slug}.html">
+  <link rel="canonical" href="{DOMAIN}/blog/{slug}">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{title} | {COMPANY_NAME}">
   <meta property="og:description" content="{desc}">
   <meta property="og:image" content="{cover_image}">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="{DOMAIN}/blog/{slug}.html">
+  <meta property="og:url" content="{DOMAIN}/blog/{slug}">
 
   <!-- Schema.org: Article -->
   <script type="application/ld+json">
@@ -365,7 +365,7 @@ def generate_seo_geo_html(meta: dict, content: dict, blog_id: str) -> str:
     }},
     "mainEntityOfPage": {{
       "@type": "WebPage",
-      "@id": "{DOMAIN}/blog/{slug}.html"
+      "@id": "{DOMAIN}/blog/{slug}"
     }}
   }}
   </script>
@@ -446,7 +446,7 @@ def generate_seo_geo_html(meta: dict, content: dict, blog_id: str) -> str:
 
   <!-- 브레드크럼 -->
   <div class="breadcrumb">
-    <a href="/">홈</a> &gt; <a href="/blog/index.html">시공사례</a> &gt; <span>{primary_area} {primary_service}</span>
+    <a href="/">홈</a> &gt; <a href="/blog/">시공사례</a> &gt; <span>{primary_area} {primary_service}</span>
   </div>
 
   <!-- 헤더 -->
@@ -675,7 +675,7 @@ def update_blog_index(posts: list):
         date_clean = p.get('date', '')
         
         cards_html += f"""
-        <article class="post-card" onclick="location.href='{slug}.html'" role="button" tabindex="0">
+        <article class="post-card" onclick="location.href='{slug}'" role="button" tabindex="0">
             {cover_html}
             <div class="card-body">
                 {"" if not p.get("category") else f'<span class="card-badge">{p["category"]}</span>'}
@@ -741,14 +741,14 @@ def update_blog_index(posts: list):
 <body>
 <header class="site-header">
     <div class="header-inner">
-        <a href="../index.html" class="logo">
+        <a href="/" class="logo">
             <div class="logo-icon">🔧</div>
             <span class="logo-text">하수구수사대</span>
         </a>
         <nav class="header-nav">
-            <a href="../index.html">홈</a>
-            <a href="index.html">블로그</a>
-            <a href="../index.html#contact">상담문의</a>
+            <a href="/">홈</a>
+            <a href="/blog/">블로그</a>
+            <a href="/#contact">상담문의</a>
         </nav>
     </div>
 </header>
