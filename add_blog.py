@@ -315,6 +315,34 @@ def generate_seo_html(meta: dict) -> str:
   }}
   </script>
 
+  <!-- Schema.org: BreadcrumbList -->
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "홈",
+        "item": "{DOMAIN}/"
+      }},
+      {{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "시공사례",
+        "item": "{DOMAIN}/blog/"
+      }},
+      {{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{title}",
+        "item": "{DOMAIN}/blog/{slug}"
+      }}
+    ]
+  }}
+  </script>
+
   <style>
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
     body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; }}

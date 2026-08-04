@@ -690,6 +690,34 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
   }}
   </script>
 
+  <!-- Schema.org: BreadcrumbList -->
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "홈",
+        "item": "{DOMAIN}/"
+      }},
+      {{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "시공사례",
+        "item": "{DOMAIN}/blog/"
+      }},
+      {{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{title}",
+        "item": "{DOMAIN}/blog/{slug}"
+      }}
+    ]
+  }}
+  </script>
+
   <style>
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
     body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; }}
@@ -762,7 +790,7 @@ def generate_seo_geo_html(meta: dict, content: dict, geo_seo_info: dict, blog_id
   </div>
 
   <!-- 대표 이미지 -->
-  {f'<div class="image-box"><img src="{cover_image}" alt="{title} 대표 이미지"><div class="caption">{primary_area} {primary_service} 현장</div></div>' if cover_image else ''}
+  {f'<div class="image-box"><img src="{cover_image}" alt="{title} - {primary_area} {primary_service} 현장 이미지"><div class="caption">{primary_area} {primary_service} 현장</div></div>' if cover_image else ''}
 
   <!-- 작업 개요 -->
   <div class="section">
