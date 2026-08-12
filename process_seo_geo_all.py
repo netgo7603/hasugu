@@ -1057,6 +1057,8 @@ def update_blog_index(posts: list):
     
     # 1. posts.json 파일 생성 (전체 목록)
     posts_json_data = []
+    all_links_list = []
+    
     for p in posts:
         slug = p["slug"]
         cover = p.get("cover_image", "")
@@ -1075,6 +1077,8 @@ def update_blog_index(posts: list):
             "description": p.get("description", ""),
             "date": p.get("date", "")
         })
+        
+        all_links_list.append(f'<li><a href="{slug}">{p.get("title", "")}</a></li>')
         
     posts_json_path = BLOG_DIR / "posts.json"
     with open(posts_json_path, 'w', encoding='utf-8') as f:
@@ -1119,19 +1123,121 @@ def update_blog_index(posts: list):
             </article>
         </a>"""
 
+    all_links_html = "\n".join(all_links_list)
+
+    # SEO / AIO ItemList 스키마 생성 (상위 24개)
+    item_list_elements = []
+    for idx, p in enumerate(static_posts, 1):
+        slug_clean = p['slug'].replace('.html', '')
+        item_list_elements.append(f'''        {{
+          "@type": "ListItem",
+          "position": {idx},
+          "url": "{DOMAIN}/blog/{slug_clean}",
+          "name": "{p.get('title', '')}"
+        }}''')
+    item_list_json = ",\n".join(item_list_elements)
+
     index_html = f"""<!DOCTYPE html>
 
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="하수구수사대 시공 후기 및 블로그 - 용인·수원·화성 하수구 막힘 전문 청소업체">
-    <title>블로그 - 하수구수사대</title>
+    <meta name="description" content="하수구수사대 시공 후기 및 블로그 - 용인·수원·화성 하수구 막힘, 싱크대 역류, 변기막힘, 고압세척 전문 청소업체 시공 사례 모음">
+    <meta name="keywords" content="하수구막힘, 싱크대막힘, 변기막힘, 고압세척, 용인하수구막힘, 수원하수구막힘, 화성하수구막힘, 하수구수사대">
+    <title>시공 후기 & 블로그 - 하수구수사대</title>
     <link rel="canonical" href="{DOMAIN}/blog/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <!-- GEO (Geographic / Location SEO) Meta Tags -->
+    <meta name="geo.region" content="KR-41">
+    <meta name="geo.placename" content="용인시, 수원시, 화성시, 경기도">
+    <meta name="geo.position" content="37.2410;127.1779">
+    <meta name="ICBM" content="37.2410, 127.1779">
+
+    <!-- Open Graph for Social & AI Indexing -->
+    <meta property="og:title" content="시공 후기 & 블로그 - 하수구수사대">
+    <meta property="og:description" content="용인·수원·화성 하수구 막힘, 싱크대 역류, 고압세척 실제 시공 후기 1,400여 건">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{DOMAIN}/blog/">
+    <meta property="og:image" content="{DOMAIN}/images/favicon.png">
+
+    <!-- Schema.org: CollectionPage & ItemList (SEO / AIO / AEO) -->
+    <script type="application/ld+json">
+    {{
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "하수구수사대 시공 후기 및 블로그",
+      "description": "용인·수원·화성 등 경기 전지역 하수구막힘, 싱크대역류, 변기막힘, 고압세척 실제 시공사례 1,400여 건 모음",
+      "url": "{DOMAIN}/blog/",
+      "publisher": {{
+        "@type": "Organization",
+        "name": "{COMPANY_NAME}",
+        "url": "{DOMAIN}/"
+      }},
+      "mainEntity": {{
+        "@type": "ItemList",
+        "numberOfItems": {len(posts)},
+        "itemListElement": [
+{item_list_json}
+        ]
+      }}
+    }}
+    </script>
+
+    <!-- Schema.org: LocalBusiness (GEO / Local SEO) -->
+    <script type="application/ld+json">
+    {{
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "{COMPANY_NAME}",
+      "image": "{DOMAIN}/images/favicon.png",
+      "telephone": "{COMPANY_PHONE}",
+      "url": "{DOMAIN}/",
+      "priceRange": "₩₩",
+      "address": {{
+        "@type": "PostalAddress",
+        "addressRegion": "경기도",
+        "addressCountry": "KR"
+      }},
+      "areaServed": [
+        {{"@type": "City", "name": "용인시"}},
+        {{"@type": "City", "name": "수원시"}},
+        {{"@type": "City", "name": "화성시"}},
+        {{"@type": "City", "name": "안산시"}},
+        {{"@type": "City", "name": "시흥시"}},
+        {{"@type": "City", "name": "평택시"}}
+      ],
+      "serviceType": ["하수구막힘", "싱크대막힘", "변기막힘", "고압세척", "배관청소", "누수탐지"],
+      "openingHours": "Mo-Su 00:00-24:00"
+    }}
+    </script>
+
+    <!-- Schema.org: BreadcrumbList (SEO Navigation) -->
+    <script type="application/ld+json">
+    {{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "{DOMAIN}/"
+        }},
+        {{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "블로그",
+          "item": "{DOMAIN}/blog/"
+        }}
+      ]
+    }}
+    </script>
+
     <style>
         *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
         :root {{
@@ -1148,11 +1254,17 @@ def update_blog_index(posts: list):
         .logo-text {{ font-size: 1.1rem; font-weight: 700; }}
         .header-nav a {{ color: rgba(255,255,255,.85); text-decoration: none; font-size: .9rem; font-weight: 500; padding: 6px 14px; border-radius: var(--radius-sm); transition: background .2s; }}
         .header-nav a:hover {{ background: rgba(255,255,255,.15); color: #fff; }}
-        .page-hero {{ background: linear-gradient(135deg, #1a237e, #283593); padding: 80px 24px 60px; text-align: center; color: #fff; }}
+        .page-hero {{ background: linear-gradient(135deg, #1a237e, #283593); padding: 60px 24px 50px; text-align: center; color: #fff; }}
         .page-hero h1 {{ font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; margin-bottom: 12px; }}
         .page-hero p {{ opacity: .8; font-size: 1rem; }}
         .post-count {{ display: inline-block; background: var(--accent); color: #fff; padding: 4px 14px; border-radius: 20px; font-size: .8rem; font-weight: 700; margin-top: 16px; }}
-        .posts-grid {{ max-width: 1100px; margin: 0 auto; padding: 56px 24px 40px; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }}
+        
+        .search-section {{ max-width: 1100px; margin: -25px auto 0; padding: 0 24px; position: relative; z-index: 10; }}
+        .search-box {{ background: #fff; border-radius: var(--radius); padding: 12px 20px; box-shadow: var(--shadow-md); display: flex; align-items: center; gap: 12px; border: 1px solid #e0e0e0; }}
+        .search-box input {{ flex: 1; border: none; outline: none; font-size: 1rem; font-family: inherit; color: var(--text-dark); }}
+        .search-box span {{ font-size: 1.2rem; }}
+
+        .posts-grid {{ max-width: 1100px; margin: 0 auto; padding: 36px 24px 40px; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }}
         .post-card {{ background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; cursor: pointer; transition: transform .25s, box-shadow .25s; display: flex; flex-direction: column; }}
         .post-card:hover {{ transform: translateY(-6px); box-shadow: var(--shadow-md); }}
         .card-img {{ height: 210px; overflow: hidden; background: #e8eaf0; }}
@@ -1166,13 +1278,24 @@ def update_blog_index(posts: list):
         .card-meta {{ display: flex; justify-content: space-between; align-items: center; font-size: .8rem; color: var(--text-light); margin-top: 8px; }}
         .card-read {{ color: var(--primary); font-weight: 600; }}
         .empty-state {{ text-align: center; padding: 80px 24px; color: var(--text-light); grid-column: 1/-1; }}
-        .load-more-container {{ text-align: center; margin: 20px 0 80px; }}
+        .load-more-container {{ text-align: center; margin: 20px 0 60px; }}
         .load-more-btn {{ background: var(--primary); color: white; border: none; padding: 12px 36px; font-size: 1rem; font-weight: 600; border-radius: var(--radius-sm); cursor: pointer; box-shadow: var(--shadow-sm); transition: background .2s, transform .2s; }}
         .load-more-btn:hover {{ background: var(--primary-dark); transform: translateY(-2px); }}
         .load-more-btn:active {{ transform: translateY(0); }}
+
+        /* SEO 전체 포스트 인덱스 세션 */
+        .all-posts-section {{ max-width: 1100px; margin: 0 auto 80px; padding: 0 24px; }}
+        .all-posts-details {{ background: #fff; border-radius: var(--radius); padding: 20px 24px; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0; }}
+        .all-posts-summary {{ font-size: 1.05rem; font-weight: 700; color: var(--text-dark); cursor: pointer; user-select: none; outline: none; }}
+        .all-posts-summary:hover {{ color: var(--primary); }}
+        .all-posts-list {{ margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px 20px; list-style: none; padding: 0; max-height: 500px; overflow-y: auto; font-size: .88rem; }}
+        .all-posts-list li {{ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }}
+        .all-posts-list a {{ color: var(--text-mid); text-decoration: none; transition: color .15s; }}
+        .all-posts-list a:hover {{ color: var(--primary); text-decoration: underline; }}
+
         .site-footer {{ background: #1a1a2e; color: rgba(255,255,255,.55); text-align: center; padding: 32px 24px; font-size: .82rem; line-height: 1.8; }}
         .site-footer strong {{ color: rgba(255,255,255,.85); }}
-        @media (max-width: 768px) {{ .posts-grid {{ padding: 32px 16px 40px; gap: 20px; }} .header-nav {{ display: none; }} }}
+        @media (max-width: 768px) {{ .posts-grid {{ padding: 32px 16px 40px; gap: 20px; }} .header-nav {{ display: none; }} .all-posts-list {{ grid-template-columns: 1fr; }} }}
     </style>
 </head>
 <body>
@@ -1194,12 +1317,30 @@ def update_blog_index(posts: list):
     <p>하수구수사대의 실제 현장 시공 후기를 확인하세요</p>
     <span class="post-count">총 {len(posts)}개 포스트</span>
 </section>
+
+<div class="search-section">
+    <div class="search-box">
+        <span>🔍</span>
+        <input type="text" id="blog-search-input" placeholder="지역, 작업내용, 제목 검색 (예: 동탄, 고압세척, 싱크대 막힘...)" />
+    </div>
+</div>
+
 <div class="posts-grid" id="posts-container">
     {cards_html if cards_html else '<div class="empty-state"><p>아직 블로그 포스트가 없습니다.</p></div>'}
 </div>
 <div class="load-more-container">
     <button id="load-more-btn" class="load-more-btn">더 보기</button>
 </div>
+
+<section class="all-posts-section">
+    <details class="all-posts-details">
+        <summary class="all-posts-summary">📂 전체 시공 사례 포스트 목록 ({len(posts)}개 전체보기)</summary>
+        <ul class="all-posts-list">
+            {all_links_html}
+        </ul>
+    </details>
+</section>
+
 <footer class="site-footer">
     <strong>하수구수사대</strong><br>
     용인·수원·화성 하수구 막힘 전문 청소업체<br>
@@ -1208,17 +1349,66 @@ def update_blog_index(posts: list):
 
 <script>
     let allPosts = [];
+    let filteredPosts = [];
     let currentIndex = 24;
     const limit = 24;
     const container = document.getElementById('posts-container');
     const loadMoreBtn = document.getElementById('load-more-btn');
+    const searchInput = document.getElementById('blog-search-input');
+
+    function createCardElement(p) {{
+        const card = document.createElement('a');
+        card.href = p.slug.replace(/\\.html$/, '');
+        card.className = 'post-card';
+        card.style.textDecoration = 'none';
+        card.style.color = 'inherit';
+        
+        const coverHtml = p.cover_image ? 
+            `<div class="card-img"><img src="${{p.cover_image}}" alt="${{p.title}}" loading="lazy"></div>` :
+            `<div class="card-img card-img-placeholder">🔧</div>`;
+        
+        const categoryHtml = p.category ? `<span class="card-badge">${{p.category}}</span>` : '';
+        const descTrunc = p.description && p.description.length > 80 ? p.description.slice(0, 80) + '...' : (p.description || '');
+
+        card.innerHTML = `
+            <article style="height: 100%; display: flex; flex-direction: column;">
+                ${{coverHtml}}
+                <div class="card-body" style="flex: 1; display: flex; flex-direction: column; gap: 8px;">
+                    ${{categoryHtml}}
+                    <h2 class="card-title">${{p.title}}</h2>
+                    <p class="card-desc">${{descTrunc}}</p>
+                    <div class="card-meta">
+                        <span>📅 ${{p.date}}</span>
+                        <span class="card-read">자세히 보기 →</span>
+                    </div>
+                </div>
+            </article>
+        `;
+        return card;
+    }}
+
+    function renderPosts(postsToRender, isAppend = false) {{
+        if (!isAppend) {{
+            container.innerHTML = '';
+        }}
+        
+        if (postsToRender.length === 0 && !isAppend) {{
+            container.innerHTML = '<div class="empty-state"><p>검색 결과가 없습니다.</p></div>';
+            if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+            return;
+        }}
+
+        postsToRender.forEach(p => {{
+            container.appendChild(createCardElement(p));
+        }});
+    }}
 
     // posts.json 파일 비동기 로드
     fetch('posts.json')
         .then(response => response.json())
         .then(data => {{
             allPosts = data;
-            // 만약 전체 포스트가 24개 이하라면 더보기 버튼 숨김
+            filteredPosts = allPosts;
             if (allPosts.length <= currentIndex) {{
                 if (loadMoreBtn) loadMoreBtn.style.display = 'none';
             }}
@@ -1227,42 +1417,35 @@ def update_blog_index(posts: list):
 
     if (loadMoreBtn) {{
         loadMoreBtn.addEventListener('click', () => {{
-            const nextPosts = allPosts.slice(currentIndex, currentIndex + limit);
-            nextPosts.forEach(p => {{
-                const card = document.createElement('a');
-                card.href = p.slug.replace(/\.html$/, '');
-                card.className = 'post-card';
-
-                card.style.textDecoration = 'none';
-                card.style.color = 'inherit';
-                
-                const coverHtml = p.cover_image ? 
-                    `<div class="card-img"><img src="${{p.cover_image}}" alt="${{p.title}}" loading="lazy"></div>` :
-                    `<div class="card-img card-img-placeholder">🔧</div>`;
-                
-                const categoryHtml = p.category ? `<span class="card-badge">${{p.category}}</span>` : '';
-                const descTrunc = p.description.length > 80 ? p.description.slice(0, 80) + '...' : p.description;
-
-                card.innerHTML = `
-                    <article style="height: 100%; display: flex; flex-direction: column;">
-                        \${{coverHtml}}
-                        <div class="card-body" style="flex: 1; display: flex; flex-direction: column; gap: 8px;">
-                            \${{categoryHtml}}
-                            <h2 class="card-title">\${{p.title}}</h2>
-                            <p class="card-desc">\${{descTrunc}}</p>
-                            <div class="card-meta">
-                                <span>📅 \${{p.date}}</span>
-                                <span class="card-read">자세히 보기 →</span>
-                            </div>
-                        </div>
-                    </article>
-                `;
-                container.appendChild(card);
-            }});
+            const nextPosts = filteredPosts.slice(currentIndex, currentIndex + limit);
+            renderPosts(nextPosts, true);
 
             currentIndex += limit;
-            if (currentIndex >= allPosts.length) {{
+            if (currentIndex >= filteredPosts.length) {{
                 loadMoreBtn.style.display = 'none';
+            }}
+        }});
+    }}
+
+    if (searchInput) {{
+        searchInput.addEventListener('input', (e) => {{
+            const query = e.target.value.trim().toLowerCase();
+            if (!query) {{
+                filteredPosts = allPosts;
+                currentIndex = 24;
+                renderPosts(allPosts.slice(0, 24));
+                if (loadMoreBtn) {{
+                    loadMoreBtn.style.display = allPosts.length > 24 ? 'inline-block' : 'none';
+                }}
+            }} else {{
+                filteredPosts = allPosts.filter(p => 
+                    (p.title && p.title.toLowerCase().includes(query)) ||
+                    (p.description && p.description.toLowerCase().includes(query)) ||
+                    (p.category && p.category.toLowerCase().includes(query))
+                );
+                currentIndex = filteredPosts.length;
+                renderPosts(filteredPosts);
+                if (loadMoreBtn) loadMoreBtn.style.display = 'none';
             }}
         }});
     }}
@@ -1273,6 +1456,7 @@ def update_blog_index(posts: list):
     with open(index_path, 'w', encoding='utf-8') as f:
         f.write(index_html)
     print("  ✅ blog/index.html 갱신 완료!")
+
 
 # ============================================================
 # 메인 마이그레이션 실행 루틴
