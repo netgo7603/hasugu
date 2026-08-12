@@ -965,26 +965,25 @@ def update_blog_index(posts: list):
         card.style.color = 'inherit';
         
         const coverHtml = p.cover_image ? 
-            `<div class="card-img"><img src="${{p.cover_image}}" alt="${{p.title}}" loading="lazy"></div>` :
-            `<div class="card-img card-img-placeholder">🔧</div>`;
+            '<div class="card-img"><img src="' + p.cover_image + '" alt="' + p.title + '" loading="lazy"></div>' :
+            '<div class="card-img card-img-placeholder">🔧</div>';
         
-        const categoryHtml = p.category ? `<span class="card-badge">${{p.category}}</span>` : '';
+        const categoryHtml = p.category ? '<span class="card-badge">' + p.category + '</span>' : '';
         const descTrunc = p.description && p.description.length > 80 ? p.description.slice(0, 80) + '...' : (p.description || '');
 
-        card.innerHTML = `
-            <article style="height: 100%; display: flex; flex-direction: column;">
-                ${{coverHtml}}
-                <div class="card-body" style="flex: 1; display: flex; flex-direction: column; gap: 8px;">
-                    ${{categoryHtml}}
-                    <h2 class="card-title">${{p.title}}</h2>
-                    <p class="card-desc">${{descTrunc}}</p>
-                    <div class="card-meta">
-                        <span>📅 ${{p.date}}</span>
-                        <span class="card-read">자세히 보기 →</span>
-                    </div>
-                </div>
-            </article>
-        `;
+        card.innerHTML = 
+            '<article style="height: 100%; display: flex; flex-direction: column;">' +
+                coverHtml +
+                '<div class="card-body" style="flex: 1; display: flex; flex-direction: column; gap: 8px;">' +
+                    categoryHtml +
+                    '<h2 class="card-title">' + p.title + '</h2>' +
+                    '<p class="card-desc">' + descTrunc + '</p>' +
+                    '<div class="card-meta">' +
+                        '<span>📅 ' + (p.date || '') + '</span>' +
+                        '<span class="card-read">자세히 보기 →</span>' +
+                    '</div>' +
+                '</div>' +
+            '</article>';
         return card;
     }}
 
@@ -1004,8 +1003,8 @@ def update_blog_index(posts: list):
         }});
     }}
 
-    // posts.json 파일 비동기 로드
-    fetch('posts.json')
+    // posts.json 파일 비동기 로드 (캐시 방지 v=2)
+    fetch('posts.json?v=2')
         .then(response => response.json())
         .then(data => {{
             allPosts = data;
