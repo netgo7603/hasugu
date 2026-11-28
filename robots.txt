@@ -4,3 +4,5 @@ Disallow: /index_files/
 
 Sitemap: https://lymin80.shop/sitemap.xml
 Sitemap: https://lymin80.shop/rss.xml
+
+#DaumWebMasterTool:b0ed53e6d2c2528c268abfef242a251535d5766e58bc2af7cec175bdbeaa9beb:wRgbLNgPvWQylyHAj1bNag==
